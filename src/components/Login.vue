@@ -4,7 +4,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="#">
 					<div class="logo-wrapper">
-						<img src="../assets/logo.png">
+						<img src="../assets/login-images/logo.png">
 						<div class="title-wrapper">
 							<label class="main-title">OLYMPUS</label>
 							<span class="title">SOCIAL NETWORK</span>
@@ -122,7 +122,7 @@ export default {
 <style scoped>
 .main-container {
 	background-color: white;
-	background-image: url("../assets/users-bg.png");
+	background-image: url("../assets/login-images/users-bg.png");
 	background-repeat: repeat;
 	animation-delay: 0s;
 	animation-duration: 20s;
