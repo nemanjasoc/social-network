@@ -329,16 +329,24 @@ a:link {
 }
 
 @media only screen and (max-width: 1150px) {
-    .author-data {
+    .fa-caret-down {
         display: none;
     }
 
-    .fa-caret-down {
+    .author-title {
+        display: none;
+    }
+
+    .author-subtitle {
         display: none;
     }
 }
 
 @media only screen and (max-width: 1080px) {
+    .online-dot {
+        left: 50px;
+    }
+
 	.title {
 		display: none;
 	}
@@ -357,6 +365,10 @@ a:link {
 @media only screen and (max-width: 1024px) {
 	.nav-link img {
         margin-left: 0;
+    }
+
+    .online-dot {
+        left: 1px;
     }
 }
 

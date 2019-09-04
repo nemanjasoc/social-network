@@ -246,7 +246,6 @@ img {
 	border-radius: 4px;
 }
 
-/*right content*/
 .right-content {
     display: flex;
     background-color: white;

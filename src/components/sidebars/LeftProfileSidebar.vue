@@ -157,6 +157,21 @@
                         <span class="left-menu-title">Manage Widgets</span>
                     </a>
                 </li>
+                <div class="profile-completion-container">
+                    <div class="profile-completion-title">
+                        <span class="completion-title">Profile Completion</span>
+                        <span class="completion-percent">76%</span>
+                    </div>
+                    <div class="completion-line">
+                        <div class="max-range-line progress-moved">
+                            <span class="filled-profile"></span>
+                        </div>
+                    </div>
+                    <div class="comletion-text">Complete
+                        <span class="your-profile-text">your profile</span>
+                        so people can know more about you!
+                    </div>
+                </div>
             </ul>
         </div>
     </div>
@@ -300,6 +315,7 @@ export default {
     align-items: center;
     display: flex;
     justify-content: center;
+    opacity: 0;
 }
 
 .fa-bars .tooltiptext-menu::after,
@@ -335,6 +351,8 @@ export default {
 .fa-industry:hover .tooltiptext-account-stats,
 .fa-poll-h:hover .tooltiptext-manage-widgets {
     visibility: visible;
+    opacity: 1;
+    transition: ease all .8s;
 }
 
 .fa-newspaper .tooltiptext-newsfeed {
@@ -406,6 +424,7 @@ export default {
     padding-top: 32px;
     font-size: 22px;
     color: #9a9fbf;
+    transition: color .6s; 
 }
 
 .fa-bars:hover,
@@ -461,6 +480,76 @@ ul, li {
 
 a:link {
     text-decoration: none;
+}
+
+.profile-completion-container {
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.profile-completion-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.completion-title {
+    display: flex;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+.completion-percent {
+    display: flex;
+    font-size: 14px;
+    margin-right: 25px;
+}
+
+.completion-line {
+    display: flex;
+    justify-content: center;
+}
+
+.max-range-line {
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #ebecf2;
+    position: relative;
+    margin: 12px 25px;
+}
+
+.filled-profile {
+    position: absolute;
+    height: 6px; 
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    transition: 0.4s linear;  
+    transition-property: width; 
+}
+
+.progress-moved .filled-profile {
+    width: 75%; 
+    background-color: #ff5e3a;   
+    animation: progressAnimation 6s;
+}
+
+@keyframes progressAnimation {
+  0%   { width: 0%;}
+  100% { width: 75%;}
+}
+
+.comletion-text {
+    font-size: 14px;
+    margin: 0 25px;
+    text-align: justify;
+}
+
+.your-profile-text {
+    color: #ff5e3a;
 }
 
 /*media query*/

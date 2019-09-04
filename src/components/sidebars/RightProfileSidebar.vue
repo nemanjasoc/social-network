@@ -68,24 +68,24 @@
                     <span class="user-status-online-wider"></span>
                 </div> 
                 <div class="user-status">
-                    <a href="#" class="user-name">Carol Summers</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal" data-backdrop="false">Carol Summers</a>
                     <span class="status">ONLINE</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>                
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal" data-backdrop="false"></i>                
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -98,24 +98,24 @@
                     <span class="user-status-online-wider"></span>
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Mathilda Brinker</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal" data-backdrop="false">Mathilda Brinker</a>
                     <span class="status">AT WORK!</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal" data-backdrop="false"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -128,24 +128,24 @@
                     <span class="user-status-online-wider"></span>
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Carol Summers</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Carol Summers</a>
                     <span class="status">ONLINE</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -158,24 +158,24 @@
                     <span class="user-status-away-wider"></span>
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Michael Maximoff</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Michael Maximoff</a>
                     <span class="status">AWAY</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -188,24 +188,24 @@
                     <span class="user-status-disconected-wider"></span>
                  </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Rachel Howlett</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Rachel Howlett</a>
                     <span class="status">OFFLINE</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -222,24 +222,24 @@
                     <span class="user-status-online-wider"></span>
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Sarah Hetfield</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Sarah Hetfield</a>
                     <span class="status">ONLINE</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -256,24 +256,24 @@
                     <span class="user-status-online-wider"></span>
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Rachel Howlett</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Rachel Howlett</a>
                     <span class="status">OFFLINE</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -286,24 +286,24 @@
                     <span class="user-status-away-wider"></span>  
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Bruce Peterson</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Bruce Peterson</a>
                     <span class="status">ONLINE</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -316,24 +316,24 @@
                     <span class="user-status-invisible-wider"></span> 
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Chris Greyson</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Chris Greyson</a>
                     <span class="status">AWAY</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -346,24 +346,24 @@
                     <span class="user-status-away-wider"></span> 
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Nicholas Grisom</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Nicholas Grisom</a>
                     <span class="status">INVISIBLE</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -376,24 +376,24 @@
                     <span class="user-status-online-wider"></span> 
                 </div>
                 <div class="user-status">
-                    <a href="#" class="user-name">Chris Greyson</a>
+                    <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Chris Greyson</a>
                     <span class="status">AWAY</span>
                 </div>
                 <div class="three-dots">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
                     <ul class="three-chat-icons">
                         <li>
-                            <i class="fas fa-comment-dots">
+                            <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">START CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment-medical">
+                            <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">AD TO CONVERSATION</span>
                             </i>
                         </li>
                         <li>
-                            <i class="fas fa-comment">
+                            <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
                                 <span class="tooltiptext">BLOCK FROM CHAT</span>
                             </i>
                         </li>
@@ -416,6 +416,72 @@
                 </div>
             </li> 
         </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="chatModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="status-online"></span>
+                        <h6 class="modal-header-chat-title">Chat</h6>
+                        <i class="fas fa-ellipsis-h"></i>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-user-thumb"> 
+                            <img src="../../assets/profile-images/avatar62-sm.jpg">
+                        </div>
+                        <span class="modal-chat-message">Hi James! Please remember to buy the food for tomorrow! 
+                            I’m gonna be handling the gifts and Jake’s gonna get the drinks
+                        </span>
+                        <span class="chat-message-date">Yesterday at 8:10pm</span>
+                    </div>
+                    <div class="modal-footer">
+                        <form class="modal-form-group">
+                            <div class="modal-textarear">
+                                <label class="modal-form-label">Press enter to post..</label>
+                                <textarea class="modal-form-control" placeholder></textarea>
+                            </div>
+                            <div class="modal-footer-icons">
+                                <i class="fas fa-tv"></i>
+                                <i class="far fa-smile"></i>
+                                <!--ul class="modal-smile-icons">
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat9.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/profile-images/icon-chat1.png">
+                                    </li>
+                                </ul-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -429,7 +495,144 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.modal {
+    left: calc(100% - 300px);
+    width: 300px;
+    top: -29px;
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.modal-header {
+    background-color: #7c5ac2;
+}
+
+.close {
+    color: #fff;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+.status-online {
+    width: 6px;
+    height: 6px;
+    background-color: #32e4cd;
+    border-radius: 50%;
+    margin: auto 0;
+}
+
+.modal-header-chat-title {
+    color: #fff;
+    font-weight: 700;
+    margin-left: 5px;
+    font-size: 12px;
+    margin: auto 185px auto 5px;
+}
+
+.modal-header-three-dots {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fa-ellipsis-h {
+    color: #fff;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 25px 5px 24px;
+}
+
+.modal-chat-message {
+    background-color: #f0f4f9;
+    margin-top: 12px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    margin-left: 8px;
+    padding: 10px;
+    width: 75%;
+    text-align: justify;
+    color: #888da8;
+}
+
+.modal-user-thumb img {
+    border-radius: 50%;
+}
+
+.chat-message-date {
+    color: #888da8;
+    font-size: 10px;
+    margin-left: 37px;
+}
+
+.modal-form-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.modal-form-label {
+    font-size: 11px;
+    margin-top: 10px;
+    color: #888da8;
+}
+
+.modal-footer-icons {
+    margin: 70px auto 0 auto;
+    display: flex;
+    color: #888da8;
+}
+
+textarea {
+    outline: none;
+    border: none;
+    font-size: 11px;
+    width: 95%
+}
+
+.fa-tv {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.fa-smile {
+    cursor: pointer;
+}
+
+/*
+.modal-smile-icons {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: gray;
+    padding: 5px;
+    text-align: justify;
+    position: relative;
+}
+
+.modal-smile-icons img {
+    vertical-align: middle;
+    border-style: none;
+    display: flex;
+    margin: 4px;
+    position: absolute;
+}
+*/
+
+
+
+
 .right-sidebar {
     position: fixed;
     z-index: 22;
@@ -566,9 +769,9 @@ export default {
 
 .three-dots {
     display: flex;
-    position: relative;
     margin-right: 20px;
     align-items: center;
+    position: relative;
     color: #c0c4d8;
 }
 
@@ -579,8 +782,7 @@ export default {
     right: 0;
     opacity: 0;
     background-color: #fff;
-    padding: 10px 25px 10px 10px;
-    width: 190px;
+    width: 0px;
 }
 
 .three-dots:hover .three-chat-icons {
@@ -590,8 +792,7 @@ export default {
     right: 100%;
     opacity: 1;
     background-color: #fff;
-    transition: ease all .4s;
-    padding: 10px 25px 10px 10px;
+    transition: ease all .8s;
     width: 160px;
 }
 
@@ -619,6 +820,7 @@ export default {
     left: 50%;
     margin-left: -60px;
     font-size: 9px;
+    opacity: 0;
 }
 
 .fa-comment-dots .tooltiptext::after,
@@ -638,6 +840,8 @@ export default {
 .fa-comment-medical:hover .tooltiptext,
 .fa-comment:hover .tooltiptext  {
     visibility: visible;
+    opacity: 1;
+    transition: ease all .8s;
 }
 
 .right-sidebar-bar {
@@ -752,7 +956,6 @@ a:link {
 .right-sidebar-bar-wider .fa-times:hover {
     color: #ff5e3a;
 }
-
 
 .social-network-chat-sidebar-wide {
     position: relative;
