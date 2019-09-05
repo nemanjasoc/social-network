@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div class="social-network-chat-header" @click="rightSidebarToggle = !rightSidebarToggle">
+            <i class="far fa-comments" v-if="!rightSidebarToggle"></i>
+            <i class="fas fa-times" v-if="rightSidebarToggle"></i>
+        </div>
         <ul class="right-sidebar" v-bind:class="{ inactive: rightSidebarToggle }">
             <li class="chat-user">              
                 <img src="../../assets/profile-images/avatar67-sm.jpg">
@@ -423,7 +427,7 @@
                     <div class="modal-header">
                         <span class="status-online"></span>
                         <h6 class="modal-header-chat-title">Chat</h6>
-                        <i class="fas fa-ellipsis-h"></i>
+                        <i class="fas fa-ellipsis-h" @click="rightSidebarToggle = false"></i>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
@@ -442,40 +446,50 @@
                                 <textarea class="modal-form-control" placeholder></textarea>
                             </div>
                             <div class="modal-footer-icons">
-                                <i class="fas fa-tv"></i>
-                                <i class="far fa-smile"></i>
-                                <!--ul class="modal-smile-icons">
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat9.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                    <li>
-                                        <img src="../../assets/profile-images/icon-chat1.png">
-                                    </li>
-                                </ul-->
+                                <div class="modal-tv-icon">
+                                    <i class="fas fa-tv"></i>
+                                </div>
+                                <div class="modal-smile-icon">
+                                    <i class="far fa-smile"></i>
+                                    <ul class="more-smile-icons">
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat1.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat9.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat6.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat21.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat15.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat24.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat11.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat4.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat20.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat8.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat26.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/profile-images/icon-chat27.png">
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -496,142 +510,9 @@ export default {
 </script>
 
 <style>
-.modal {
-    left: calc(100% - 300px);
-    width: 300px;
-    top: -29px;
-}
-
-.modal-backdrop {
+.social-network-chat-header {
     display: none;
 }
-
-.modal-header {
-    background-color: #7c5ac2;
-}
-
-.close {
-    color: #fff;
-    font-weight: 500;
-    font-size: 19px;
-}
-
-.close:hover {
-    color: #fff;
-}
-
-.status-online {
-    width: 6px;
-    height: 6px;
-    background-color: #32e4cd;
-    border-radius: 50%;
-    margin: auto 0;
-}
-
-.modal-header-chat-title {
-    color: #fff;
-    font-weight: 700;
-    margin-left: 5px;
-    font-size: 12px;
-    margin: auto 185px auto 5px;
-}
-
-.modal-header-three-dots {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.fa-ellipsis-h {
-    color: #fff;
-    margin: auto 0;
-    cursor: pointer;
-}
-
-.modal-body {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px 25px 5px 24px;
-}
-
-.modal-chat-message {
-    background-color: #f0f4f9;
-    margin-top: 12px;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    font-size: 12px;
-    margin-left: 8px;
-    padding: 10px;
-    width: 75%;
-    text-align: justify;
-    color: #888da8;
-}
-
-.modal-user-thumb img {
-    border-radius: 50%;
-}
-
-.chat-message-date {
-    color: #888da8;
-    font-size: 10px;
-    margin-left: 37px;
-}
-
-.modal-form-group {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.modal-form-label {
-    font-size: 11px;
-    margin-top: 10px;
-    color: #888da8;
-}
-
-.modal-footer-icons {
-    margin: 70px auto 0 auto;
-    display: flex;
-    color: #888da8;
-}
-
-textarea {
-    outline: none;
-    border: none;
-    font-size: 11px;
-    width: 95%
-}
-
-.fa-tv {
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.fa-smile {
-    cursor: pointer;
-}
-
-/*
-.modal-smile-icons {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    background: gray;
-    padding: 5px;
-    text-align: justify;
-    position: relative;
-}
-
-.modal-smile-icons img {
-    vertical-align: middle;
-    border-style: none;
-    display: flex;
-    margin: 4px;
-    position: absolute;
-}
-*/
-
-
-
 
 .right-sidebar {
     position: fixed;
@@ -793,6 +674,7 @@ textarea {
     opacity: 1;
     background-color: #fff;
     transition: ease all .8s;
+    -webkit-transition: ease all .8s;
     width: 160px;
 }
 
@@ -978,36 +860,175 @@ a:link {
     color: #fff;
 }
 
+.modal {
+    left: calc(100% - 300px);
+    width: 300px;
+    top: -29px;
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.modal-header {
+    background-color: #7c5ac2;
+}
+
+.close {
+    color: #fff;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+.status-online {
+    width: 6px;
+    height: 6px;
+    background-color: #32e4cd;
+    border-radius: 50%;
+    margin: auto 0;
+}
+
+.modal-header-chat-title {
+    color: #fff;
+    font-weight: 700;
+    margin-left: 5px;
+    font-size: 12px;
+    margin: auto 185px auto 5px;
+}
+
+.modal-header-three-dots {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-header .fa-ellipsis-h {
+    color: #fff;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 25px 5px 24px;
+}
+
+.modal-chat-message {
+    background-color: #f0f4f9;
+    margin-top: 12px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    margin-left: 8px;
+    padding: 10px;
+    width: 75%;
+    text-align: justify;
+    color: #888da8;
+}
+
+.modal-user-thumb img {
+    border-radius: 50%;
+}
+
+.chat-message-date {
+    color: #888da8;
+    font-size: 10px;
+    margin-left: 37px;
+}
+
+.modal-form-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.modal-form-label {
+    font-size: 11px;
+    margin-top: 10px;
+    color: #888da8;
+}
+
+.modal-footer-icons {
+    margin: 70px auto 0 auto;
+    display: flex;
+    color: #c2c5d9;
+}
+
+textarea {
+    outline: none;
+    border: none;
+    font-size: 11px;
+    width: 95%
+}
+
+.fa-tv {
+    margin-right: 20px;
+    cursor: pointer;
+    color: #c2c5d9;
+}
+
+.fa-smile {
+    cursor: pointer;
+}
+
+.modal-smile-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.more-smile-icons {
+    display: none;
+    position: absolute;
+    width: 0;
+    bottom: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    opacity: 0;
+    text-align: left;
+    padding: 10px 10px 10px 15px;
+}
+
+.modal-smile-icon:hover .more-smile-icons {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 100%;
+    bottom: 100%;
+    opacity: 1;
+    background-color: #fff;
+    width: 150px;
+    cursor: pointer;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+}
+
 /*media query*/
-@media only screen and (max-width: 1350px) {
-
-}
-
-@media only screen and (max-width: 1150px) {
-
-}
-
-@media only screen and (max-width: 1080px) {
-
-}
-
-@media only screen and (max-width: 1024px) {
-
-}
-
-@media only screen and (max-width: 992px) {
-
-}
-
-@media only screen and (max-width: 880px) {
-
-}
-
-@media only screen and (max-width: 769px) {
-
-}
-
 @media only screen and (max-width: 768px) {
+    .right-sidebar {
+        display: none;
+    }
 
+    .social-network-chat-header {
+        color: #fff;
+        width: 80px;
+        height: 70px;
+        background-color: #7c5ac2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        position: fixed;
+        z-index: 22;
+        right: 0;
+        margin-top: -70px;
+        cursor: pointer;
+    }
+
+    .right-sidebar-bar-wider .fa-times {
+        display: none;
+    }
 }
 </style>

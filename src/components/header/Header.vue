@@ -67,20 +67,6 @@
                 </ul>
             </div>
         </nav>
-
-        <div class="nav-item dropdown">
-            <a class="nav-link-message dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="social-network-chat">
-                    <i class="far fa-comments"></i>
-                </div>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -409,22 +395,6 @@ a:link {
 
     .search-form {
         display: none;
-    }
-
-    .social-network-chat {
-        color: #fff;
-        width: 70px;
-        height: 70px;
-        background-color: #7c5ac2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 25px;
-        position: fixed;
-        z-index: 22;
-        right: 0;
-        margin-top: -70px;
-        cursor: pointer;
     }
 
     .nav-link-message {

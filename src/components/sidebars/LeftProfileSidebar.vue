@@ -1,9 +1,11 @@
 <template>
     <div>
+        <!--big devices narrow sidebar-->
         <div class="left-fixed-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
             <div class="logo">
                 <img src="../../assets/login-images/logo.png" alt="logo">
             </div>
+            
             <ul class="left-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
                 <li>
                     <a href="#">
@@ -84,7 +86,7 @@
                 </li>
             </ul>
         </div>
-
+        <!--big devices wider sidebar-->
         <div class="left-fixed-sidebar-wider" v-bind:class="{ inactive: !leftSidebarToggle }">
             <div class="logo-wider">
                 <img src="../../assets/login-images/logo.png" alt="logo">
@@ -174,6 +176,183 @@
                 </div>
             </ul>
         </div>
+
+        <!--small devices narrow sidebar-->
+        <!--div class="left-fixed-sidebar-small" v-bind:class="{ inactive: leftSidebarToggle }">
+            <div class="logo">
+                <img src="../../assets/login-images/logo.png" alt="logo">
+            </div>
+            <ul class="left-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-bars" @click="leftSidebarToggle = !leftSidebarToggle">
+                            <span class="tooltiptext-menu">OPEN MENU</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-newspaper">
+                            <span class="tooltiptext-newsfeed">NEWSFEED</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-star">
+                            <span class="tooltiptext-fav-page">FAV PAGE</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-friends">
+                            <span class="tooltiptext-friend-groups">FRIEND GROUPS</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-headphones">
+                            <span class="tooltiptext-music-and-playlists">MUSIC&PLAYLIST</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cloud-sun">
+                            <span class="tooltiptext-weather-app">WEATHER APP</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-calendar-alt">
+                            <span class="tooltiptext-calendar-and-events">CALENDAR AND EVENTS</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-certificate">
+                            <span class="tooltiptext-community-badges">COMMUNITY BADGES</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-birthday-cake">
+                            <span class="tooltiptext-friends-birthday">FRIENDS BIRTHDAYS</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-industry">
+                            <span class="tooltiptext-account-stats">ACCOUNT STATS</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-poll-h">
+                            <span class="tooltiptext-manage-widgets">MANAGE WIDGETS</span>
+                        </i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--small devices wider sidebar-->
+        <!--div class="left-fixed-sidebar-wider-small" v-bind:class="{ inactive: !leftSidebarToggle }">
+            <div class="logo-wider">
+                <img src="../../assets/login-images/logo.png" alt="logo">
+                <span class="olympus-title">OLYMPUS</span>
+            </div>
+            <ul class="left-sidebar-wider" v-bind:class="{ inactive: !leftSidebarToggle }">  
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="fas fa-times" @click="leftSidebarToggle = !leftSidebarToggle"></i>
+                        <span class="left-menu-title">Collapse menu</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="far fa-newspaper"></i>
+                        <span class="left-menu-title">Newsfeed</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="far fa-star"></i>
+                        <span class="left-menu-title">Fav Pages Feed</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="left-menu-title">Friend Groups</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="fas fa-headphones"></i>
+                        <span class="left-menu-title">Music & Playlist</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span class="left-menu-title">Weather App</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="far fa-calendar-alt"></i>
+                        <span class="left-menu-title">Calendar and Events</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="fas fa-certificate"></i>
+                        <span class="left-menu-title">Community Badges</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span class="left-menu-title">Friends Birthdays</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="fas fa-industry"></i>
+                        <span class="left-menu-title">Account Stats</span>
+                    </a>
+                </li>
+                <li class="left-menu">
+                    <a href="#">
+                        <i class="fas fa-poll-h"></i>
+                        <span class="left-menu-title">Manage Widgets</span>
+                    </a>
+                </li>
+                <div class="profile-completion-container">
+                    <div class="profile-completion-title">
+                        <span class="completion-title">Profile Completion</span>
+                        <span class="completion-percent">76%</span>
+                    </div>
+                    <div class="completion-line">
+                        <div class="max-range-line progress-moved">
+                            <span class="filled-profile"></span>
+                        </div>
+                    </div>
+                    <div class="comletion-text">Complete
+                        <span class="your-profile-text">your profile</span>
+                        so people can know more about you!
+                    </div>
+                </div>
+            </ul>
+        </div-->
+
     </div>
 </template>
 
@@ -188,6 +367,9 @@ export default {
 </script>
 
 <style scoped>
+.logo-small {
+    display: none;
+}
 .left-fixed-sidebar {
     position: fixed;
     z-index: 22;
@@ -553,40 +735,12 @@ a:link {
 }
 
 /*media query*/
-@media only screen and (max-width: 1350px) {
- 
-}
-
-@media only screen and (max-width: 1150px) {
-
-}
-
-@media only screen and (max-width: 1080px) {
-
-}
-
-@media only screen and (max-width: 1024px) {
-
-}
-
-@media only screen and (max-width: 992px) {
-
-}
-
-@media only screen and (max-width: 880px) {
-
-}
-
-@media only screen and (max-width: 769px) {
-
-}
-
 @media only screen and (max-width: 768px) {
     .left-sidebar {
         display: none;
     }
 
-    .left-fixed-sidebar-wider {
+    .left-sidebar-wider {
         display: none;
     }
 }
