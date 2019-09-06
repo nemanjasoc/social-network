@@ -509,7 +509,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .social-network-chat-header {
     display: none;
 }
@@ -529,7 +529,7 @@ export default {
     text-align: center;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .right-sidebar.inactive {
@@ -552,7 +552,7 @@ export default {
     text-align: center;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .right-sidebar-wider.inactive {
