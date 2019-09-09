@@ -46,11 +46,10 @@
                         </ul>
                     </div>
                 </div>
-                
             </div>
         </div-->
 
-        <div class="main-container">
+        <section class="main-container">
             <div class="container">
                 <div class="row">
                     <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -85,10 +84,14 @@
                                                 <div class="three-dots">
                                                     <div class="dropdown-three-dots">
                                                         <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
-                                                        <div class="dropdown-content">
-                                                            <a href="#">Report Profile</a>
-                                                            <a href="#">Block Profile</a>
-                                                        </div>
+                                                        <ul class="dropdown-content">
+                                                            <li>
+                                                                <a href="#">Report Profile</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">Block Profile</a>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </li>
@@ -105,11 +108,17 @@
                                     <div class="settings-button">
                                         <div class="dropdown-settings-button">
                                             <div class="dropbtn"><i class="fas fa-sliders-h"></i></div>
-                                            <div class="dropdown-content">
-                                                <a href="#">Update Profile Photo</a>
-                                                <a href="#">Update Header Photo</a>
-                                                <a href="#">Account Settings</a>
-                                            </div>
+                                            <ul class="dropdown-content">
+                                                <li>
+                                                    <a href="#">Update Profile Photo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Update Header Photo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Account Settings</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +137,9 @@
                 </div>
                 <div class="main-content">
                     <aside class="left-side-first-block">
-                        <h6 class="title-badges">James's Badges</h6>
+                        <div class="left-side-first-block-title">
+                            <h6 class="title-badges">James's Badges</h6>
+                        </div>
                         <div class="badges-block-content">
                             <ul class="badges">
                                 <li>
@@ -167,15 +178,195 @@
                             </ul>
                         </div>
                     </aside>
-                    <div class="center-first-block">
-
-                    </div>
+                    <article class="center-first-block">
+                        <div class="author-container">                           
+                            <div class="author-data-first-block">
+                                <img src="../assets/profile-images/author-page.jpg" alt="author">
+                                <div class="author-data-wrapper">
+                                    <span class="author-name-first-block">James Spiegel</span>
+                                    <span class="time">19 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="first-block-three-dots">
+                                <div class="dropdown-first-block-three-dots">
+                                    <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
+                                    <ul class="dropdown-content">
+                                        <li>
+                                            <a href="#">Edit Post</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Delete Post</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Turn Off Notifications</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Select As Featured</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque.
+                        </p>
+                        <div class="post-info">
+                            <div class="post-heart">
+                                <i class="far fa-heart"></i>
+                                <span class="eight">8</span>
+                            </div>
+                            <ul class="friends-images">
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic10.jpg" alt="friend">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic11.jpg" alt="friend">
+                                </li>
+                            </ul>
+                            <div class="people-names">
+                                <span class="name-one">Jenny,</span>
+                                <span class="name-two">Robert</span>
+                                <span class="more-likes">and <br> 6 more liked this</span>
+                            </div>
+                            <div class="people-comments">
+                                <div class="people-message-icon">
+                                    <i class="far fa-comment-alt"></i>
+                                    <span class="seventeen">17</span>
+                                </div>
+                                <div class="share-icon">
+                                    <i class="fas fa-share"></i>
+                                    <span class="twentyfour">24</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                     <aside class="right-side-first-block">
-                        
+                        <div class="right-side-first-block-title">
+                            <h6 class="title-photos">Last Photos</h6>
+                        </div>
+                        <div class="photos-content">
+                            <ul class="photos">
+                                <li>
+                                    <img src="../assets/profile-images/last-photo10-large.jpg">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/last-photo11-large.jpg">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/last-photo12-large.jpg">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/last-photo13-large.jpg">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/last-photo14-large.jpg">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/last-photo15-large.jpg">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/last-photo16-large.jpg">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/last-photo17-large.jpg">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/last-photo18-large.jpg">
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <aside class="left-side-second-block">
+                        <div class="left-side-second-block-title">
+                            <h6 class="title-playlist">My Spotify Playlist</h6>
+                        </div>                      
+                        <ol class="playlist">
+                            <li class="first-video">
+                                <span class="one">1</span>                             
+                                <div class="play-icon">
+                                    <img src="../assets/profile-images/playlist6.jpg">
+                                    <i class="fas fa-play"></i>
+                                </div>                               
+                                <div class="composition">
+                                    <span class="composition-name">The Past Starts Slow...</span>
+                                    <span class="composition-author">System of a Revenge</span>
+                                </div>
+                                <span class="composition-time">3:22</span>
+                            </li>
+                            <li class="second-video">
+                                <span class="two">2</span>                                
+                                <div class="play-icon">
+                                    <img src="../assets/profile-images/playlist7.jpg">
+                                    <i class="fas fa-play"></i>
+                                </div>                               
+                                <div class="composition">
+                                    <span class="composition-name">The Pretender</span>
+                                    <span class="composition-author">Kung Fighters</span>
+                                </div>
+                                <span class="composition-time">5:48</span>
+                            </li>
+                            <li class="third-video">
+                                <span class="three">3</span>                                  
+                                <div class="play-icon">
+                                    <img src="../assets/profile-images/playlist8.jpg">
+                                    <i class="fas fa-play"></i>
+                                </div>                                
+                                <div class="composition">
+                                    <span class="composition-name">Blood Brothers</span>
+                                    <span class="composition-author">Iron Maid</span>
+                                </div>
+                                <span class="composition-time">3:06</span>
+                            </li>
+                            <li class="fourth-video">
+                                <span class="four">4</span>                                   
+                                <div class="play-icon">
+                                    <img src="../assets/profile-images/playlist9.jpg">
+                                    <i class="fas fa-play"></i>
+                                </div>                               
+                                <div class="composition">
+                                    <span class="composition-name">Seven Nation Army</span>
+                                    <span class="composition-author">The Black Stripes</span>
+                                </div>
+                                <span class="composition-time">6:17</span>
+                            </li>
+                            <li class="fifth-video">
+                                <span class="five">5</span>                                
+                                <div class="play-icon">
+                                        <img src="../assets/profile-images/playlist10.jpg">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="composition">
+                                    <span class="composition-name">Killer Queen</span>
+                                    <span class="composition-author">Archiduke</span>
+                                </div>
+                                <span class="composition-time">5:40</span>
+                            </li>
+                        </ol>                       
+                    </aside>
+                    <article class="center-second-block">
+
+                    </article>
+                    <aside class="right-side-second-block">
+                        <div class="right-side-second-block-title">
+                            <h6 class="title-name">James's Poll</h6>
+                        </div>
                     </aside>
                 </div>
             </div>
-        </div>
+        </section>
         
         <app-right-profile-sidebar></app-right-profile-sidebar>
     </div>
@@ -197,6 +388,10 @@ export default {
 
 <style scoped>
 ul {
+    list-style-type: none;
+}
+
+li {
     list-style-type: none;
 }
 
@@ -291,12 +486,16 @@ a:link {
     border-color: transparent transparent #fff transparent;
 }
 
-.dropdown-content a {
+.dropdown-content li a {
     display: block;
     font-weight: 700;
-    color: #515365;
+    color: #9a9fbf;
     font-size: 12px;
     padding: 7px 0;
+}
+
+.dropdown-content li a:hover {
+    color: #515365;
 }
 
 .dropdown-three-dots:hover .dropdown-content {
@@ -362,7 +561,7 @@ a:link {
     bottom: 190%;
 }
 
-.dropdown-settings-button .dropdown-content a {
+.dropdown-settings-button .dropdown-content li a {
     display: block;
     font-weight: 700;
     color: #515365;
@@ -372,6 +571,10 @@ a:link {
 
 .dropdown-settings-button:hover .dropdown-content {
     display: block;
+}
+
+.dropdown-settings-button .dropdown-content li a:hover {
+    color: #ff5e3a;
 }
 
 .dropdown-settings-button .dropdown-content::after {
@@ -429,49 +632,41 @@ a:link {
     display: grid;
     grid-template-columns: 24% 50% 24%;
     grid-gap: 15px;
-    background: #fff;
 }
 
 .left-side-first-block {
     border-radius: 5px;
-    border: 1px solid #888;
-    padding: 20px;
+    /*border: 1px solid #e6ecf5;*/
     background: #fff;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    height: fit-content;
 }
 
-.center-first-block {
-    border-radius: 5px;
-    border: 1px solid #888;
-    padding: 20px;
-    background: #fff;
-}
-
-.right-side-first-block {
-    border-radius: 5px;
-    border: 1px solid #888;
-    padding: 20px;
-    background: #fff;
+.left-side-first-block-title {
+    padding: 23px 25px 18px;
+    border-bottom: 1px solid #e6ecf5;
 }
 
 .title-badges {
     color: #515365;
     font-weight: 700;
+    font-size: 14px;
 }
 
 .badges-block-content {
-
+    padding: 24px 23px 23px;
 }
 
 .badges {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     position: relative;
+    margin: 0 0 -20px -18px;
 }
 
 .badges li {
-    margin-right: 10px;
-    margin-bottom: 20px;
+    margin: 0 0 20px 8px;
 }
    
 .orange-badge {
@@ -488,7 +683,7 @@ a:link {
     display: flex;
     justify-content: center;
     top: -2px;
-    left: 28px;
+    left: 32px;
 }
 
 .blue-badge {
@@ -505,7 +700,7 @@ a:link {
     display: flex;
     justify-content: center;
     top: -2px;
-    right: 70px;
+    right: 52px;
 }
 
 .green-badge {
@@ -522,102 +717,357 @@ a:link {
     display: flex;
     justify-content: center;
     top: 57px;
-    right: 69px;
+    right: 52px;
 }
 
-/*
-.main-content {
-    width: 100%;
-    height: calc(100% - 70px);
-    background-color: #edf2f6;
-    position: absolute;
+.center-first-block {
+    border-radius: 5px;
+    /*border: 1px solid #e6ecf5;*/
+    background: #fff;
+    padding: 25px;
+    border: 1px solid gray;
+    height: fit-content;
 }
 
-.main-image {
-    position: relative;
-    padding-top: 50px;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.main-image img {
-    display: block;
-    width: 100%;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    height: auto;
-}
-
-.user-profile-sections {
-    width: 80%;
-    margin: auto;
-    border: 1px solid #e6ecf5;;
-    background-color: #fff;
-    padding: 38px 0;
+.author-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
-.profile-menu {
+.author-data-first-block {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
-.profile-menu li a {
+.author-data-first-block img {
+    border-radius: 100%;
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+}
+
+.author-data-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name-first-block {
     font-size: 14px;
+    color: #515365;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.author-name-first-block:hover {
+    color: #ff5e3a;
+}
+
+.time {
+    font-size: 12px;
     color: #9a9fbf;
+}
+
+.first-block-three-dots {
+    color: #9a9fbf;
+    cursor: pointer;
+}
+
+.dropdown-first-block-three-dots {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-first-block-three-dots .dropdown-content {
+    display: none;
+    width: 200px;
+    text-align: left;
+    padding: 15px 20px;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    z-index: 5;
+    right: -25px;
+    margin-top: 10px;
+}
+
+.dropdown-first-block-three-dots .dropdown-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 168px;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.dropdown-first-block-three-dots .dropdown-content li a {
+    display: block;
+    font-weight: 700;
+    color: #515365;
+    font-size: 12px;
+    padding: 7px 0;
+}
+
+.dropdown-first-block-three-dots:hover .dropdown-content {
     display: block;
 }
 
-.profile-menu li a:hover {
-    color: #515365;
+.dropdown-first-block-three-dots .dropdown-content li a:hover {
+    color: #ff5e3a;
 }
 
-.profile-menu li a.active {
-    color: #515365;
+p {
+    margin: 25px 0;
+    font-size: 14px;
+    color: #9a9fbf;
 }
 
-.author-main-content {
-    position: absolute;
+.post-info {
     display: flex;
+    padding: 20px 0 0;
+    border-top: 1px solid #e6ecf5;
+    align-items: center;
+}
+
+.post-heart {
+    margin-right: 15px;
+}
+
+.post-heart .fa-heart {
+    color: #9a9fbf;
+    margin-right: 8px;
+}
+
+.eight {
+    color: #9a9fbf;
+}
+
+.friends-images {
+    display: flex;
+    margin-right: 27px;
+}
+
+.friends-images li {
+    margin-right: -12px;
+}
+
+.name-one {
+    color: #515365;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.name-two {
+    color: #515365;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.friends-images img {
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.more-likes {
+    color: #9a9fbf;
+    font-size: 12px;
+}
+
+.people-comments {
+    display: flex;
+    margin-left: auto;
+}
+
+.people-message-icon {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.people-message-icon .fa-comment-alt {
+    color: #c2c5d9;
+    margin-right: 5px;
+}
+
+.seventeen {
+    color: #888da8;
+}
+
+.people-message-icon:hover .fa-comment-alt,
+.people-message-icon:hover .seventeen {
+    color: #ff5e3a;
+}
+
+.share-icon {
+    cursor: pointer;
+}
+
+.share-icon .fa-share {
+    color: #c2c5d9;
+    margin-right: 5px;
+}
+
+.twentyfour {
+    color: #888da8;
+}
+
+.share-icon:hover .fa-share,
+.share-icon:hover .twentyfour {
+    color: #ff5e3a;
+}
+
+.right-side-first-block {
+    border-radius: 5px;
+    /*border: 1px solid #e6ecf5;*/
+    background: #fff;
+    border: 1px solid gray;
+}
+
+.right-side-first-block-title {
+    padding: 23px 25px 18px;
+    border-bottom: 1px solid #e6ecf5;
+}
+
+.title-photos {
+    color: #515365;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.photos-content {
+    padding: 24px 23px 23px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
-    left: 45%;
-    bottom: 10px;
     align-items: center;
     text-align: center;
 }
 
-.author-main-image img {
-    border-radius: 50%;
-    border: 6px solid #fff;
-    background-color: #fff;
+.photos li {
+    padding: 0 4px 4px 0;
 }
 
-.autor-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.photos img {
+    width: 68px;
+    height: 68px;
+    border-radius: 4px;
 }
 
-.author-name {
+.left-side-second-block {
+    border-radius: 5px;
+    /*border: 1px solid #e6ecf5;*/
+    background: #fff;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    /*height: fit-content;*/
+    margin-top: -120px;
+}
+
+.left-side-second-block-title {
+    padding: 23px 25px 18px;
+    border-bottom: 1px solid #e6ecf5;
+}
+
+.title-playlist {
     color: #515365;
     font-weight: 700;
-    font-size: 23px;
+    font-size: 14px; 
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.playlist li {
+    padding: 13px 10px;
+}
+
+.first-video,
+.second-video,
+.third-video,
+.fourth-video,
+.fifth-video {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first-video:hover .play-icon .fa-play,
+.second-video:hover .play-icon .fa-play,
+.third-video:hover .play-icon .fa-play,
+.fourth-video:hover .play-icon .fa-play,
+.fifth-video:hover .play-icon .fa-play {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    color: #fff;
+    opacity: 0.8;
     cursor: pointer;
 }
 
-.author-name:hover {
-    color: #ff5e3a;
+.one,
+.two,
+.three,
+.four,
+.five {
+    margin-right: 10px;
+    font-size: 10px;
+    color: #888da8;
+    align-items: center;
+    display: flex;
 }
 
-.country {
-    font-size: 12px;
-    color: #9a9fbf;
+.play-icon {
+    position: relative;
+    cursor: pointer;
 }
-*/
+
+.play-icon img {
+    border-radius: 4px;
+}
+
+.play-icon .fa-play {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    color: #fff;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.composition {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    margin-right: auto;
+}
+
+.composition-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #515365;
+}
+
+.composition-author {
+    font-size: 11px;
+    color: #888da8;
+}
+
+.composition-name:hover,
+.composition-author:hover {
+    color: #ff5e3a;
+    cursor: pointer;
+}
+
+.composition-time {
+    font-size: 11px;
+    margin-right: 13px;
+    color: #888da8;
+}
+
 </style>
