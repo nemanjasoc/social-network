@@ -2,52 +2,6 @@
     <div>
         <app-left-profile-sidebar></app-left-profile-sidebar>
         <app-header></app-header>
-        
-        <!--div class="main-content">
-            <div class="main-image">
-                <img src="../assets/profile-images/top-header1.jpg">
-            </div>
-            <div class="user-profile-sections">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
-                            <ul class="profile-menu">
-                                <li>
-                                    <a href="#" class="active">Timeline</a>
-                                </li>
-                                <li>
-                                    <a href="#">About</a>
-                                </li>
-                                <li>
-                                    <a href="#">Friends</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-               
-                    <div class="author-main-content">
-                        <div class="author-main-image">
-                            <img src="../assets/profile-images/author-main1.jpg">
-                        </div>
-                        <div class="autor-data">
-                            <div class="author-name">James Spiegel</div>
-                            <div class="country">San Francisco, CA</div>
-                        </div>
-                    </div>
-                      
-                    <div class="col col-lg-5 ml-auto col-md-5 col-sm-12 col-12">
-                        <ul class="profile-menu">
-                            <li>
-                                <a href="#">Photos</a>
-                            </li>
-                            <li>
-                                <a href="#">Videos</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div-->
 
         <section class="main-container">
             <div class="container">
@@ -135,6 +89,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="main-content">
                     <aside class="left-side-first-block">
                         <div class="left-side-first-block-title">
@@ -178,17 +133,18 @@
                             </ul>
                         </div>
                     </aside>
+
                     <article class="center-first-block">
                         <div class="author-container">                           
-                            <div class="author-data-first-block">
+                            <div class="author-data-block">
                                 <img src="../assets/profile-images/author-page.jpg" alt="author">
                                 <div class="author-data-wrapper">
-                                    <span class="author-name-first-block">James Spiegel</span>
+                                    <span class="author-name-title">James Spiegel</span>
                                     <span class="time">19 hours ago</span>
                                 </div>
                             </div>
-                            <div class="first-block-three-dots">
-                                <div class="dropdown-first-block-three-dots">
+                            <div class="block-three-dots">
+                                <div class="dropdown-block-three-dots">
                                     <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
                                     <ul class="dropdown-content">
                                         <li>
@@ -216,7 +172,7 @@
                         <div class="post-info">
                             <div class="post-heart">
                                 <i class="far fa-heart"></i>
-                                <span class="eight">8</span>
+                                <span class="post-heart-number">8</span>
                             </div>
                             <ul class="friends-images">
                                 <li>
@@ -243,15 +199,30 @@
                             <div class="people-comments">
                                 <div class="people-message-icon">
                                     <i class="far fa-comment-alt"></i>
-                                    <span class="seventeen">17</span>
+                                    <span class="comment-number">17</span>
                                 </div>
                                 <div class="share-icon">
                                     <i class="fas fa-share"></i>
-                                    <span class="twentyfour">24</span>
+                                    <span class="share-number">24</span>
                                 </div>
                             </div>
                         </div>
+                        <div class="center-first-block-side-icons">
+                            <div class="trophy-side-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="heart-side-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="comments-side-icon">
+                                <i class="far fa-comment-alt"></i>
+                            </div>
+                            <div class="share-side-icon">
+                                <i class="fas fa-share"></i>
+                            </div>
+                        </div>
                     </article>
+
                     <aside class="right-side-first-block">
                         <div class="right-side-first-block-title">
                             <h6 class="title-photos">Last Photos</h6>
@@ -356,12 +327,224 @@
                             </li>
                         </ol>                       
                     </aside>
-                    <article class="center-second-block">
 
+                    <article class="center-second-block">
+                        <div class="author-container">                           
+                            <div class="author-data-block">
+                                <img src="../assets/profile-images/author-page.jpg" alt="author">
+                                <div class="author-data-wrapper">
+                                    <div class="author-data">
+                                        <span class="author-name-title">James Spiegel</span>
+                                        <span class="shared-photo">shared</span>
+                                        <a href="#">Diana Jameson</a>
+                                        <span class="apostrophe">'s</span> 
+                                        <a href="#">photo</a>
+                                    </div>
+                                    <span class="time">7 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="block-three-dots">
+                                <div class="dropdown-block-three-dots">
+                                    <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
+                                    <ul class="dropdown-content">
+                                        <li>
+                                            <a href="#">Edit Post</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Delete Post</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Turn Off Notifications</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Select As Featured</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            Hi! Everyone should check out these amazing photographs that my friend shot the past week.
+                            Here’s one of them...leave a kind comment!
+                        </p>
+                        <div class="post-photo">
+                            <img src="../assets/profile-images/post-photo6.jpg" alt="photo">
+                        </div>
+                        <div class="author-data-block">
+                            <span class="author-dot"></span>
+                            <img src="../assets/profile-images/avatar8-sm.jpg" alt="author">
+                            <div class="author-data-wrapper">
+                                <span class="author-name-title">Diana Jameson</span>
+                                <span class="time">16 hours ago</span>
+                            </div>
+                        </div>
+                        <p>
+                            Here’s the first photo of our incredible photoshoot from yesterday. 
+                            If you like it please say so and tel me what you wanna see next!
+                        </p>
+                        <div class="post-info">
+                            <div class="post-heart">
+                                <i class="far fa-heart"></i>
+                                <span class="post-heart-number">15</span>
+                            </div>
+                            <ul class="friends-images">
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic10.jpg" alt="friend">
+                                </li>
+                                <li>
+                                    <img src="../assets/profile-images/friend-harmonic11.jpg" alt="friend">
+                                </li>
+                            </ul>
+                            <div class="people-names">
+                                <span class="name-one">Diana,</span>
+                                <span class="name-two">Nicholas</span>
+                                <span class="more-likes">and <br> 13 more liked this</span>
+                            </div>
+                            <div class="people-comments">
+                                <div class="people-message-icon">
+                                    <i class="far fa-comment-alt"></i>
+                                    <span class="comment-number">0</span>
+                                </div>
+                                <div class="share-icon">
+                                    <i class="fas fa-share"></i>
+                                    <span class="share-number">16</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center-second-block-side-icons">
+                            <div class="heart-side-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="comments-side-icon">
+                                <i class="far fa-comment-alt"></i>
+                            </div>
+                            <div class="share-side-icon">
+                                <i class="fas fa-share"></i>
+                            </div>
+                        </div>
                     </article>
+
                     <aside class="right-side-second-block">
                         <div class="right-side-second-block-title">
                             <h6 class="title-name">James's Poll</h6>
+                        </div>
+                        <div class="right-side-second-block-content">
+                            <p>If you had to choose, which actor do you prefer to be the next Darkman?</p>
+                            <div class="vote-content">
+                                <div class="vote-info-first">                                   
+                                    <label class="vote-title">Thomas Bale
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>                                 
+                                    <span class="vote-percent">62%</span>
+                                </div>
+                                <div class="completion-line">
+                                    <div class="max-range-line progress-moved">
+                                        <span class="filled-first"></span>
+                                    </div>
+                                </div>
+                                <div class="voted-number">12 friends voted for this</div>
+                                <ul class="friends-voted-images">
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic1.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic2.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic3.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic4.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic5.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic6.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <span class="other-users">+3</span>
+                                    </li>
+                                </ul>
+                                <div class="vote-info-second">                                   
+                                    <label class="vote-title">Ben Robertson
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>                                 
+                                    <span class="vote-percent">27%</span>
+                                </div>
+                                <div class="completion-line">
+                                    <div class="max-range-line progress-moved">
+                                        <span class="filled-second"></span>
+                                    </div>
+                                </div>
+                                <div class="voted-number">7 friends voted for this</div>
+                                <ul class="friends-voted-images">
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic10.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic11.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic12.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic13.jpg" alt="friend">
+                                    </li>
+                                </ul>
+
+                                <div class="vote-info-third">                                   
+                                    <label class="vote-title">Michael Streiton
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>                                 
+                                    <span class="vote-percent">11%</span>
+                                </div>
+                                <div class="completion-line">
+                                    <div class="max-range-line progress-moved">
+                                        <span class="filled-third"></span>
+                                    </div>
+                                </div>
+                                <div class="voted-number">2 friends voted for this</div>
+                                <ul class="friends-voted-images">
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic14.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic15.jpg" alt="friend">
+                                    </li>
+                                </ul>
+                                <button type="button" class="vote-button">Vote Now!</button>
+                            </div>
                         </div>
                     </aside>
                 </div>
@@ -630,8 +813,8 @@ a:link {
 
 .main-content {
     display: grid;
-    grid-template-columns: 24% 50% 24%;
-    grid-gap: 15px;
+    grid-template-columns: 22% 50% 22%;
+    grid-column-gap: 3%;
 }
 
 .left-side-first-block {
@@ -734,11 +917,11 @@ a:link {
     justify-content: space-between;
 }
 
-.author-data-first-block {
+.author-data-block {
     display: flex;
 }
 
-.author-data-first-block img {
+.author-data-block img {
     border-radius: 100%;
     margin-right: 12px;
     width: 40px;
@@ -750,14 +933,14 @@ a:link {
     flex-direction: column;
 }
 
-.author-name-first-block {
+.author-name-title {
     font-size: 14px;
     color: #515365;
     font-weight: 700;
     cursor: pointer;
 }
 
-.author-name-first-block:hover {
+.author-name-title:hover {
     color: #ff5e3a;
 }
 
@@ -766,17 +949,17 @@ a:link {
     color: #9a9fbf;
 }
 
-.first-block-three-dots {
+.block-three-dots {
     color: #9a9fbf;
     cursor: pointer;
 }
 
-.dropdown-first-block-three-dots {
+.dropdown-block-three-dots {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-first-block-three-dots .dropdown-content {
+.dropdown-block-three-dots .dropdown-content {
     display: none;
     width: 200px;
     text-align: left;
@@ -790,7 +973,7 @@ a:link {
     margin-top: 10px;
 }
 
-.dropdown-first-block-three-dots .dropdown-content::after {
+.dropdown-block-three-dots .dropdown-content::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -801,7 +984,7 @@ a:link {
     border-color: transparent transparent #fff transparent;
 }
 
-.dropdown-first-block-three-dots .dropdown-content li a {
+.dropdown-block-three-dots .dropdown-content li a {
     display: block;
     font-weight: 700;
     color: #515365;
@@ -809,11 +992,11 @@ a:link {
     padding: 7px 0;
 }
 
-.dropdown-first-block-three-dots:hover .dropdown-content {
+.dropdown-block-three-dots:hover .dropdown-content {
     display: block;
 }
 
-.dropdown-first-block-three-dots .dropdown-content li a:hover {
+.dropdown-block-three-dots .dropdown-content li a:hover {
     color: #ff5e3a;
 }
 
@@ -832,6 +1015,12 @@ p {
 
 .post-heart {
     margin-right: 15px;
+    cursor: pointer;
+}
+
+.post-heart:hover .fa-heart,
+.post-heart:hover .post-heart-number {
+    color: #ff5e3a;
 }
 
 .post-heart .fa-heart {
@@ -839,7 +1028,7 @@ p {
     margin-right: 8px;
 }
 
-.eight {
+.post-heart-number {
     color: #9a9fbf;
 }
 
@@ -867,6 +1056,7 @@ p {
 .friends-images img {
     border-radius: 50%;
     border: 2px solid #fff;
+    cursor: pointer;
 }
 
 .more-likes {
@@ -889,12 +1079,12 @@ p {
     margin-right: 5px;
 }
 
-.seventeen {
+.comment-number {
     color: #888da8;
 }
 
 .people-message-icon:hover .fa-comment-alt,
-.people-message-icon:hover .seventeen {
+.people-message-icon:hover .comment-number {
     color: #ff5e3a;
 }
 
@@ -907,12 +1097,12 @@ p {
     margin-right: 5px;
 }
 
-.twentyfour {
+.share-number {
     color: #888da8;
 }
 
 .share-icon:hover .fa-share,
-.share-icon:hover .twentyfour {
+.share-icon:hover .share-number {
     color: #ff5e3a;
 }
 
@@ -962,8 +1152,8 @@ p {
     background: #fff;
     margin-bottom: 15px;
     border: 1px solid gray;
-    /*height: fit-content;*/
-    margin-top: -120px;
+    height: fit-content;
+    margin-top: -100px;
 }
 
 .left-side-second-block-title {
@@ -1070,4 +1260,326 @@ p {
     color: #888da8;
 }
 
+.center-first-block-side-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 511px;
+    top: 596px;
+}
+
+.trophy-side-icon,
+.heart-side-icon,
+.comments-side-icon,
+.share-side-icon {
+    background-color: #9a9fbf;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.trophy-side-icon .fa-trophy,
+.heart-side-icon .fa-heart,
+.comments-side-icon .fa-comment-alt,
+.share-side-icon .fa-share {
+    color: #fff;
+}
+
+.trophy-side-icon:hover {
+    background-color: #fdc014;
+}
+
+.heart-side-icon:hover,
+.comments-side-icon:hover,
+.share-side-icon:hover {
+    background-color: #ff5e3a;
+}
+
+.center-second-block {
+    border-radius: 5px;
+    /*border: 1px solid #e6ecf5;*/
+    background: #fff;
+    padding: 25px;
+    border: 1px solid gray;
+    height: fit-content;
+    margin-top: -15px;
+}
+
+.post-photo {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.center-second-block-side-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 511px;
+    top: 910px;
+}
+
+.author-dot {
+    width: 9px;
+    height: 9px;
+    background-color: #fafbfd;
+    border-radius: 50%;
+    border: 2px solid #c2c5d9;
+    margin-top: 13px;
+    margin-right: 20px;
+}
+
+.author-data a {
+    color: #ff5e3a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.shared-photo {
+    color: #9a9fbf;
+    font-size: 12px;
+    cursor: default;
+}
+
+.apostrophe {
+    color: #9a9fbf;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.right-side-second-block {
+    border-radius: 5px;
+    /*border: 1px solid #e6ecf5;*/
+    background: #fff;
+    border: 1px solid gray;
+    margin-top: 20px;
+    height: fit-content;
+}
+
+.right-side-second-block-title {
+    padding: 23px 25px 18px;
+    border-bottom: 1px solid #e6ecf5;
+}
+
+.title-name {
+    color: #515365;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.right-side-second-block-content {
+    padding: 24px;
+}
+
+.right-side-second-block-content p {
+    font-size: 13px;
+    margin-top: 0;
+}
+
+.vote-info-first,
+.vote-info-second,
+.vote-info-third {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* custom radio button */
+.vote-title {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #515365;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.vote-title input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.vote-title:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a white background and orange border */
+.vote-title input:checked ~ .checkmark {
+    background-color: #fff;
+    border: 2px solid #ff5e3a;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.vote-title input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.vote-title .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    background-color: #ff5e3a;
+}
+
+.vote-percent {
+    font-size: 14px;
+    color: #515365;
+}
+
+.completion-line {
+    display: flex;
+    justify-content: center;
+}
+
+.max-range-line {
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #ebecf2;
+    position: relative;
+}
+
+.filled-first,
+.filled-second,
+.filled-third {
+    position: absolute;
+    height: 6px; 
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+}
+
+.progress-moved .filled-first {
+    width: 62%; 
+    background-color: #ff5e3a;   
+    animation: progressAnimationFirst 6s;
+}
+
+.progress-moved .filled-second {
+    width: 27%; 
+    background-color: #ff5e3a;   
+    animation: progressAnimationSecond 6s;
+}
+
+.progress-moved .filled-third {
+    width: 11%; 
+    background-color: #ff5e3a;   
+    animation: progressAnimationThird 6s;
+}
+
+@keyframes progressAnimationFirst {
+    0%   { width: 0%;}
+    100% { width: 62%;}
+}
+
+@keyframes progressAnimationSecond {
+    0%   { width: 0%;}
+    100% { width: 27%;}
+}
+
+@keyframes progressAnimationThird {
+    0%   { width: 0%;}
+    100% { width: 11%;}
+}
+
+.voted-number {
+    font-size: 13px;
+    color: #9a9fbf;
+    margin: 10px 0;
+}
+
+.friends-voted-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.friends-voted-images li {
+    margin-right: -12px;
+}
+
+.friends-voted-images img {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.other-users {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: block;
+    margin-right: -12px;
+    background-color: #ff5e3a;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.vote-button {
+    border: 1px solid #d8dbe6;
+    width: 100%;
+    background-color: #fff;
+    height: 40px;
+    color: #888da8;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.vote-button:hover {
+    color: #9a9fbf;
+}
+
+button[type=button] {
+    outline: none;
+}
+
+/*media query*/
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1250px;
+    }
+}
 </style>
