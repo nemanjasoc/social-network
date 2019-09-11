@@ -1,9 +1,6 @@
 <template>
     <div>
         <nav class="navbar navbar-expand navbar-dark" ml-auto>
-            <!--button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button-->
             <div class="title">
                 <h6>Profile Page</h6>
             </div>
@@ -14,48 +11,237 @@
             <span class="text-find-friends">Find Friends</span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="smile" href="#">
-                            <i class="far fa-smile"></i>
-                            <div class="smile-badge">
-                                <span class="blue-badge">6</span>
+
+                    <li class="nav-item">                    
+                        <div class="dropdown-smile">
+                            <div class="dropbtn">
+                                <a class="smile" href="#">
+                                    <i class="far fa-smile"></i>
+                                    <div class="smile-badge">
+                                        <span class="blue-badge">6</span>
+                                    </div>
+                                </a>                           
                             </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="comments" href="#">
-                            <i class="far fa-comments"></i>
-                            <div class="comments-badge">
-                                <span class="purple-badge">2</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="thunder" href="#">
-                            <i class="fas fa-bolt"></i>
-                            <div class="thunder-badge">
-                                <span class="orange-badge">8</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="author-data-wrapper">
-                                <img src="../../assets/profile-images/author-page.jpg">
-                                <div class="author-data">
-                                    <span class="author-title">James Spiegel</span>
-                                    <span class="author-subtitle">SPACE COWBOY</span>
-                                    <span class="online-dot"></span>
+                            <ul class="dropdown-content">
+                                <div class="dropdown-header">
+                                    <span class="dropdown-header-left-title">FRIEND REQUESTS</span>
+                                    <div class="dropdown-header-right-titles">
+                                        <span>Find Friends</span>
+                                        <span>Settings</span>
+                                    </div>
                                 </div>
-                                <i class="fas fa-caret-down"></i>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                                <li>
+                                    <div class="dropdown-author-content">
+                                        <div class="dropdown-author-data-wrapper">
+                                            <div class="dropdown-author-img">
+                                                <img src="../../assets/profile-images/avatar55-sm.jpg">
+                                            </div>
+                                            <div class="dropdown-author-data">
+                                                <span class="dropdown-author-name">Tamara Romanoff</span>
+                                                <span class="dropdown-author-text">Mutual Friend: Sarah Hetfield</span>
+                                            </div>
+                                        </div>
+                                        <div class="smile-squares">
+                                            <div class="blue-smile"><i class="far fa-smile"></i></div>
+                                            <div class="gray-smile"><i class="far fa-smile"></i></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-author-content">
+                                        <div class="dropdown-author-data-wrapper">
+                                            <div class="dropdown-author-img">
+                                                <img src="../../assets/profile-images/avatar56-sm.jpg">
+                                            </div>
+                                            <div class="dropdown-author-data">
+                                                <span class="dropdown-author-name">Tony Stevens</span>
+                                                <span class="dropdown-author-text">4 Friends in Common</span>
+                                            </div>
+                                        </div>
+                                        <div class="smile-squares">
+                                            <div class="blue-smile"><i class="far fa-smile"></i></div>
+                                            <div class="gray-smile"><i class="far fa-smile"></i></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-author-content">
+                                        <div class="dropdown-author-data-wrapper">
+                                            <div class="dropdown-author-img">
+                                                <img src="../../assets/profile-images/avatar57-sm.jpg">
+                                            </div>
+                                            <div class="dropdown-author-data">
+                                                <span class="dropdown-author-name">Tamara Romanoff</span>
+                                                <span class="dropdown-author-text">Mutual Friend: Sarah Hetfield</span>
+                                            </div>
+                                        </div>                                        
+                                        <i class="far fa-smile"></i>   
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-author-content">
+                                        <div class="dropdown-author-data-wrapper">
+                                            <div class="dropdown-author-img">
+                                                <img src="../../assets/profile-images/avatar58-sm.jpg">
+                                            </div>
+                                            <div class="dropdown-author-data">
+                                                <span class="dropdown-author-name">Stagg Clothing</span>
+                                                <span class="dropdown-author-text">9 Friends in Common</span>
+                                            </div>
+                                        </div>
+                                        <div class="smile-squares">
+                                            <div class="blue-smile"><i class="far fa-smile"></i></div>
+                                            <div class="gray-smile"><i class="far fa-smile"></i></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="dropdown-comments">
+                            <div class="dropbtn">
+                                <a class="comments" href="#">
+                                    <i class="far fa-comments"></i>
+                                    <div class="comments-badge">
+                                        <span class="purple-badge">2</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <ul class="dropdown-content">
+                                <div class="dropdown-header">
+                                    <span class="dropdown-header-left-title">CHAT/MESSAGES</span>
+                                    <div class="dropdown-header-right-titles">
+                                        <span>Settings</span>
+                                        <span>Mark All As Read</span>
+                                    </div>
+                                </div>
+                                <li>
+                                    <a href="#">Edit Post</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete Post</a>
+                                </li>
+                                <li>
+                                    <a href="#">Turn Off Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="#">Select As Featured</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="dropdown-thunder">
+                            <div class="dropbtn">
+                                <a class="thunder" href="#">
+                                    <i class="fas fa-bolt"></i>
+                                    <div class="thunder-badge">
+                                        <span class="orange-badge">8</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <ul class="dropdown-content">
+                                <div class="dropdown-header">
+                                    <span class="dropdown-header-left-title">NOTIFICATIONS</span>
+                                    <div class="dropdown-header-right-titles">
+                                        <span>Settings</span>
+                                        <span>Mark All As Read</span>
+                                    </div>
+                                </div>
+                                <li>
+                                    <a href="#">Edit Post</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete Post</a>
+                                </li>
+                                <li>
+                                    <a href="#">Turn Off Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="#">Select As Featured</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="dropdown-author">
+                            <div class="dropbtn">
+                                <div class="author-data-wrapper">
+                                    <img src="../../assets/profile-images/author-page.jpg">
+                                    <div class="author-data">
+                                        <span class="author-title">James Spiegel</span>
+                                        <span class="author-subtitle">SPACE COWBOY</span>
+                                        <span class="online-status-dot"></span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <ul class="dropdown-content">
+                                <div class="dropdown-title">
+                                    <span class="title-account">Your Account</span>
+                                </div>
+                                <li class="settings">
+                                    <i class="fas fa-bars"></i>
+                                    <span class="title-settings">Profile Settings</span>
+                                </li>
+                                <li class="fav">
+                                    <i class="far fa-star"></i>
+                                    <span class="title-fav-page">Create Fav Page</span>
+                                </li>
+                                <li class="logout">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span class="title-logout">Log Out</span>
+                                </li>
+
+                                <div class="dropdown-title">
+                                    <span class="title-chat-settings">Chat Settings</span>
+                                </div>
+                                <li class="status-online">
+                                    <span class="green-dot"></span>
+                                    <span class="title-online">Online</span>
+                                </li>
+                                <li class="status-away">
+                                    <span class="yellow-dot"></span>
+                                    <span class="title-away">Away</span>
+                                </li>
+                                <li class="status-disconnected">
+                                    <span class="red-dot"></span>
+                                    <span class="title-disconnected">Disconnected</span>
+                                </li>
+                                <li class="status-invisible">
+                                    <span class="gray-dot"></span>
+                                    <span class="title-invisible">Invisible</span>
+                                </li>
+
+                                <div class="dropdown-title">
+                                    <span class="title-custom-status">Custom Status</span>
+                                </div>
+                                <form class="form-group">
+                                    <input class="form-control" type="search" value="Space Cowboy">
+                                    <button type="button" class="check-button"><i class="fas fa-check"></i></button>
+                                </form>
+
+                                <div class="dropdown-title">
+                                    <span class="title-olympus">About Olympus</span>
+                                </div>
+                                <li class="terms">
+                                    <span class="title-terms">Terms & Conditions</span>
+                                </li>
+                                <li class="faq">
+                                    <span class="title-faq">FAQs</span>
+                                </li>
+                                <li class="careers">
+                                    <span class="title-careers">Careers</span>
+                                </li>
+                                <li class="contact">
+                                    <span class="title-contact">Contact</span>
+                                </li>
+                            </ul>
+                        </div>                       
                     </li>
                     <li class="nav-item-search">
                         <a class="search" href="#">
@@ -255,7 +441,7 @@ a:link {
     font-size: 11px;
 }
 
-.nav-link img {
+.author-data-wrapper img {
     border-radius: 50%;
     margin-left: 50px;
 }
@@ -263,6 +449,7 @@ a:link {
 .author-data-wrapper {
     display: flex;
     position: relative;
+    cursor: pointer;
 }
 
 .author-data {
@@ -285,11 +472,7 @@ a:link {
     font-size: 8px;
 }
 
-.dropdown-toggle::after {
-    display: none;
-}
-
-.online-dot {
+.online-status-dot {
     position: absolute;
     width: 8px;
     height: 8px;
@@ -301,10 +484,358 @@ a:link {
 
 .fa-caret-down {
     margin: 10px 0px 0px 15px;
+    color: white;
 }
 
-.social-network-chat {
+/*dropdown smile*/
+.dropdown-smile {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-smile .dropdown-content {
+    display: block;
+    width: 380px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    z-index: 20;
+    right: -150px;
+    top: 50px;
+    padding-bottom: 70px;
+}
+
+.dropdown-smile  .dropdown-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 200px;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.dropdown-smile:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6ecf5;
+}
+
+.dropdown-header-left-title {
+    color: #9a9fbf;
+    font-size: 9px;
+}
+
+.dropdown-header-right-titles {
+    color: #515365;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dropdown-header-right-titles span:nth-child(2) {
+    margin-left: 10px;
+}
+
+.dropdown-header-right-titles span:nth-child(1):hover,
+.dropdown-header-right-titles span:nth-child(2):hover {
+    color: #ff5e3a;
+}
+
+.dropdown-author-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #e6ecf5;
+}
+
+.dropdown-author-data-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-author-img img {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+}
+
+.dropdown-author-data {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.dropdown-author-name {
+    color: #515365;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.dropdown-author-text {
+    font-size: 12px;
+    color: #9a9fbf;
+}
+
+.smile-squares {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blue-smile {
+    height: 40px;
+    width: 40px;
+    background-color: #38a9ff;
+    border-radius: 4px;
+}
+
+.gray-smile {
+    height: 40px;
+    width: 40px;
+    background-color: #9a9fbf;
+    margin-left: 15px;
+    border-radius: 4px;
+}
+
+.blue-smile .fa-smile,
+.gray-smile .fa-smile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+/*dropdown comments*/
+.dropdown-comments {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-comments .dropdown-content {
     display: none;
+    width: 380px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    z-index: 20;
+    right: -153px;
+    top: 50px;
+    padding-bottom: 70px;
+}
+
+.dropdown-comments .dropdown-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 200px;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.dropdown-comments:hover .dropdown-content {
+    display: block;
+}
+
+/*dropdown thunder*/
+.dropdown-thunder {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-thunder .dropdown-content {
+    display: none;
+    width: 380px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    z-index: 20;
+    right: -155px;
+    top: 50px;
+    padding-bottom: 70px;
+}
+
+.dropdown-thunder .dropdown-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 200px;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.dropdown-thunder:hover .dropdown-content {
+    display: block;
+}
+
+/*dropdown author*/
+.dropdown-author {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-author .dropdown-content {
+    display: none;
+    width: 230px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    z-index: 20;
+    right: -25px;
+}
+
+.dropdown-author .dropdown-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 200px;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.dropdown-author:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-title {
+    display: flex;
+    border-bottom: 1px solid #e6ecf5;
+    border-top: 1px solid #e6ecf5;
+    padding: 10px 10px 10px 15px;
+}
+
+.title-account,
+.title-chat-settings,
+.title-custom-status,
+.title-olympus {
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #9a9fbf;
+    font-weight: 700;
+}
+
+.settings,
+.fav,
+.logout,
+.status-online,
+.status-away,
+.status-disconnected,
+.status-invisible,
+.terms,
+.faq,
+.careers,
+.contact {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content .fa-bars,
+.dropdown-content .fa-star,
+.dropdown-content .fa-sign-out-alt {
+    color: #9a9fbf;
+    font-size: 20px;
+}
+
+.title-settings,
+.title-fav-page,
+.title-logout,
+.title-terms,
+.title-faq,
+.title-careers,
+.title-contact {
+    font-size: 12px;
+    color: #515365;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.title-online,
+.title-away,
+.title-disconnected,
+.title-invisible {
+    font-size: 12px;
+    color: #9a9fbf;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.title-online:hover,
+.title-away:hover,
+.title-disconnected:hover,
+.title-invisible:hover {
+    color: #515365;
+}
+
+.title-settings:hover,
+.title-fav-page:hover,
+.title-logout:hover,
+.title-terms:hover,
+.title-faq:hover,
+.title-careers:hover,
+.title-contact:hover {
+    color: #ff5e3a;
+}
+
+.green-dot,
+.yellow-dot,
+.red-dot,
+.gray-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #32e4cd;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.red-dot {
+    background-color: #ff4f60;
+}
+
+.yellow-dot {
+    background-color: #ffd52f;
+}
+
+.gray-dot {
+    background-color: #cbdfee;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 15px 0px 0px 15px;
+}
+
+.form-control {
+    font-size: 12px;
+    width: 100%;
+}
+
+button[type=button] {
+    background-color: #7c5ac2;
+    color: #fff;
+    width: 35px;
+    border-radius: 0 5px 5px 0;
+    height: 100%;
+    text-align: center;
+    border: 3px solid #7c5ac2;
 }
 
 /*media query*/
@@ -329,7 +860,7 @@ a:link {
 }
 
 @media only screen and (max-width: 1080px) {
-    .online-dot {
+    .online-status-dot {
         left: 50px;
     }
 
@@ -349,12 +880,12 @@ a:link {
 }
 
 @media only screen and (max-width: 1024px) {
-	.nav-link img {
-        margin-left: 0;
+	.author-data-wrapper img {
+        margin-left: 20px;
     }
 
-    .online-dot {
-        left: 1px;
+    .online-status-dot {
+        left: 20px;
     }
 }
 
@@ -375,6 +906,7 @@ a:link {
 
     .search-form {
         margin-right: 20px;
+        width: 200px;
     }
 }
 
@@ -395,10 +927,6 @@ a:link {
 
     .search-form {
         display: none;
-    }
-
-    .nav-link-message {
-        padding: 0;
     }
 
     .author-data-wrapper {

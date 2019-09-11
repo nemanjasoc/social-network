@@ -516,7 +516,7 @@ export default {
 
 .right-sidebar {
     position: fixed;
-    z-index: 22;
+    z-index: 5;
     width: 80px;
     height: calc(100% - 70px);
     right: 0;
@@ -539,7 +539,7 @@ export default {
 
 .right-sidebar-wider {
     position: fixed;
-    z-index: 22;
+    z-index: 10;
     width: 270px;
     height: calc(100% - 70px);
     right: 0;
