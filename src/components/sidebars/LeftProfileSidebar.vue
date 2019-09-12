@@ -193,9 +193,10 @@ export default {
 .logo-small {
     display: none;
 }
+
 .left-fixed-sidebar {
     position: fixed;
-    z-index: 22;
+    z-index: 1031;
     width: 70px;
     height: 100%;
     left: 0;
@@ -241,7 +242,7 @@ export default {
 
 .left-fixed-sidebar-wider {
     position: fixed;
-    z-index: 22;
+    z-index: 1031;
     width: 250px;
     height: 100%;
     left: 0;

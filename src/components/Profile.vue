@@ -38,14 +38,16 @@
                                                 <div class="three-dots">
                                                     <div class="dropdown-three-dots">
                                                         <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
-                                                        <ul class="dropdown-content">
-                                                            <li>
-                                                                <a href="#">Report Profile</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Block Profile</a>
-                                                            </li>
-                                                        </ul>
+                                                        <div class="dropdown-content">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">Report Profile</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">Block Profile</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -62,17 +64,19 @@
                                     <div class="settings-button">
                                         <div class="dropdown-settings-button">
                                             <div class="dropbtn"><i class="fas fa-sliders-h"></i></div>
-                                            <ul class="dropdown-content">
-                                                <li>
-                                                    <a href="#">Update Profile Photo</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Update Header Photo</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Account Settings</a>
-                                                </li>
-                                            </ul>
+                                            <div class="dropdown-content">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Update Profile Photo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Update Header Photo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Account Settings</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -146,20 +150,22 @@
                             <div class="block-three-dots">
                                 <div class="dropdown-block-three-dots">
                                     <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
-                                    <ul class="dropdown-content">
-                                        <li>
-                                            <a href="#">Edit Post</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Delete Post</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Turn Off Notifications</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Select As Featured</a>
-                                        </li>
-                                    </ul>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Edit Post</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Delete Post</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Turn Off Notifications</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Select As Featured</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -267,20 +273,20 @@
                         <ol class="playlist">
                             <li class="first-video">
                                 <span class="one">1</span>                             
-                                <div class="play-icon">
-                                    <img src="../assets/profile-images/playlist6.jpg">
+                                <div class="play-icon" data-toggle="modal" data-target="#videoModalFirst">
+                                    <img src="../assets/profile-images/ws-blue-orchid.jpg">
                                     <i class="fas fa-play"></i>
                                 </div>                               
                                 <div class="composition">
-                                    <span class="composition-name">The Past Starts Slow...</span>
-                                    <span class="composition-author">System of a Revenge</span>
+                                    <span class="composition-name">Blue Orchid</span>
+                                    <span class="composition-author">The White Stripes</span>
                                 </div>
                                 <span class="composition-time">3:22</span>
                             </li>
                             <li class="second-video">
                                 <span class="two">2</span>                                
-                                <div class="play-icon">
-                                    <img src="../assets/profile-images/playlist7.jpg">
+                                <div class="play-icon" data-toggle="modal" data-target="#videoModalSecond">
+                                    <img src="../assets/profile-images/ws-seven-nation-army.jpg">
                                     <i class="fas fa-play"></i>
                                 </div>                               
                                 <div class="composition">
@@ -291,8 +297,8 @@
                             </li>
                             <li class="third-video">
                                 <span class="three">3</span>                                  
-                                <div class="play-icon">
-                                    <img src="../assets/profile-images/playlist8.jpg">
+                                <div class="play-icon" data-toggle="modal" data-target="#videoModalThird">
+                                    <img src="../assets/profile-images/rhcp-snow.jpg">
                                     <i class="fas fa-play"></i>
                                 </div>                                
                                 <div class="composition">
@@ -303,8 +309,8 @@
                             </li>
                             <li class="fourth-video">
                                 <span class="four">4</span>                                   
-                                <div class="play-icon">
-                                    <img src="../assets/profile-images/playlist9.jpg">
+                                <div class="play-icon" data-toggle="modal" data-target="#videoModalFourth">
+                                    <img src="../assets/profile-images/sg-mrs-robinson.jpg">
                                     <i class="fas fa-play"></i>
                                 </div>                               
                                 <div class="composition">
@@ -315,8 +321,8 @@
                             </li>
                             <li class="fifth-video">
                                 <span class="five">5</span>                                
-                                <div class="play-icon">
-                                        <img src="../assets/profile-images/playlist10.jpg">
+                                <div class="play-icon" data-toggle="modal" data-target="#videoModalFifth">
+                                        <img src="../assets/profile-images/bb-everybody.jpg">
                                     <i class="fas fa-play"></i>
                                 </div>
                                 <div class="composition">
@@ -346,20 +352,22 @@
                             <div class="block-three-dots">
                                 <div class="dropdown-block-three-dots">
                                     <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
-                                    <ul class="dropdown-content">
-                                        <li>
-                                            <a href="#">Edit Post</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Delete Post</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Turn Off Notifications</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Select As Featured</a>
-                                        </li>
-                                    </ul>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Edit Post</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Delete Post</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Turn Off Notifications</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Select As Featured</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -549,6 +557,72 @@
                     </aside>
                 </div>
             </div>
+            <!-- Modals -->
+            <div class="modal fade" id="videoModalFirst">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe width="100%" height="350px" src="https://www.youtube.com/embed/jW8UlrtcEac">
+                            </iframe>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="videoModalSecond">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/0J2QdDbelmY">
+                            </iframe>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="videoModalThird">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/ifXalt3MJtM">
+                            </iframe>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="videoModalFourth">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/9C1BCAgu2I8">
+                            </iframe>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="videoModalFifth">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe width="100%" height="380" src="https://www.youtube.com/embed/EHV0zs0kVGg">
+                            </iframe>
+                        </div>               
+                    </div>
+                </div>
+            </div>
         </section>
         
         <app-right-profile-sidebar></app-right-profile-sidebar>
@@ -601,7 +675,7 @@ a:link {
 }
 
 .main-image {
-    padding-top: 50px;
+    padding-top: 110px;
 }
 
 .main-image img {
@@ -1219,6 +1293,8 @@ p {
 
 .play-icon img {
     border-radius: 4px;
+    width: 40px;
+    height: 40px;
 }
 
 .play-icon .fa-play {
@@ -1574,6 +1650,10 @@ p {
 
 button[type=button] {
     outline: none;
+}
+
+.modal-body {
+    padding: 0 5px 5px 5px;
 }
 
 /*media query*/
