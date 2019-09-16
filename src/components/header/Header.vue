@@ -354,7 +354,7 @@
                                         <span class="author-subtitle">SPACE COWBOY</span>
                                         <span class="online-status-dot"></span>
                                     </div>
-                                    <i class="fas fa-caret-down"></i>
+                                    <i class="fas fa-angle-down"></i>
                                 </div>
                             </div>
                             <div class="dropdown-content">
@@ -661,7 +661,7 @@ a:link {
     border-radius: 50%;
 }
 
-.fa-caret-down {
+.fa-angle-down {
     margin: 10px 0px 0px 15px;
     color: white;
 }
@@ -1128,7 +1128,7 @@ button[type=button] {
 }
 
 @media only screen and (max-width: 1150px) {
-    .fa-caret-down {
+    .fa-angle-down {
         display: none;
     }
 
@@ -1240,4 +1240,22 @@ button[type=button] {
         color: #9a9fbf;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .nav-item-search {
+        margin-right: -45px;
+    }
+
+    .nav-item {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .nav-item-search {
+        margin-right: -30px;
+    }
+}
+
 </style>

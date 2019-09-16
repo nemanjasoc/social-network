@@ -3,510 +3,245 @@
         <app-left-profile-sidebar></app-left-profile-sidebar>
         <app-header></app-header>
 
-        <section class="main-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="image-block">
-                            <div class="main-image">
-                                <img src="../assets/profile-images/top-header1.jpg">
-                            </div>
-                            <div class="user-profile-sections">
-                                <div class="row">
-                                    <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
-                                        <ul class="profile-menu">
-                                            <li>
-                                                <a href="#" class="active">Timeline</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">About</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Friends</a>
-                                            </li>
-                                        </ul>
+        <section class="main-container-wrapper">
+            <div class="main-container">  
+                <div class="image-block">
+                    <div class="main-image">
+                        <img src="../assets/profile-images/top-header1.jpg">
+                    </div>
+                    <div class="user-profile-sections">                                
+                        <ul class="profile-menu-left">
+                            <li>
+                                <a href="#" class="active">Timeline</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Friends</a>
+                            </li>
+                        </ul>                                   
+                        
+                        <ul class="profile-menu-right">
+                            <li>
+                                <a href="#">Photos</a>
+                            </li>
+                            <li>
+                                <a href="#">Videos</a>
+                            </li>
+                            <li>
+                                <div class="three-dots">
+                                    <div class="dropdown-three-dots">
+                                        <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
+                                        <div class="dropdown-content">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Report Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Block Profile</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="col col-lg-5 ml-auto col-md-5 col-sm-12 col-12">
-                                        <ul class="profile-menu">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="three-rounded-image-buttons">
+                            <div class="smile-button">
+                                <i class="far fa-smile"></i>
+                            </div>
+                            <div class="chat-button">
+                                <i class="far fa-comments"></i>
+                            </div>
+                            <div class="settings-button">
+                                <div class="dropdown-settings-button">
+                                    <div class="dropbtn"><i class="fas fa-sliders-h"></i></div>
+                                    <div class="dropdown-content">
+                                        <ul>
                                             <li>
-                                                <a href="#">Photos</a>
+                                                <a href="#">Update Profile Photo</a>
                                             </li>
                                             <li>
-                                                <a href="#">Videos</a>
+                                                <a href="#">Update Header Photo</a>
                                             </li>
                                             <li>
-                                                <div class="three-dots">
-                                                    <div class="dropdown-three-dots">
-                                                        <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
-                                                        <div class="dropdown-content">
-                                                            <ul>
-                                                                <li>
-                                                                    <a href="#">Report Profile</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Block Profile</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <a href="#">Account Settings</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="three-rounded-image-buttons">
-                                    <div class="smile-button">
-                                        <i class="far fa-smile"></i>
+                            </div>
+                        </div>                       
+                        <div class="author-main-content">
+                            <div class="author-main-image">
+                                <img src="../assets/profile-images/author-main1.jpg">
+                            </div>
+                            <div class="autor-data">
+                                <div class="author-name">James Spiegel</div>
+                                <div class="country">San Francisco, CA</div>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+                  
+                <div class="main-content">
+                    <div class="left-side-block">                   
+                        <div class="left-side-first-block">
+                            <div class="left-side-first-block-title">
+                                <h6 class="title-badges">James's Badges</h6>
+                            </div>
+                            <div class="badges-block-content">
+                                <ul class="badges">
+                                    <li>
+                                        <img src="../assets/profile-images/badge1.png">
+                                        <div class="orange-badge">2</div>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge4.png">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge3.png">
+                                        <div class="blue-badge">4</div>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge6.png">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge11.png">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge8.png">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge10.png">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge13.png">
+                                        <div class="green-badge">2</div>
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge7.png">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/badge12.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="left-side-second-block">
+                            <div class="left-side-second-block-title">
+                                <h6 class="title-playlist">My Spotify Playlist</h6>
+                            </div>                      
+                            <ol class="playlist">
+                                <li class="first-video">
+                                    <span class="one">1</span>                             
+                                    <div class="play-icon" data-toggle="modal" data-target="#videoModalFirst">
+                                        <img src="../assets/profile-images/ws-blue-orchid.jpg">
+                                        <i class="fas fa-play"></i>
+                                    </div>                               
+                                    <div class="composition">
+                                        <span class="composition-name">Blue Orchid</span>
+                                        <span class="composition-author">The White Stripes</span>
                                     </div>
-                                    <div class="chat-button">
-                                        <i class="far fa-comments"></i>
+                                    <span class="composition-time">3:22</span>
+                                </li>
+                                <li class="second-video">
+                                    <span class="two">2</span>                                
+                                    <div class="play-icon" data-toggle="modal" data-target="#videoModalSecond">
+                                        <img src="../assets/profile-images/ws-seven-nation-army.jpg">
+                                        <i class="fas fa-play"></i>
+                                    </div>                               
+                                    <div class="composition">
+                                        <span class="composition-name">Seven Nation Army</span>
+                                        <span class="composition-author">The White Stripes</span>
                                     </div>
-                                    <div class="settings-button">
-                                        <div class="dropdown-settings-button">
-                                            <div class="dropbtn"><i class="fas fa-sliders-h"></i></div>
-                                            <div class="dropdown-content">
-                                                <ul>
-                                                    <li>
-                                                        <a href="#">Update Profile Photo</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Update Header Photo</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Account Settings</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                    <span class="composition-time">5:48</span>
+                                </li>
+                                <li class="third-video">
+                                    <span class="three">3</span>                                  
+                                    <div class="play-icon" data-toggle="modal" data-target="#videoModalThird">
+                                        <img src="../assets/profile-images/rhcp-snow.jpg">
+                                        <i class="fas fa-play"></i>
+                                    </div>                                
+                                    <div class="composition">
+                                        <span class="composition-name">Snow</span>
+                                        <span class="composition-author">Red Hot Chili Peppers</span>
+                                    </div>
+                                    <span class="composition-time">3:06</span>
+                                </li>
+                                <li class="fourth-video">
+                                    <span class="four">4</span>                                   
+                                    <div class="play-icon" data-toggle="modal" data-target="#videoModalFourth">
+                                        <img src="../assets/profile-images/sg-mrs-robinson.jpg">
+                                        <i class="fas fa-play"></i>
+                                    </div>                               
+                                    <div class="composition">
+                                        <span class="composition-name">Mrs. Robinson</span>
+                                        <span class="composition-author">Simon & Garfunkel</span>
+                                    </div>
+                                    <span class="composition-time">6:17</span>
+                                </li>
+                                <li class="fifth-video">
+                                    <span class="five">5</span>                                
+                                    <div class="play-icon" data-toggle="modal" data-target="#videoModalFifth">
+                                            <img src="../assets/profile-images/bb-everybody.jpg">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="composition">
+                                        <span class="composition-name">Everybody Needs <br> Somebody</span>
+                                        <span class="composition-author">The Blues Brothers</span>
+                                    </div>
+                                    <span class="composition-time">5:40</span>
+                                </li>
+                            </ol>                       
+                        </div>
+                    </div>
+                    <div class="center-block">
+                        <div class="center-first-block">
+                            <div class="author-container">                           
+                                <div class="author-data-block">
+                                    <img src="../assets/profile-images/author-page.jpg" alt="author">
+                                    <div class="author-data-wrapper">
+                                        <span class="author-name-title">James Spiegel</span>
+                                        <span class="time">19 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="block-three-dots">
+                                    <div class="dropdown-block-three-dots">
+                                        <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
+                                        <div class="dropdown-content">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Edit Post</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Delete Post</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Turn Off Notifications</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Select As Featured</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="author-main-content">
-                                <div class="author-main-image">
-                                    <img src="../assets/profile-images/author-main1.jpg">
+                            <p>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque.
+                            </p>
+                            <div class="post-info">
+                                <div class="post-heart">
+                                    <i class="far fa-heart"></i>
+                                    <span class="post-heart-number">8</span>
                                 </div>
-                                <div class="autor-data">
-                                    <div class="author-name">James Spiegel</div>
-                                    <div class="country">San Francisco, CA</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="main-content">
-                    <aside class="left-side-first-block">
-                        <div class="left-side-first-block-title">
-                            <h6 class="title-badges">James's Badges</h6>
-                        </div>
-                        <div class="badges-block-content">
-                            <ul class="badges">
-                                <li>
-                                    <img src="../assets/profile-images/badge1.png">
-                                    <div class="orange-badge">2</div>
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge4.png">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge3.png">
-                                    <div class="blue-badge">4</div>
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge6.png">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge11.png">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge8.png">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge10.png">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge13.png">
-                                    <div class="green-badge">2</div>
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge7.png">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/badge12.png">
-                                </li>
-                            </ul>
-                        </div>
-                    </aside>
-
-                    <article class="center-first-block">
-                        <div class="author-container">                           
-                            <div class="author-data-block">
-                                <img src="../assets/profile-images/author-page.jpg" alt="author">
-                                <div class="author-data-wrapper">
-                                    <span class="author-name-title">James Spiegel</span>
-                                    <span class="time">19 hours ago</span>
-                                </div>
-                            </div>
-                            <div class="block-three-dots">
-                                <div class="dropdown-block-three-dots">
-                                    <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
-                                    <div class="dropdown-content">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Edit Post</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Delete Post</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Turn Off Notifications</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Select As Featured</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque.
-                        </p>
-                        <div class="post-info">
-                            <div class="post-heart">
-                                <i class="far fa-heart"></i>
-                                <span class="post-heart-number">8</span>
-                            </div>
-                            <ul class="friends-images">
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic10.jpg" alt="friend">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic11.jpg" alt="friend">
-                                </li>
-                            </ul>
-                            <div class="people-names">
-                                <span class="name-one">Jenny,</span>
-                                <span class="name-two">Robert</span>
-                                <span class="more-likes">and <br> 6 more liked this</span>
-                            </div>
-                            <div class="people-comments">
-                                <div class="people-message-icon">
-                                    <i class="far fa-comment-alt"></i>
-                                    <span class="comment-number">17</span>
-                                </div>
-                                <div class="share-icon">
-                                    <i class="fas fa-share"></i>
-                                    <span class="share-number">24</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="center-first-block-side-icons">
-                            <div class="trophy-side-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="heart-side-icon">
-                                <i class="far fa-heart"></i>
-                            </div>
-                            <div class="comments-side-icon">
-                                <i class="far fa-comment-alt"></i>
-                            </div>
-                            <div class="share-side-icon">
-                                <i class="fas fa-share"></i>
-                            </div>
-                        </div>
-                    </article>
-
-                    <aside class="right-side-first-block">
-                        <div class="right-side-first-block-title">
-                            <h6 class="title-photos">Last Photos</h6>
-                        </div>
-                        <div class="photos-content">
-                            <ul class="photos">
-                                <li>
-                                    <img src="../assets/profile-images/last-photo10-large.jpg">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/last-photo11-large.jpg">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/last-photo12-large.jpg">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/last-photo13-large.jpg">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/last-photo14-large.jpg">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/last-photo15-large.jpg">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/last-photo16-large.jpg">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/last-photo17-large.jpg">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/last-photo18-large.jpg">
-                                </li>
-                            </ul>
-                        </div>
-                    </aside>
-
-                    <aside class="left-side-second-block">
-                        <div class="left-side-second-block-title">
-                            <h6 class="title-playlist">My Spotify Playlist</h6>
-                        </div>                      
-                        <ol class="playlist">
-                            <li class="first-video">
-                                <span class="one">1</span>                             
-                                <div class="play-icon" data-toggle="modal" data-target="#videoModalFirst">
-                                    <img src="../assets/profile-images/ws-blue-orchid.jpg">
-                                    <i class="fas fa-play"></i>
-                                </div>                               
-                                <div class="composition">
-                                    <span class="composition-name">Blue Orchid</span>
-                                    <span class="composition-author">The White Stripes</span>
-                                </div>
-                                <span class="composition-time">3:22</span>
-                            </li>
-                            <li class="second-video">
-                                <span class="two">2</span>                                
-                                <div class="play-icon" data-toggle="modal" data-target="#videoModalSecond">
-                                    <img src="../assets/profile-images/ws-seven-nation-army.jpg">
-                                    <i class="fas fa-play"></i>
-                                </div>                               
-                                <div class="composition">
-                                    <span class="composition-name">The Pretender</span>
-                                    <span class="composition-author">Kung Fighters</span>
-                                </div>
-                                <span class="composition-time">5:48</span>
-                            </li>
-                            <li class="third-video">
-                                <span class="three">3</span>                                  
-                                <div class="play-icon" data-toggle="modal" data-target="#videoModalThird">
-                                    <img src="../assets/profile-images/rhcp-snow.jpg">
-                                    <i class="fas fa-play"></i>
-                                </div>                                
-                                <div class="composition">
-                                    <span class="composition-name">Blood Brothers</span>
-                                    <span class="composition-author">Iron Maid</span>
-                                </div>
-                                <span class="composition-time">3:06</span>
-                            </li>
-                            <li class="fourth-video">
-                                <span class="four">4</span>                                   
-                                <div class="play-icon" data-toggle="modal" data-target="#videoModalFourth">
-                                    <img src="../assets/profile-images/sg-mrs-robinson.jpg">
-                                    <i class="fas fa-play"></i>
-                                </div>                               
-                                <div class="composition">
-                                    <span class="composition-name">Seven Nation Army</span>
-                                    <span class="composition-author">The Black Stripes</span>
-                                </div>
-                                <span class="composition-time">6:17</span>
-                            </li>
-                            <li class="fifth-video">
-                                <span class="five">5</span>                                
-                                <div class="play-icon" data-toggle="modal" data-target="#videoModalFifth">
-                                        <img src="../assets/profile-images/bb-everybody.jpg">
-                                    <i class="fas fa-play"></i>
-                                </div>
-                                <div class="composition">
-                                    <span class="composition-name">Killer Queen</span>
-                                    <span class="composition-author">Archiduke</span>
-                                </div>
-                                <span class="composition-time">5:40</span>
-                            </li>
-                        </ol>                       
-                    </aside>
-
-                    <article class="center-second-block">
-                        <div class="author-container">                           
-                            <div class="author-data-block">
-                                <img src="../assets/profile-images/author-page.jpg" alt="author">
-                                <div class="author-data-wrapper">
-                                    <div class="author-data">
-                                        <span class="author-name-title">James Spiegel</span>
-                                        <span class="shared-photo">shared</span>
-                                        <a href="#">Diana Jameson</a>
-                                        <span class="apostrophe">'s</span> 
-                                        <a href="#">photo</a>
-                                    </div>
-                                    <span class="time">7 hours ago</span>
-                                </div>
-                            </div>
-                            <div class="block-three-dots">
-                                <div class="dropdown-block-three-dots">
-                                    <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
-                                    <div class="dropdown-content">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Edit Post</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Delete Post</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Turn Off Notifications</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Select As Featured</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            Hi! Everyone should check out these amazing photographs that my friend shot the past week.
-                            Here’s one of them...leave a kind comment!
-                        </p>
-                        <div class="post-photo">
-                            <img src="../assets/profile-images/post-photo6.jpg" alt="photo">
-                        </div>
-                        <div class="author-data-block">
-                            <span class="author-dot"></span>
-                            <img src="../assets/profile-images/avatar8-sm.jpg" alt="author">
-                            <div class="author-data-wrapper">
-                                <span class="author-name-title">Diana Jameson</span>
-                                <span class="time">16 hours ago</span>
-                            </div>
-                        </div>
-                        <p>
-                            Here’s the first photo of our incredible photoshoot from yesterday. 
-                            If you like it please say so and tel me what you wanna see next!
-                        </p>
-                        <div class="post-info">
-                            <div class="post-heart">
-                                <i class="far fa-heart"></i>
-                                <span class="post-heart-number">15</span>
-                            </div>
-                            <ul class="friends-images">
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic10.jpg" alt="friend">
-                                </li>
-                                <li>
-                                    <img src="../assets/profile-images/friend-harmonic11.jpg" alt="friend">
-                                </li>
-                            </ul>
-                            <div class="people-names">
-                                <span class="name-one">Diana,</span>
-                                <span class="name-two">Nicholas</span>
-                                <span class="more-likes">and <br> 13 more liked this</span>
-                            </div>
-                            <div class="people-comments">
-                                <div class="people-message-icon">
-                                    <i class="far fa-comment-alt"></i>
-                                    <span class="comment-number">0</span>
-                                </div>
-                                <div class="share-icon">
-                                    <i class="fas fa-share"></i>
-                                    <span class="share-number">16</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="center-second-block-side-icons">
-                            <div class="heart-side-icon">
-                                <i class="far fa-heart"></i>
-                            </div>
-                            <div class="comments-side-icon">
-                                <i class="far fa-comment-alt"></i>
-                            </div>
-                            <div class="share-side-icon">
-                                <i class="fas fa-share"></i>
-                            </div>
-                        </div>
-                    </article>
-
-                    <aside class="right-side-second-block">
-                        <div class="right-side-second-block-title">
-                            <h6 class="title-name">James's Poll</h6>
-                        </div>
-                        <div class="right-side-second-block-content">
-                            <p>If you had to choose, which actor do you prefer to be the next Darkman?</p>
-                            <div class="vote-content">
-                                <div class="vote-info-first">                                   
-                                    <label class="vote-title">Thomas Bale
-                                        <input type="radio" checked="checked" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>                                 
-                                    <span class="vote-percent">62%</span>
-                                </div>
-                                <div class="completion-line">
-                                    <div class="max-range-line progress-moved">
-                                        <span class="filled-first"></span>
-                                    </div>
-                                </div>
-                                <div class="voted-number">12 friends voted for this</div>
-                                <ul class="friends-voted-images">
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic1.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic2.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic3.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic4.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic5.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic6.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <span class="other-users">+3</span>
-                                    </li>
-                                </ul>
-                                <div class="vote-info-second">                                   
-                                    <label class="vote-title">Ben Robertson
-                                        <input type="radio" checked="checked" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>                                 
-                                    <span class="vote-percent">27%</span>
-                                </div>
-                                <div class="completion-line">
-                                    <div class="max-range-line progress-moved">
-                                        <span class="filled-second"></span>
-                                    </div>
-                                </div>
-                                <div class="voted-number">7 friends voted for this</div>
-                                <ul class="friends-voted-images">
+                                <ul class="friends-images">
                                     <li>
                                         <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
                                     </li>
@@ -522,41 +257,306 @@
                                     <li>
                                         <img src="../assets/profile-images/friend-harmonic11.jpg" alt="friend">
                                     </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic12.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic13.jpg" alt="friend">
-                                    </li>
                                 </ul>
-
-                                <div class="vote-info-third">                                   
-                                    <label class="vote-title">Michael Streiton
-                                        <input type="radio" checked="checked" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>                                 
-                                    <span class="vote-percent">11%</span>
+                                <div class="people-names">
+                                    <span class="name-one">Jenny,</span>
+                                    <span class="name-two">Robert</span>
+                                    <span class="more-likes">and <br> 6 more liked this</span>
                                 </div>
-                                <div class="completion-line">
-                                    <div class="max-range-line progress-moved">
-                                        <span class="filled-third"></span>
+                                <div class="people-comments">
+                                    <div class="people-message-icon">
+                                        <i class="far fa-comment-alt"></i>
+                                        <span class="comment-number">17</span>
+                                    </div>
+                                    <div class="share-icon">
+                                        <i class="fas fa-share"></i>
+                                        <span class="share-number">24</span>
                                     </div>
                                 </div>
-                                <div class="voted-number">2 friends voted for this</div>
-                                <ul class="friends-voted-images">
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic14.jpg" alt="friend">
-                                    </li>
-                                    <li>
-                                        <img src="../assets/profile-images/friend-harmonic15.jpg" alt="friend">
-                                    </li>
-                                </ul>
-                                <button type="button" class="vote-button">Vote Now!</button>
+                            </div>
+                            <div class="center-first-block-side-icons">
+                                <div class="trophy-side-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="heart-side-icon">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <div class="comments-side-icon">
+                                    <i class="far fa-comment-alt"></i>
+                                </div>
+                                <div class="share-side-icon">
+                                    <i class="fas fa-share"></i>
+                                </div>
                             </div>
                         </div>
-                    </aside>
-                </div>
-            </div>
+                        <div class="center-second-block">
+                            <div class="author-container">                           
+                                <div class="author-data-block">
+                                    <img src="../assets/profile-images/author-page.jpg" alt="author">
+                                    <div class="author-data-wrapper">
+                                        <div class="author-data">
+                                            <span class="author-name-title">James Spiegel</span>
+                                            <span class="shared-photo">shared</span>
+                                            <a href="#">Diana Jameson</a>
+                                            <span class="apostrophe">'s</span> 
+                                            <a href="#">photo</a>
+                                        </div>
+                                        <span class="time">7 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="block-three-dots">
+                                    <div class="dropdown-block-three-dots">
+                                        <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
+                                        <div class="dropdown-content">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Edit Post</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Delete Post</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Turn Off Notifications</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Select As Featured</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Hi! Everyone should check out these amazing photographs that my friend shot the past week.
+                                Here’s one of them...leave a kind comment!
+                            </p>
+                            <div class="post-photo">
+                                <img src="../assets/profile-images/post-photo6.jpg" alt="photo">
+                            </div>
+                            <div class="author-data-block">
+                                <span class="author-dot"></span>
+                                <img src="../assets/profile-images/avatar8-sm.jpg" alt="author">
+                                <div class="author-data-wrapper">
+                                    <span class="author-name-title">Diana Jameson</span>
+                                    <span class="time">16 hours ago</span>
+                                </div>
+                            </div>
+                            <p>
+                                Here’s the first photo of our incredible photoshoot from yesterday. 
+                                If you like it please say so and tel me what you wanna see next!
+                            </p>
+                            <div class="post-info">
+                                <div class="post-heart">
+                                    <i class="far fa-heart"></i>
+                                    <span class="post-heart-number">15</span>
+                                </div>
+                                <ul class="friends-images">
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic10.jpg" alt="friend">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/friend-harmonic11.jpg" alt="friend">
+                                    </li>
+                                </ul>
+                                <div class="people-names">
+                                    <span class="name-one">Diana,</span>
+                                    <span class="name-two">Nicholas</span>
+                                    <span class="more-likes">and <br> 13 more liked this</span>
+                                </div>
+                                <div class="people-comments">
+                                    <div class="people-message-icon">
+                                        <i class="far fa-comment-alt"></i>
+                                        <span class="comment-number">0</span>
+                                    </div>
+                                    <div class="share-icon">
+                                        <i class="fas fa-share"></i>
+                                        <span class="share-number">16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center-second-block-side-icons">
+                                <div class="heart-side-icon">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <div class="comments-side-icon">
+                                    <i class="far fa-comment-alt"></i>
+                                </div>
+                                <div class="share-side-icon">
+                                    <i class="fas fa-share"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-content-blocks">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+
+                    <div class="right-block">    
+                        <div class="right-side-first-block">
+                            <div class="right-side-first-block-title">
+                                <h6 class="title-photos">Last Photos</h6>
+                            </div>
+                            <div class="photos-content">
+                                <ul class="photos">
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo10-large.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo11-large.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo12-large.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo13-large.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo14-large.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo15-large.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo16-large.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo17-large.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="../assets/profile-images/last-photo18-large.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-side-second-block">
+                            <div class="right-side-second-block-title">
+                                <h6 class="title-name">James's Poll</h6>
+                            </div>
+                            <div class="right-side-second-block-content">
+                                <p>If you had to choose, which actor do you prefer to be the next Darkman?</p>
+                                <div class="vote-content">
+                                    <div class="vote-info-first">                                   
+                                        <label class="vote-title">Thomas Bale
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>                                 
+                                        <span class="vote-percent">62%</span>
+                                    </div>
+                                    <div class="completion-line">
+                                        <div class="max-range-line progress-moved">
+                                            <span class="filled-first"></span>
+                                        </div>
+                                    </div>
+                                    <div class="voted-number">12 friends voted for this</div>
+                                    <ul class="friends-voted-images">
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic1.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic2.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic3.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic4.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic5.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic6.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <span class="other-users">+3</span>
+                                        </li>
+                                    </ul>
+                                    <div class="vote-info-second">                                   
+                                        <label class="vote-title">Ben Robertson
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>                                 
+                                        <span class="vote-percent">27%</span>
+                                    </div>
+                                    <div class="completion-line">
+                                        <div class="max-range-line progress-moved">
+                                            <span class="filled-second"></span>
+                                        </div>
+                                    </div>
+                                    <div class="voted-number">7 friends voted for this</div>
+                                    <ul class="friends-voted-images">
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic7.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic8.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic9.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic10.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic11.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic12.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic13.jpg" alt="friend">
+                                        </li>
+                                    </ul>
+
+                                    <div class="vote-info-third">                                   
+                                        <label class="vote-title">Michael Streiton
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>                                 
+                                        <span class="vote-percent">11%</span>
+                                    </div>
+                                    <div class="completion-line">
+                                        <div class="max-range-line progress-moved">
+                                            <span class="filled-third"></span>
+                                        </div>
+                                    </div>
+                                    <div class="voted-number">2 friends voted for this</div>
+                                    <ul class="friends-voted-images">
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic14.jpg" alt="friend">
+                                        </li>
+                                        <li>
+                                            <img src="../assets/profile-images/friend-harmonic15.jpg" alt="friend">
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="vote-button">Vote Now!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back-to-top">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                </div><!-- main-content -->
+            </div><!-- main-container -->
             <!-- Modals -->
             <div class="modal fade" id="videoModalFirst">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -583,7 +583,7 @@
                         </div>               
                     </div>
                 </div>
-            </div>
+            </div> 
             <div class="modal fade" id="videoModalThird">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -617,13 +617,13 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <iframe width="100%" height="380" src="https://www.youtube.com/embed/EHV0zs0kVGg">
+                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/EHV0zs0kVGg">
                             </iframe>
                         </div>               
                     </div>
                 </div>
             </div>
-        </section>
+        </section><!-- main-container-wrapper -->
         
         <app-right-profile-sidebar></app-right-profile-sidebar>
     </div>
@@ -661,11 +661,18 @@ a:link {
     text-decoration: none;
 }
 
-.main-container {
+.main-container-wrapper {
     width: 100%;
     height: calc(100% - 70px);
     background-color: #edf2f6;
     position: absolute;
+}
+
+.main-container {
+    width: 86%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .image-block {
@@ -691,31 +698,41 @@ a:link {
     padding: 38px 0;
     border: 1px solid #e6ecf5;;
     background-color: #fff;
+    display: flex;
+    justify-content: space-between;
 }
 
-.profile-menu {
+.profile-menu-left,
+.profile-menu-right {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.profile-menu li a {
+.user-profile-sections ul li {
+    padding: 0 35px;
+}
+
+.profile-menu-left li a,
+.profile-menu-right li a {
     font-size: 14px;
     font-weight: 700;
     color: #9a9fbf;
 }
 
-.profile-menu li a:hover {
+.profile-menu-left li a:hover,
+.profile-menu-right li a:hover {
     color: #515365;
 }
 
-.profile-menu li a.active {
+.profile-menu-left li a.active {
     color: #515365;
 }
 
 .dropdown-three-dots {
     position: relative;
     display: inline-block;
+    margin-right: 35px;
 }
 
 .dropdown-content {
@@ -768,7 +785,7 @@ a:link {
     position: absolute;
     display: flex;
     justify-content: space-around;
-    right: 38px;
+    right: 20px;
     top: -31px;
 }
 
@@ -847,10 +864,7 @@ a:link {
 
 .author-main-content {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    left: 45%;
+    left: 42%;
     bottom: 10px;
     align-items: center;
     text-align: center;
@@ -926,7 +940,9 @@ a:link {
     margin: 0 0 20px 8px;
 }
    
-.orange-badge {
+.orange-badge,
+.blue-badge,
+.green-badge {
     position: absolute;
     width: 15px;
     height: 15px;
@@ -944,46 +960,25 @@ a:link {
 }
 
 .blue-badge {
-    position: absolute;
-    width: 15px;
-    height: 15px;
     background-color: #38a9ff;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    top: -2px;
-    right: 52px;
+    left: 124px;
 }
 
 .green-badge {
-    position: absolute;
-    width: 15px;
-    height: 15px;
     background-color: #08ddc1;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    justify-content: center;
     top: 57px;
-    right: 52px;
+    left: 124px;
 }
 
 .center-first-block {
+    position: relative;
     border-radius: 5px;
     /*border: 1px solid #e6ecf5;*/
     background: #fff;
     padding: 25px;
     border: 1px solid gray;
     height: fit-content;
+    margin-bottom: 15px;
 }
 
 .author-container {
@@ -1185,6 +1180,7 @@ p {
     /*border: 1px solid #e6ecf5;*/
     background: #fff;
     border: 1px solid gray;
+    margin-bottom: 15px;
 }
 
 .right-side-first-block-title {
@@ -1205,18 +1201,18 @@ p {
 .photos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 .photos li {
-    padding: 0 4px 4px 0;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    width: 33.33%;
 }
 
 .photos img {
-    width: 68px;
-    height: 68px;
+    width: 100%;
+    height: auto;
     border-radius: 4px;
 }
 
@@ -1227,7 +1223,6 @@ p {
     margin-bottom: 15px;
     border: 1px solid gray;
     height: fit-content;
-    margin-top: -100px;
 }
 
 .left-side-second-block-title {
@@ -1244,12 +1239,12 @@ p {
 .playlist {
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
+    padding-left: 5px;
     padding-top: 20px;
 }
 
 .playlist li {
-    padding: 13px 10px;
+    padding: 13px 5px;
 }
 
 .first-video,
@@ -1279,7 +1274,7 @@ p {
 .three,
 .four,
 .five {
-    margin-right: 10px;
+    margin-right: 8px;
     font-size: 10px;
     color: #888da8;
     align-items: center;
@@ -1309,7 +1304,7 @@ p {
 .composition {
     display: flex;
     flex-direction: column;
-    margin-left: 12px;
+    margin-left: 8px;
     margin-right: auto;
 }
 
@@ -1332,7 +1327,7 @@ p {
 
 .composition-time {
     font-size: 11px;
-    margin-right: 13px;
+    margin-right: 5px;
     color: #888da8;
 }
 
@@ -1340,8 +1335,8 @@ p {
     position: absolute;
     display: flex;
     flex-direction: column;
-    right: 511px;
-    top: 596px;
+    right: -17px;
+    top: 20px;
 }
 
 .trophy-side-icon,
@@ -1377,13 +1372,13 @@ p {
 }
 
 .center-second-block {
+    position: relative;
     border-radius: 5px;
     /*border: 1px solid #e6ecf5;*/
     background: #fff;
     padding: 25px;
     border: 1px solid gray;
     height: fit-content;
-    margin-top: -15px;
 }
 
 .post-photo {
@@ -1393,12 +1388,17 @@ p {
     margin-bottom: 25px;
 }
 
+.post-photo img {
+    display: block;
+    width: 100%;
+}
+
 .center-second-block-side-icons {
     position: absolute;
     display: flex;
     flex-direction: column;
-    right: 511px;
-    top: 910px;
+    right: -17px;
+    top: 20px;
 }
 
 .author-dot {
@@ -1434,7 +1434,6 @@ p {
     /*border: 1px solid #e6ecf5;*/
     background: #fff;
     border: 1px solid gray;
-    margin-top: 20px;
     height: fit-content;
 }
 
@@ -1563,19 +1562,19 @@ p {
 .progress-moved .filled-first {
     width: 62%; 
     background-color: #ff5e3a;   
-    animation: progressAnimationFirst 6s;
+    animation: progressAnimationFirst 3s;
 }
 
 .progress-moved .filled-second {
     width: 27%; 
     background-color: #ff5e3a;   
-    animation: progressAnimationSecond 6s;
+    animation: progressAnimationSecond 3s;
 }
 
 .progress-moved .filled-third {
     width: 11%; 
     background-color: #ff5e3a;   
-    animation: progressAnimationThird 6s;
+    animation: progressAnimationThird 3s;
 }
 
 @keyframes progressAnimationFirst {
@@ -1656,10 +1655,236 @@ button[type=button] {
     padding: 0 5px 5px 5px;
 }
 
+.more-content-blocks {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccd1e0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.more-content-blocks:hover {
+    color: #ff5e3a;
+}
+
+.back-to-top {
+    width: 50px;
+    height: 50px;
+    background-color: #ff5e3a;
+    border-radius: 50%;
+    position: fixed;
+    box-shadow: 0 0 10px 0 rgba(63, 66, 87, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 22px;
+    bottom: 10px;
+    right: 85px;
+    cursor: pointer;
+    z-index: 20;
+    transition: all .3s ease;
+}
+
+
 /*media query*/
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1250px;
+@media (max-width: 1399px) {
+    .green-badge {
+        left: 172px;
+    }
+
+    .main-container {
+        width: 80%;
+    }
+
+    .play-icon img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 1216px) {
+    .green-badge {
+        left: 80px;
+        top: 116px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .user-profile-sections ul li {
+        padding: 0 20px;
+    }
+
+    .three-dots {
+        margin-right: -25px;
+    }
+
+    .main-content {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-column-gap: 4%;
+        grid-row-gap: 15px;
+        width: 100%;
+    }
+
+    .left-block {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .center-block {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    
+    .right-block {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .main-container {
+        width: 75%;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .more-content-blocks {
+        margin: 40px auto 25px auto;
+    }
+
+    .green-badge {
+        left: 355px;
+        top: 0;
+    }
+}
+
+@media (max-width: 1105px)  {
+    .green-badge {
+        left: 32px;
+        top: 58px;
+    }
+}
+
+@media (max-width: 992px) {
+    .user-profile-sections ul li {
+        padding: 0 14px;
+    }
+
+    .author-name {
+        font-size: 18px;
+    }
+
+    .three-rounded-image-buttons {
+        right: 0px;
+    }
+
+    .smile-button,
+    .chat-button,
+    .settings-button {
+        margin-right: 18px;
+    }
+
+    .people-message-icon,
+    .share-icon {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 977px) {
+    .green-badge {
+        left: 77px;
+        top: 58px;
+    }
+}
+
+@media (max-width: 849px) {
+    .green-badge {
+        left: 125px;
+        top: 58px;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        width: 72%;
+    }
+
+    .three-rounded-image-buttons {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: -115px;
+    }
+
+    .user-profile-sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 225px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 80%;
+    }
+
+    .center-first-block-side-icons {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        right: 33px;
+        top: -19px;
+    }
+
+    .trophy-side-icon,
+    .heart-side-icon,
+    .comments-side-icon,
+    .share-side-icon {
+        margin-right: 8px;
+    }
+
+    .center-second-block-side-icons {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        right: 35px;
+        top: -16px;
+    }
+}
+
+@media (max-width: 580px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .author-main-content {
+        left: 35%;
+    }
+
+    .post-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .people-comments {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .author-main-content {
+        left: 26%;
     }
 }
 </style>
