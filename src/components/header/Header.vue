@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <header>
         <nav class="navbar fixed-top navbar-expand navbar-dark" ml-auto>
             <div class="title">
                 <h6>Profile Page</h6>
@@ -11,7 +11,6 @@
             <span class="text-find-friends">Find Friends</span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-
                     <li class="nav-item">                    
                         <div class="dropdown-smile">
                             <div class="dropbtn">
@@ -35,7 +34,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar55-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar55-sm.jpg" alt="avatar-55">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-name">Tamara Romanoff</span>
@@ -52,7 +51,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar56-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar56-sm.jpg" alt="avatar-56">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-name">Tony Stevens</span>
@@ -69,7 +68,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar57-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar57-sm.jpg" alt="avatar-57">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <div class="dropdown-author-text">You and
@@ -88,7 +87,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar58-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar58-sm.jpg" alt="avatar-58">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-name">Stagg Clothing</span>
@@ -132,7 +131,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar59-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar59-sm.jpg" alt="avatar-59">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-name">Diana Jameson</span>
@@ -152,7 +151,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar60-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar60-sm.jpg" alt="avatar-60">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-name">Jake Parker</span>
@@ -169,7 +168,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar61-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar61-sm.jpg" alt="avatar-61">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-name">Elaine Dreyfuss</span>
@@ -188,10 +187,10 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-users-img">
-                                                    <img src="../../assets/profile-images/avatar10-sm.jpg">
-                                                    <img src="../../assets/profile-images/avatar11-sm.jpg">
-                                                    <img src="../../assets/profile-images/avatar12-sm.jpg">
-                                                    <img src="../../assets/profile-images/avatar13-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar10-sm.jpg" alt="avatar-10">
+                                                    <img src="../../assets/profile-images/avatar11-sm.jpg" alt="avatar-11">
+                                                    <img src="../../assets/profile-images/avatar12-sm.jpg" alt="avatar-12">
+                                                    <img src="../../assets/profile-images/avatar13-sm.jpg" alt="avatar-13">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-name">You, Faye, Ed & Jet +3</span>
@@ -237,7 +236,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar62-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar62-sm.jpg" alt="avatar-62">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <div class="dropdown-author-name">Mathilda Brinker
@@ -257,7 +256,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar63-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar63-sm.jpg" alt="avatar-63">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-text">You and
@@ -277,7 +276,7 @@
                                         <div class="dropdown-author-content-two-img">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar64-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar64-sm.jpg" alt="avatar-64">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <span class="dropdown-author-name">Sarah Hetfield
@@ -292,7 +291,7 @@
                                             </div>
                                         </div>
                                         <div class="comment-photo">
-                                            <img src="../../assets/profile-images/comment-photo1.jpg">
+                                            <img src="../../assets/profile-images/comment-photo1.jpg" alt="photo-1">
                                             <span class="dropdown-author-text">"She looks incredible in that <br> outfit! We should see each..."</span>
                                         </div>
                                     </li>
@@ -300,7 +299,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar65-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar65-sm.jpg" alt="avatar-65">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <div class="dropdown-author-name">Green Goo Rock
@@ -320,7 +319,7 @@
                                         <div class="dropdown-author-content">
                                             <div class="dropdown-author-data-wrapper">
                                                 <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar66-sm.jpg">
+                                                    <img src="../../assets/profile-images/avatar66-sm.jpg" alt="avatar-66">
                                                 </div>
                                                 <div class="dropdown-author-data">
                                                     <div class="dropdown-author-name">James Summers
@@ -348,7 +347,7 @@
                         <div class="dropdown-author">
                             <div class="dropbtn">
                                 <div class="author-data-wrapper">
-                                    <img src="../../assets/profile-images/author-page.jpg">
+                                    <img src="../../assets/profile-images/author-page.jpg" alt="author">
                                     <div class="author-data">
                                         <span class="author-title">James Spiegel</span>
                                         <span class="author-subtitle">SPACE COWBOY</span>
@@ -432,7 +431,7 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    </header>
 </template>
 
 <script>
@@ -519,10 +518,15 @@ a:link {
     padding-left: 20px;
     font-size: 12px;
     font-weight: 600;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .text-find-friends:hover {
     color: #ff5e3a;
+    cursor: pointer;
 }
 
 .navbar-nav {
@@ -673,18 +677,20 @@ a:link {
 }
 
 .dropdown-smile .dropdown-content {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
     width: 380px;
     border-radius: 5px;
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    z-index: 20;
     right: -150px;
     top: 50px;
+    transition: opacity 0.4s linear;
 }
 
-.dropdown-smile  .dropdown-content::after {
+.dropdown-smile .dropdown-content::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -696,7 +702,9 @@ a:link {
 }
 
 .dropdown-smile:hover .dropdown-content {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 20;
 }
 
 .dropdown-header {
@@ -825,15 +833,17 @@ a:link {
 }
 
 .dropdown-comments .dropdown-content {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
     width: 380px;
     border-radius: 5px;
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    z-index: 20;
     right: -153px;
     top: 50px;
+    transition: opacity 0.4s linear;
 }
 
 .dropdown-comments .dropdown-content::after {
@@ -848,7 +858,9 @@ a:link {
 }
 
 .dropdown-comments:hover .dropdown-content {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 20;
 }
 
 .dropdown-users-img {
@@ -898,15 +910,17 @@ a:link {
 }
 
 .dropdown-thunder .dropdown-content {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
     width: 380px;
     border-radius: 5px;
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    z-index: 20;
     right: -155px;
     top: 50px;
+    transition: opacity 0.4s linear;
 }
 
 .dropdown-thunder .dropdown-content::after {
@@ -921,7 +935,9 @@ a:link {
 }
 
 .dropdown-thunder:hover .dropdown-content {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 20;
 }
 
 .orange-text {
@@ -970,14 +986,19 @@ a:link {
 }
 
 .dropdown-author .dropdown-content {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
     width: 230px;
     border-radius: 5px;
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    z-index: 20;
     right: -25px;
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
 }
 
 .dropdown-author .dropdown-content::after {
@@ -992,7 +1013,9 @@ a:link {
 }
 
 .dropdown-author:hover .dropdown-content {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 20;
 }
 
 .dropdown-title {
@@ -1189,16 +1212,6 @@ button[type=button] {
     .search-form {
         margin-right: 20px;
         width: 200px;
-    }
-}
-
-@media only screen and (max-width: 769px) {
-    .text-find-friends {
-        padding-left: 10px;
-    }
-
-    .search-form {
-        margin-right: 50px;
     }
 }
 

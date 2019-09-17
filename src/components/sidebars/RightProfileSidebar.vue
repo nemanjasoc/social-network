@@ -4,50 +4,50 @@
             <i class="far fa-comments" v-if="!rightSidebarToggle"></i>
             <i class="fas fa-times" v-if="rightSidebarToggle"></i>
         </div>
-        <div class="right-sidebar" v-bind:class="{ inactive: rightSidebarToggle }">
+        <aside class="right-sidebar" v-bind:class="{ inactive: rightSidebarToggle }">
             <ul class="right-sidebar-users">
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar67-sm.jpg">
+                    <img src="../../assets/profile-images/avatar67-sm.jpg" alt="avatar-67">
                     <span class="user-status-online"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar62-sm.jpg">
+                    <img src="../../assets/profile-images/avatar62-sm.jpg" alt="avatar-62">
                     <span class="user-status-online"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar68-sm.jpg">
+                    <img src="../../assets/profile-images/avatar68-sm.jpg" alt="avatar-68">
                     <span class="user-status-online"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar69-sm.jpg">
+                    <img src="../../assets/profile-images/avatar69-sm.jpg" alt="avatar-69">
                     <span class="user-status-away"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar70-sm.jpg">
+                    <img src="../../assets/profile-images/avatar70-sm.jpg" alt="avatar-70">
                     <span class="user-status-disconected"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar64-sm.jpg">
+                    <img src="../../assets/profile-images/avatar64-sm.jpg" alt="avatar-64">
                     <span class="user-status-online"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar71-sm.jpg">
+                    <img src="../../assets/profile-images/avatar71-sm.jpg" alt="avatar-71">
                     <span class="user-status-online"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar72-sm.jpg">
+                    <img src="../../assets/profile-images/avatar72-sm.jpg" alt="avatar-72">
                     <span class="user-status-away"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar63-sm.jpg">
+                    <img src="../../assets/profile-images/avatar63-sm.jpg" alt="avatar-63">
                     <span class="user-status-invisible"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar72-sm.jpg">
+                    <img src="../../assets/profile-images/avatar72-sm.jpg" alt="avatar-72">
                     <span class="user-status-away"></span>                
                 </li>
                 <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar71-sm.jpg">
+                    <img src="../../assets/profile-images/avatar71-sm.jpg" alt="avatar-71">
                     <span class="user-status-online"></span>                
                 </li>                           
             </ul>
@@ -59,9 +59,9 @@
                     <i class="far fa-comments"></i>
                 </div>
             </div>   
-        </div>
+        </aside>
 
-        <div class="right-sidebar-wider" v-bind:class="{ inactive: !rightSidebarToggle }">
+        <aside class="right-sidebar-wider" v-bind:class="{ inactive: !rightSidebarToggle }">
             <ul class="right-sidebar-wider-users">
                 <div class="settings">
                     <span class="left-title">CLOSE FRIENDS</span>
@@ -69,7 +69,7 @@
                 </div>
                 <li class="chat-user-wider">
                     <div class="user-thumb">              
-                        <img src="../../assets/profile-images/avatar67-sm.jpg">
+                        <img src="../../assets/profile-images/avatar67-sm.jpg" alt="avatar-67">
                         <span class="user-status-online-wider"></span>
                     </div> 
                     <div class="user-status">
@@ -99,7 +99,7 @@
                 </li>
                 <li class="chat-user-wider">
                     <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar62-sm.jpg">
+                        <img src="../../assets/profile-images/avatar62-sm.jpg" alt="avatar-62">
                         <span class="user-status-online-wider"></span>
                     </div>
                     <div class="user-status">
@@ -129,7 +129,7 @@
                 </li>
                 <li class="chat-user-wider">
                     <div class="user-thumb">              
-                        <img src="../../assets/profile-images/avatar68-sm.jpg">
+                        <img src="../../assets/profile-images/avatar68-sm.jpg" alt="avatar-68">
                         <span class="user-status-online-wider"></span>
                     </div>
                     <div class="user-status">
@@ -159,7 +159,7 @@
                 </li>
                 <li class="chat-user-wider">
                     <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar69-sm.jpg">
+                        <img src="../../assets/profile-images/avatar69-sm.jpg" alt="avatar-69">
                         <span class="user-status-away-wider"></span>
                     </div>
                     <div class="user-status">
@@ -189,7 +189,7 @@
                 </li>
                 <li class="chat-user-wider">
                     <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar70-sm.jpg">
+                        <img src="../../assets/profile-images/avatar70-sm.jpg" alt="avatar-70">
                         <span class="user-status-disconected-wider"></span>
                     </div>
                     <div class="user-status">
@@ -223,7 +223,7 @@
                 </div>
                 <li class="chat-user-wider">
                     <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar64-sm.jpg">
+                        <img src="../../assets/profile-images/avatar64-sm.jpg" alt="avatar-64">
                         <span class="user-status-online-wider"></span>
                     </div>
                     <div class="user-status">
@@ -257,7 +257,7 @@
                 </div>
                 <li class="chat-user-wider">
                     <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar71-sm.jpg">
+                        <img src="../../assets/profile-images/avatar71-sm.jpg" alt="avatar-71">
                         <span class="user-status-online-wider"></span>
                     </div>
                     <div class="user-status">
@@ -287,7 +287,7 @@
                 </li>
                 <li class="chat-user-wider"> 
                     <div class="user-thumb"> 
-                        <img src="../../assets/profile-images/avatar72-sm.jpg">
+                        <img src="../../assets/profile-images/avatar72-sm.jpg" alt="avatar-72">
                         <span class="user-status-away-wider"></span>  
                     </div>
                     <div class="user-status">
@@ -317,7 +317,7 @@
                 </li>
                 <li class="chat-user-wider">   
                     <div class="user-thumb"> 
-                        <img src="../../assets/profile-images/avatar63-sm.jpg">
+                        <img src="../../assets/profile-images/avatar63-sm.jpg" alt="avatar-63">
                         <span class="user-status-invisible-wider"></span> 
                     </div>
                     <div class="user-status">
@@ -347,7 +347,7 @@
                 </li>
                 <li class="chat-user-wider">     
                     <div class="user-thumb"> 
-                        <img src="../../assets/profile-images/avatar72-sm.jpg">
+                        <img src="../../assets/profile-images/avatar72-sm.jpg" alt="avatar-72">
                         <span class="user-status-away-wider"></span> 
                     </div>
                     <div class="user-status">
@@ -377,7 +377,7 @@
                 </li>
                 <li class="chat-user-wider">    
                     <div class="user-thumb"> 
-                        <img src="../../assets/profile-images/avatar71-sm.jpg">
+                        <img src="../../assets/profile-images/avatar71-sm.jpg" alt="avatar-71">
                         <span class="user-status-online-wider"></span> 
                     </div>
                     <div class="user-status">
@@ -423,8 +423,8 @@
                     </div>
                 </li> 
             </div>
-        </div>
-        <!-- Modal -->
+        </aside>
+        
         <div class="modal fade" id="chatModal" role="dialog">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
@@ -436,7 +436,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="modal-user-thumb"> 
-                            <img src="../../assets/profile-images/avatar62-sm.jpg">
+                            <img src="../../assets/profile-images/avatar62-sm.jpg" alt="avatar-62">
                         </div>
                         <span class="modal-chat-message">Hi James! Please remember to buy the food for tomorrow! 
                             I’m gonna be handling the gifts and Jake’s gonna get the drinks
@@ -456,42 +456,18 @@
                                 <div class="modal-smile-icon">
                                     <i class="far fa-smile"></i>
                                     <ul class="more-smile-icons">
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat1.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat9.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat6.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat21.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat15.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat24.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat11.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat4.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat20.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat8.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat26.png">
-                                        </li>
-                                        <li>
-                                            <img src="../../assets/profile-images/icon-chat27.png">
-                                        </li>
+                                        <li><img src="../../assets/profile-images/icon-chat1.png" alt="icon-chat1"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat9.png" alt="icon-chat9"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat6.png" alt="icon-chat6"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat21.png" alt="icon-chat21"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat15.png" alt="icon-chat15"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat24.png" alt="icon-chat24"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat11.png" alt="icon-chat11"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat4.png" alt="icon-chat4"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat20.png" alt="icon-chat20"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat8.png" alt="icon-chat8"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat26.png" alt="icon-chat26"></li>
+                                        <li><img src="../../assets/profile-images/icon-chat27.png" alt="icon-chat27"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -663,6 +639,10 @@ export default {
     font-size: 12px;
     font-weight: 700;
     padding-left: 10px;
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
 }
 
 .user-name:hover {
@@ -689,21 +669,20 @@ export default {
     display: flex;
     flex-direction: row;
     position: absolute;
-    right: 0;
+    right: 100%;
+    visibility: hidden;
     opacity: 0;
     background-color: #fff;
     width: 0px;
+    -webkit-transition: width .5s ease opacity .3s ease;
+    -moz-transition: width .5s ease opacity .3s ease;
+    -o-transition: width .5s ease opacity .3s ease;
+    transition: width .5s ease opacity .3s ease;
 }
 
 .three-dots:hover .three-chat-icons {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 100%;
+    visibility: visible;
     opacity: 1;
-    background-color: #fff;
-    transition: ease all .8s;
-    -webkit-transition: ease all .8s;
     width: 160px;
 }
 
@@ -726,12 +705,16 @@ export default {
     border-radius: 6px;
     padding: 5px 0px;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     bottom: 150%;
     left: 50%;
     margin-left: -60px;
     font-size: 9px;
     opacity: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 .fa-comment-dots .tooltiptext::after,
@@ -752,7 +735,7 @@ export default {
 .fa-comment:hover .tooltiptext  {
     visibility: visible;
     opacity: 1;
-    transition: ease all .8s;
+    z-index: 1;
 }
 
 .right-sidebar-bar {
@@ -1010,28 +993,29 @@ textarea {
 }
 
 .more-smile-icons {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
     position: absolute;
-    width: 0;
-    bottom: 100%;
+    width: 150px;
+    top: -100px;
+    right: 100%;
     background-color: #fff;
     border-radius: 4px;
     opacity: 0;
     text-align: left;
     padding: 10px 10px 10px 15px;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .modal-smile-icon:hover .more-smile-icons {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    right: 100%;
-    bottom: 100%;
+    visibility: visible;
     opacity: 1;
-    background-color: #fff;
-    width: 150px;
     cursor: pointer;
-    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
 }
 
 /*media query*/

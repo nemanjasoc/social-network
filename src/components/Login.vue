@@ -4,7 +4,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="#">
 					<div class="logo-wrapper">
-						<img src="../assets/login-images/logo.png">
+						<img src="../assets/login-images/logo.png" alt="logo">
 						<div class="title-wrapper">
 							<label class="main-title">OLYMPUS</label>
 							<span class="title">SOCIAL NETWORK</span>
@@ -16,24 +16,12 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Community</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Pages</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Blog</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Events</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Shop</a>
-						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
 						<li class="nav-item dropdown">
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="#">Action</a>

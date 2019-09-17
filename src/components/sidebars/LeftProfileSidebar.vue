@@ -1,11 +1,10 @@
 <template>
     <div>
         <!--big devices narrow sidebar-->
-        <div class="left-fixed-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
+        <aside class="left-fixed-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
             <div class="logo">
                 <img src="../../assets/login-images/logo.png" alt="logo">
             </div>
-            
             <ul class="left-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
                 <li>
                     <a href="#">
@@ -85,9 +84,9 @@
                     </a>
                 </li>
             </ul>
-        </div>
+        </aside>
         <!--big devices wider sidebar-->
-        <div class="left-fixed-sidebar-wider" v-bind:class="{ inactive: !leftSidebarToggle }">
+        <aside class="left-fixed-sidebar-wider" v-bind:class="{ inactive: !leftSidebarToggle }">
             <div class="logo-wider">
                 <img src="../../assets/login-images/logo.png" alt="logo">
                 <span class="olympus-title">OLYMPUS</span>
@@ -175,7 +174,7 @@
                     </div>
                 </div>
             </ul>
-        </div>
+        </aside>
     </div>
 </template>
 
@@ -322,6 +321,10 @@ export default {
     display: flex;
     justify-content: center;
     opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
 }
 
 .fa-bars .tooltiptext-menu::after,
@@ -358,7 +361,6 @@ export default {
 .fa-poll-h:hover .tooltiptext-manage-widgets {
     visibility: visible;
     opacity: 1;
-    transition: ease all .8s;
 }
 
 .fa-newspaper .tooltiptext-newsfeed {
@@ -430,7 +432,10 @@ export default {
     padding-top: 32px;
     font-size: 22px;
     color: #9a9fbf;
-    transition: color .6s; 
+    -webkit-transition: color .3s linear;
+    -moz-transition: color .3s linear;
+    -o-transition: color .3s linear;
+    transition: color .3s linear; 
 }
 
 .fa-bars:hover,
@@ -453,7 +458,10 @@ export default {
     color: #9a9fbf;
     font-weight: 700;
     font-size: 13px;
-    transition: all .3s ease;
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
     font-weight: 700;
 }
 
@@ -538,7 +546,7 @@ a:link {
 .progress-moved .filled-profile {
     width: 75%; 
     background-color: #ff5e3a;   
-    animation: progressAnimation 6s;
+    animation: progressAnimation 2s;
 }
 
 @keyframes progressAnimation {
