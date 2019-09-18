@@ -7,7 +7,7 @@
             <div class="main-container">  
                 <div class="image-block">
                     <div class="main-image">
-                        <img src="../assets/profile-images/top-header1.jpg">
+                        <img src="../assets/profile-images/top-header1.jpg" alt="top-header1">
                     </div>
                     <div class="user-profile-sections">                                
                         <ul class="profile-menu-left">
@@ -74,7 +74,7 @@
                         </div>                       
                         <div class="author-main-content">
                             <div class="author-main-image">
-                                <img src="../assets/profile-images/author-main1.jpg">
+                                <img src="../assets/profile-images/author-main1.jpg" alt="author-main1">
                             </div>
                             <div class="autor-data">
                                 <div class="author-name">James Spiegel</div>
@@ -89,7 +89,7 @@
                     <app-center-blocks></app-center-blocks>
                     <app-right-blocks></app-right-blocks>
 
-                    <div class="back-to-top">
+                    <div class="back-to-top" @click="scrollToTop()">
                         <i class="fas fa-arrow-up"></i>
                     </div>
                 </div>
@@ -109,6 +109,14 @@ import CenterBlocks from '../components/profile/CenterBlocks.vue';
 import RightBlocks from '../components/profile/RightBlocks.vue';
 
 export default {
+    methods: { 
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    },
     components: {
         appLeftProfileSidebar: LeftProfileSidebar,
         appRightProfileSidebar: RightProfileSidebar,

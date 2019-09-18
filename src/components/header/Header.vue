@@ -21,7 +21,7 @@
                                     </div>
                                 </a>                           
                             </div>
-                            <div class="dropdown-content">                               
+                            <div class="dropdown-container">
                                 <div class="dropdown-header">
                                     <span class="dropdown-header-left-title">FRIEND REQUESTS</span>
                                     <div class="dropdown-header-right-titles">
@@ -29,78 +29,80 @@
                                         <span>Settings</span>
                                     </div>
                                 </div>
-                                <ul>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar55-sm.jpg" alt="avatar-55">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-name">Tamara Romanoff</span>
-                                                    <span class="dropdown-author-text">Mutual Friend: Sarah Hetfield</span>
-                                                </div>
-                                            </div>
-                                            <div class="smile-squares">
-                                                <div class="blue-smile"><i class="far fa-smile"></i></div>
-                                                <div class="gray-smile"><i class="far fa-smile"></i></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar56-sm.jpg" alt="avatar-56">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-name">Tony Stevens</span>
-                                                    <span class="dropdown-author-text">4 Friends in Common</span>
-                                                </div>
-                                            </div>
-                                            <div class="smile-squares">
-                                                <div class="blue-smile"><i class="far fa-smile"></i></div>
-                                                <div class="gray-smile"><i class="far fa-smile"></i></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar57-sm.jpg" alt="avatar-57">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <div class="dropdown-author-text">You and
-                                                        <span class="dropdown-author-name">Mary Jane Stark</span>
-                                                        just <br> became friends. Write on <br>
-                                                        <span class="blue-text">her wall</span>.
+                                <div class="dropdown-content" id="smile-dropdown-scrollbar">                                                                  
+                                    <ul>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar55-sm.jpg" alt="avatar-55">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-name">Tamara Romanoff</span>
+                                                        <span class="dropdown-author-text">Mutual Friend: Sarah Hetfield</span>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="ordinary-smile">                                        
-                                                <i class="far fa-smile"></i>
-                                            </div>   
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar58-sm.jpg" alt="avatar-58">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-name">Stagg Clothing</span>
-                                                    <span class="dropdown-author-text">9 Friends in Common</span>
+                                                <div class="smile-squares">
+                                                    <div class="blue-smile"><i class="far fa-smile"></i></div>
+                                                    <div class="gray-smile"><i class="far fa-smile"></i></div>
                                                 </div>
                                             </div>
-                                            <div class="smile-squares">
-                                                <div class="blue-smile"><i class="far fa-smile"></i></div>
-                                                <div class="gray-smile"><i class="far fa-smile"></i></div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar56-sm.jpg" alt="avatar-56">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-name">Tony Stevens</span>
+                                                        <span class="dropdown-author-text">4 Friends in Common</span>
+                                                    </div>
+                                                </div>
+                                                <div class="smile-squares">
+                                                    <div class="blue-smile"><i class="far fa-smile"></i></div>
+                                                    <div class="gray-smile"><i class="far fa-smile"></i></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar57-sm.jpg" alt="avatar-57">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <div class="dropdown-author-text">You and
+                                                            <span class="dropdown-author-name">Mary Jane Stark</span>
+                                                            just <br> became friends. Write on <br>
+                                                            <span class="blue-text">her wall</span>.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ordinary-smile">                                        
+                                                    <i class="far fa-smile"></i>
+                                                </div>   
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar58-sm.jpg" alt="avatar-58">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-name">Stagg Clothing</span>
+                                                        <span class="dropdown-author-text">9 Friends in Common</span>
+                                                    </div>
+                                                </div>
+                                                <div class="smile-squares">
+                                                    <div class="blue-smile"><i class="far fa-smile"></i></div>
+                                                    <div class="gray-smile"><i class="far fa-smile"></i></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <div class="dropdown-footer-blue">
                                     <span class="dropdown-footer-text">Check all your events</span>
                                 </div>
@@ -118,7 +120,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="dropdown-content">
+                            <div class="dropdown-container">
                                 <div class="dropdown-header">
                                     <span class="dropdown-header-left-title">CHAT/MESSAGES</span>
                                     <div class="dropdown-header-right-titles">
@@ -126,86 +128,88 @@
                                         <span>Mark All As Read</span>
                                     </div>
                                 </div>
-                                <ul>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar59-sm.jpg" alt="avatar-59">
+                                <div class="dropdown-content" id="comments-dropdown-scrollbar">
+                                    <ul>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar59-sm.jpg" alt="avatar-59">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-name">Diana Jameson</span>
+                                                        <span class="dropdown-author-text">
+                                                            Hi James! It’s Diana, I just wanted to let you <br> 
+                                                            know that we have to reschedule...
+                                                        </span>
+                                                        <span class="chat-time">4 hours ago</span>
+                                                    </div>
                                                 </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-name">Diana Jameson</span>
-                                                    <span class="dropdown-author-text">
-                                                        Hi James! It’s Diana, I just wanted to let you <br> 
-                                                        know that we have to reschedule...
-                                                    </span>
-                                                    <span class="chat-time">4 hours ago</span>
-                                                </div>
-                                            </div>
-                                            <div class="chat-message-icon">
-                                                <i class="far fa-comment-alt"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar60-sm.jpg" alt="avatar-60">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-name">Jake Parker</span>
-                                                    <span class="dropdown-author-text">Great, I’ll see you tomorrow!</span>
-                                                    <span class="chat-time">4 hours ago</span>
+                                                <div class="chat-message-icon">
+                                                    <i class="far fa-comment-alt"></i>
                                                 </div>
                                             </div>
-                                            <div class="chat-message-icon-transparent">
-                                                <i class="far fa-comment-alt"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar61-sm.jpg" alt="avatar-61">
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar60-sm.jpg" alt="avatar-60">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-name">Jake Parker</span>
+                                                        <span class="dropdown-author-text">Great, I’ll see you tomorrow!</span>
+                                                        <span class="chat-time">4 hours ago</span>
+                                                    </div>
                                                 </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-name">Elaine Dreyfuss</span>
-                                                    <span class="dropdown-author-text">
-                                                        We’ll have to check that at the office and <br> see if the client is on board with...
-                                                    </span>
-                                                    <span class="chat-time">Yesterday at 9:56pm</span>
+                                                <div class="chat-message-icon-transparent">
+                                                    <i class="far fa-comment-alt"></i>
                                                 </div>
                                             </div>
-                                            <div class="chat-message-icon-transparent">
-                                                <i class="far fa-comment-alt"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-users-img">
-                                                    <img src="../../assets/profile-images/avatar10-sm.jpg" alt="avatar-10">
-                                                    <img src="../../assets/profile-images/avatar11-sm.jpg" alt="avatar-11">
-                                                    <img src="../../assets/profile-images/avatar12-sm.jpg" alt="avatar-12">
-                                                    <img src="../../assets/profile-images/avatar13-sm.jpg" alt="avatar-13">
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar61-sm.jpg" alt="avatar-61">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-name">Elaine Dreyfuss</span>
+                                                        <span class="dropdown-author-text">
+                                                            We’ll have to check that at the office and <br> see if the client is on board with...
+                                                        </span>
+                                                        <span class="chat-time">Yesterday at 9:56pm</span>
+                                                    </div>
                                                 </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-name">You, Faye, Ed & Jet +3</span>
-                                                    <span class="dropdown-author-message">Ed:
-                                                        <span class="dropdown-author-text">Yeah! Seems fine by me!</span>
-                                                    </span>
-                                                    <span class="chat-time">March 16th at 10:23am</span>
+                                                <div class="chat-message-icon-transparent">
+                                                    <i class="far fa-comment-alt"></i>
                                                 </div>
                                             </div>
-                                            <div class="chat-message-icon-transparent">
-                                                <i class="far fa-comment-alt"></i>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-users-img">
+                                                        <img src="../../assets/profile-images/avatar10-sm.jpg" alt="avatar-10">
+                                                        <img src="../../assets/profile-images/avatar11-sm.jpg" alt="avatar-11">
+                                                        <img src="../../assets/profile-images/avatar12-sm.jpg" alt="avatar-12">
+                                                        <img src="../../assets/profile-images/avatar13-sm.jpg" alt="avatar-13">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-name">You, Faye, Ed & Jet +3</span>
+                                                        <span class="dropdown-author-message">Ed:
+                                                            <span class="dropdown-author-text">Yeah! Seems fine by me!</span>
+                                                        </span>
+                                                        <span class="chat-time">March 16th at 10:23am</span>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-icon-transparent">
+                                                    <i class="far fa-comment-alt"></i>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <div class="dropdown-footer-purple">
                                     <span class="dropdown-footer-text">View all Messages</span>
                                 </div>
@@ -223,7 +227,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="dropdown-content">
+                            <div class="dropdown-container">
                                 <div class="dropdown-header">
                                     <span class="dropdown-header-left-title">CHAT/MESSAGES</span>
                                     <div class="dropdown-header-right-titles">
@@ -231,111 +235,113 @@
                                         <span>Mark All As Read</span>
                                     </div>
                                 </div>
-                                <ul>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar62-sm.jpg" alt="avatar-62">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <div class="dropdown-author-name">Mathilda Brinker
-                                                        <span class="dropdown-author-text">commented on your<br>new
-                                                            <span class="orange-text">profile status</span>
-                                                        </span>
+                                <div class="dropdown-content" id="thunder-dropdown-scrollbar">
+                                    <ul>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar62-sm.jpg" alt="avatar-62">
                                                     </div>
-                                                    <span class="chat-time">4 hours ago</span>
-                                                </div>
-                                            </div>
-                                            <div class="chat-message-icon-transparent">
-                                                <i class="far fa-comment-alt"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar63-sm.jpg" alt="avatar-63">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-text">You and
-                                                        <span class="dropdown-author-name">Nicholas Grissom</span>
-                                                         just <br> became friends. Write on 
-                                                         <span class="orange-text">his wall</span>.
-                                                    </span>
-                                                    <span class="chat-time">9 hours ago</span>
-                                                </div>
-                                            </div>
-                                            <div class="ordinary-smile">                                        
-                                                <i class="far fa-smile"></i>
-                                            </div> 
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content-two-img">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar64-sm.jpg" alt="avatar-64">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <span class="dropdown-author-name">Sarah Hetfield
-                                                        <span class="dropdown-author-text">commented on your</span>
-                                                    </span>
-                                                    <span class="orange-text">photo</span>
-                                                    <span class="chat-time">Yesterday at 5:32am</span>
-                                                </div>
-                                            </div>
-                                            <div class="chat-message-icon-transparent">
-                                                <i class="far fa-comment-alt"></i>
-                                            </div>
-                                        </div>
-                                        <div class="comment-photo">
-                                            <img src="../../assets/profile-images/comment-photo1.jpg" alt="photo-1">
-                                            <span class="dropdown-author-text">"She looks incredible in that <br> outfit! We should see each..."</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar65-sm.jpg" alt="avatar-65">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <div class="dropdown-author-name">Green Goo Rock
-                                                        <span class="dropdown-author-text"> invited you to attend <br> to his event Goo in 
-                                                            <span class="orange-text">Gotham bar</span>.
-                                                        </span>
+                                                    <div class="dropdown-author-data">
+                                                        <div class="dropdown-author-name">Mathilda Brinker
+                                                            <span class="dropdown-author-text">commented on your<br>new
+                                                                <span class="orange-text">profile status</span>
+                                                            </span>
+                                                        </div>
+                                                        <span class="chat-time">4 hours ago</span>
                                                     </div>
-                                                    <span class="chat-time">March 5th at 6:43pm</span>
+                                                </div>
+                                                <div class="chat-message-icon-transparent">
+                                                    <i class="far fa-comment-alt"></i>
                                                 </div>
                                             </div>
-                                            <div class="ordinary-smile">                                        
-                                                <i class="far fa-smile"></i>
-                                            </div> 
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-author-content">
-                                            <div class="dropdown-author-data-wrapper">
-                                                <div class="dropdown-author-img">
-                                                    <img src="../../assets/profile-images/avatar66-sm.jpg" alt="avatar-66">
-                                                </div>
-                                                <div class="dropdown-author-data">
-                                                    <div class="dropdown-author-name">James Summers
-                                                        <span class="dropdown-author-text">commented on your<br>new
-                                                            <span class="orange-text">profile status</span>
-                                                        </span>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar63-sm.jpg" alt="avatar-63">
                                                     </div>
-                                                    <span class="chat-time">March 2nd at 8:29pm</span>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-text">You and
+                                                            <span class="dropdown-author-name">Nicholas Grissom</span>
+                                                            just <br> became friends. Write on 
+                                                            <span class="orange-text">his wall</span>.
+                                                        </span>
+                                                        <span class="chat-time">9 hours ago</span>
+                                                    </div>
+                                                </div>
+                                                <div class="ordinary-smile">                                        
+                                                    <i class="far fa-smile"></i>
+                                                </div> 
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content-two-img">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar64-sm.jpg" alt="avatar-64">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <span class="dropdown-author-name">Sarah Hetfield
+                                                            <span class="dropdown-author-text">commented on your</span>
+                                                        </span>
+                                                        <span class="orange-text">photo</span>
+                                                        <span class="chat-time">Yesterday at 5:32am</span>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-icon-transparent">
+                                                    <i class="far fa-comment-alt"></i>
                                                 </div>
                                             </div>
-                                            <div class="chat-message-heart">
-                                                <i class="far fa-heart"></i>
+                                            <div class="comment-photo">
+                                                <img src="../../assets/profile-images/comment-photo1.jpg" alt="photo-1">
+                                                <span class="dropdown-author-text">"She looks incredible in that <br> outfit! We should see each..."</span>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar65-sm.jpg" alt="avatar-65">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <div class="dropdown-author-name">Green Goo Rock
+                                                            <span class="dropdown-author-text"> invited you to attend <br> to his event Goo in 
+                                                                <span class="orange-text">Gotham bar</span>.
+                                                            </span>
+                                                        </div>
+                                                        <span class="chat-time">March 5th at 6:43pm</span>
+                                                    </div>
+                                                </div>
+                                                <div class="ordinary-smile">                                        
+                                                    <i class="far fa-smile"></i>
+                                                </div> 
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-author-content">
+                                                <div class="dropdown-author-data-wrapper">
+                                                    <div class="dropdown-author-img">
+                                                        <img src="../../assets/profile-images/avatar66-sm.jpg" alt="avatar-66">
+                                                    </div>
+                                                    <div class="dropdown-author-data">
+                                                        <div class="dropdown-author-name">James Summers
+                                                            <span class="dropdown-author-text">commented on your<br>new
+                                                                <span class="orange-text">profile status</span>
+                                                            </span>
+                                                        </div>
+                                                        <span class="chat-time">March 2nd at 8:29pm</span>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-heart">
+                                                    <i class="far fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <div class="dropdown-footer-orange">
                                     <span class="dropdown-footer-text">View all Notifications</span>
                                 </div>
@@ -356,7 +362,7 @@
                                     <i class="fas fa-angle-down"></i>
                                 </div>
                             </div>
-                            <div class="dropdown-content">
+                            <div class="dropdown-content-author">
                                 <div class="dropdown-title">
                                     <span class="title-account">Your Account</span>
                                 </div>
@@ -423,18 +429,29 @@
                     </li>
                     <li class="nav-item-search">
                         <a class="search" href="#">
-                            <button class="search-button" type="submit">
-                                <i class="fas fa-search"></i>
+                            <button class="search-button" type="submit" @click="isSearchClicked = !isSearchClicked" :class="{ orange: isSearchClicked }">
+                                <i class="fas fa-search" v-if="!isSearchClicked"></i>
+                                <i class="fas fa-times" v-if="isSearchClicked"></i>
                             </button>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
+        <form class="search-form-small-screen" :class="{ inactive: !isSearchClicked }">
+            <input class="form-input-small-screen" type="search" placeholder="Search here people or pages...">
+        </form>
     </header>
 </template>
 
 <script>
+export default {
+    data() {
+        return {
+            isSearchClicked: false
+        }
+    }
+}
 </script>
 
 <style scoped>
@@ -485,6 +502,39 @@ h6 {
     opacity: 1;
 }
 
+.search-form-small-screen {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 70px;
+    background-color: #494c62;
+    visibility: visible;
+    z-index: 10;
+}
+
+.search-form-small-screen.inactive {
+    visibility: hidden;
+}
+
+.search-button.orange {
+    border-bottom: 3px solid #ff5e3a;
+}
+
+.form-input-small-screen {
+    width: 230px;
+    line-height: 1.5;
+    background-color: #494c62;
+    height: 100%;
+    border: none;
+    opacity: 0.4;
+    padding-left: 15px;
+    color: #9a9fbf;
+    font-size: 12px;
+    opacity: 1;
+}
+
 input {
     outline: none;
 }
@@ -493,7 +543,7 @@ button[type=submit] {
     color: #696d87;
     border: none;
     background-color: #494c62;
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 ul {
@@ -671,26 +721,61 @@ a:link {
 }
 
 /*dropdown smile*/
-.dropdown-smile {
+.dropdown-container {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-smile .dropdown-content {
+.dropdown-content {
+    height: 270px;
+    overflow-y: hidden;
+    direction: rtl;
+}
+
+.dropdown-content:hover {
+    overflow-y: scroll;
+}
+
+.dropdown-content ul {
+    direction: ltr;
+}
+
+#smile-dropdown-scrollbar::-webkit-scrollbar,
+#comments-dropdown-scrollbar::-webkit-scrollbar,
+#thunder-dropdown-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+#smile-dropdown-scrollbar::-webkit-scrollbar-thumb,
+#comments-dropdown-scrollbar::-webkit-scrollbar-thumb,
+#thunder-dropdown-scrollbar::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 8px;
+}
+
+#smile-dropdown-scrollbar::-webkit-scrollbar-thumb:hover,
+#comments-dropdown-scrollbar::-webkit-scrollbar-thumb:hover,
+#thunder-dropdown-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.dropdown-smile .dropdown-container {
     visibility: hidden;
     opacity: 0;
     z-index: -1;
+    display: block;
     width: 380px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    right: -150px;
-    top: 50px;
-    transition: opacity 0.4s linear;
+    right: 233px;
+    top: 65px;
+    height: 300px;
+    transition: opacity 0.3s linear;
 }
 
-.dropdown-smile .dropdown-content::after {
+.dropdown-smile .dropdown-header::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -701,7 +786,7 @@ a:link {
     border-color: transparent transparent #fff transparent;
 }
 
-.dropdown-smile:hover .dropdown-content {
+.dropdown-smile:hover .dropdown-container {
     visibility: visible;
     opacity: 1;
     z-index: 20;
@@ -812,6 +897,7 @@ a:link {
     background-color: #38a9ff;
     padding: 20px;
     cursor: pointer;
+    border-radius: 0 0 5px 5px;
 }
 
 .dropdown-footer-text {
@@ -827,12 +913,12 @@ a:link {
 }
 
 /*dropdown comments*/
-.dropdown-comments {
+.dropdown-container {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-comments .dropdown-content {
+.dropdown-comments .dropdown-container {
     visibility: hidden;
     opacity: 0;
     z-index: -1;
@@ -841,12 +927,12 @@ a:link {
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    right: -153px;
-    top: 50px;
+    right: 175px;
+    top: 65px;
     transition: opacity 0.4s linear;
 }
 
-.dropdown-comments .dropdown-content::after {
+.dropdown-comments .dropdown-container::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -857,7 +943,7 @@ a:link {
     border-color: transparent transparent #fff transparent;
 }
 
-.dropdown-comments:hover .dropdown-content {
+.dropdown-comments:hover .dropdown-container {
     visibility: visible;
     opacity: 1;
     z-index: 20;
@@ -901,15 +987,16 @@ a:link {
     background-color: #7c5ac2;;
     padding: 20px;
     cursor: pointer;
+    border-radius: 0 0 5px 5px;
 }
 
 /*dropdown thunder*/
-.dropdown-thunder {
+.dropdown-container {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-thunder .dropdown-content {
+.dropdown-thunder .dropdown-container {
     visibility: hidden;
     opacity: 0;
     z-index: -1;
@@ -918,12 +1005,12 @@ a:link {
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    right: -155px;
-    top: 50px;
+    right: 120px;
+    top: 65px;
     transition: opacity 0.4s linear;
 }
 
-.dropdown-thunder .dropdown-content::after {
+.dropdown-thunder .dropdown-container::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -934,7 +1021,7 @@ a:link {
     border-color: transparent transparent #fff transparent;
 }
 
-.dropdown-thunder:hover .dropdown-content {
+.dropdown-thunder:hover .dropdown-container {
     visibility: visible;
     opacity: 1;
     z-index: 20;
@@ -962,6 +1049,7 @@ a:link {
     background-color: #ff5e3a;
     padding: 20px;
     cursor: pointer;
+    border-radius: 0 0 5px 5px;
 }
 
 .dropdown-footer-orange:hover {
@@ -985,7 +1073,7 @@ a:link {
     display: inline-block;
 }
 
-.dropdown-author .dropdown-content {
+.dropdown-author .dropdown-content-author {
     visibility: hidden;
     opacity: 0;
     z-index: -1;
@@ -995,13 +1083,14 @@ a:link {
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
     right: -25px;
+    top: 50px;
     -webkit-transition: opacity 0.3s linear;
     -moz-transition: opacity 0.3s linear;
     -o-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;
 }
 
-.dropdown-author .dropdown-content::after {
+.dropdown-author .dropdown-title::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -1012,7 +1101,7 @@ a:link {
     border-color: transparent transparent #fff transparent;
 }
 
-.dropdown-author:hover .dropdown-content {
+.dropdown-author:hover .dropdown-content-author {
     visibility: visible;
     opacity: 1;
     z-index: 20;
@@ -1022,7 +1111,7 @@ a:link {
     display: flex;
     border-bottom: 1px solid #e6ecf5;
     border-top: 1px solid #e6ecf5;
-    padding: 10px 10px 10px 15px;
+    padding: 10px 10px 10px 25px;
 }
 
 .title-account,
@@ -1047,15 +1136,16 @@ a:link {
 .careers,
 .contact {
     display: flex;
-    padding: 10px;
+    padding: 10px 10px 10px 25px;
     cursor: pointer;
 }
 
-.dropdown-content .fa-bars,
-.dropdown-content .fa-star,
-.dropdown-content .fa-sign-out-alt {
+.dropdown-content-author .fa-bars,
+.dropdown-content-author .fa-star,
+.dropdown-content-author .fa-sign-out-alt {
     color: #9a9fbf;
     font-size: 20px;
+    margin-right: 15px;
 }
 
 .title-settings,
@@ -1068,7 +1158,6 @@ a:link {
     font-size: 12px;
     color: #515365;
     font-weight: 700;
-    margin-left: 15px;
 }
 
 .title-online,
@@ -1162,6 +1251,22 @@ button[type=button] {
     .author-subtitle {
         display: none;
     }
+
+    .dropdown-smile .dropdown-container {
+        right: 124px;
+    }
+
+    .dropdown-comments .dropdown-container {
+        right: 64px;
+    }
+
+    .dropdown-thunder .dropdown-container {
+        right: 12px;
+    }
+
+    .dropdown-author .dropdown-content-author {
+        right: -2px;
+    }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -1191,6 +1296,18 @@ button[type=button] {
 
     .online-status-dot {
         left: 20px;
+    }
+
+    .dropdown-smile .dropdown-container {
+        right: 94px;
+    }
+
+    .dropdown-comments .dropdown-container {
+        right: 40px;
+    }
+
+    .dropdown-thunder .dropdown-container {
+        right: -15px;
     }
 }
 
@@ -1246,11 +1363,22 @@ button[type=button] {
     }
 
     .search-button {
-       height: 70px;
+        height: 70px;
+    }
+
+    .search-button .fa-times {
+        color: #fff;
+        font-size: 20px;
     }
 
     .fa-search {
         color: #9a9fbf;
+    }
+
+    .dropdown-smile .dropdown-container, 
+    .dropdown-comments .dropdown-container, 
+    .dropdown-thunder .dropdown-container {
+        display: none;
     }
 }
 

@@ -878,10 +878,6 @@ a:link {
     top: -29px;
 }
 
-.modal-backdrop {
-    display: none;
-}
-
 .modal-header {
     background-color: #7c5ac2;
 }
