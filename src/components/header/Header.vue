@@ -29,7 +29,7 @@
                                         <span>Settings</span>
                                     </div>
                                 </div>
-                                <div class="dropdown-content" id="smile-dropdown-scrollbar">                                                                  
+                                <div class="dropdown-content">                                                                  
                                     <ul>
                                         <li>
                                             <div class="dropdown-author-content">
@@ -128,7 +128,7 @@
                                         <span>Mark All As Read</span>
                                     </div>
                                 </div>
-                                <div class="dropdown-content" id="comments-dropdown-scrollbar">
+                                <div class="dropdown-content">
                                     <ul>
                                         <li>
                                             <div class="dropdown-author-content">
@@ -235,7 +235,7 @@
                                         <span>Mark All As Read</span>
                                     </div>
                                 </div>
-                                <div class="dropdown-content" id="thunder-dropdown-scrollbar">
+                                <div class="dropdown-content">
                                     <ul>
                                         <li>
                                             <div class="dropdown-author-content">
@@ -353,11 +353,13 @@
                         <div class="dropdown-author">
                             <div class="dropbtn">
                                 <div class="author-data-wrapper">
-                                    <img src="../../assets/profile-images/author-page.jpg" alt="author">
+                                    <div class="author-status">
+                                        <img src="../../assets/profile-images/author-page.jpg" alt="author">
+                                        <span class="online-status-dot"></span>
+                                    </div>
                                     <div class="author-data">
                                         <span class="author-title">James Spiegel</span>
                                         <span class="author-subtitle">SPACE COWBOY</span>
-                                        <span class="online-status-dot"></span>
                                     </div>
                                     <i class="fas fa-angle-down"></i>
                                 </div>
@@ -379,10 +381,11 @@
                                         <i class="fas fa-sign-out-alt"></i>
                                         <span class="title-logout">Log Out</span>
                                     </li>
-
+                                </ul>
                                     <div class="dropdown-title">
                                         <span class="title-chat-settings">Chat Settings</span>
                                     </div>
+                                <ul>
                                     <li class="status-online">
                                         <span class="green-dot"></span>
                                         <span class="title-online">Online</span>
@@ -399,7 +402,7 @@
                                         <span class="gray-dot"></span>
                                         <span class="title-invisible">Invisible</span>
                                     </li>
-
+                                </ul>
                                     <div class="dropdown-title">
                                         <span class="title-custom-status">Custom Status</span>
                                     </div>
@@ -411,6 +414,7 @@
                                     <div class="dropdown-title">
                                         <span class="title-olympus">About Olympus</span>
                                     </div>
+                                <ul>
                                     <li class="terms">
                                         <span class="title-terms">Terms & Conditions</span>
                                     </li>
@@ -479,6 +483,7 @@ export default {
 h6 {
     color: #fff;
     font-weight: 700;
+    font-size: 15px;
 }
 
 .search-form {
@@ -674,15 +679,20 @@ a:link {
     font-size: 11px;
 }
 
-.author-data-wrapper img {
-    border-radius: 50%;
-    margin-left: 50px;
-}
-
 .author-data-wrapper {
     display: flex;
     position: relative;
     cursor: pointer;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+.author-data-wrapper img {
+    border-radius: 50%;
+}
+
+.author-status {
+    position: relative;
 }
 
 .author-data {
@@ -711,7 +721,7 @@ a:link {
     height: 8px;
     background-color: #32e4cd;
     top: 0px;
-    left: 49px;
+    right: 27px;
     border-radius: 50%;
 }
 
@@ -721,6 +731,12 @@ a:link {
 }
 
 /*dropdown smile*/
+.dropdown-smile,
+.dropdown-comments,
+.dropdown-thunder {
+    position: relative;
+}
+
 .dropdown-container {
     position: relative;
     display: inline-block;
@@ -734,29 +750,15 @@ a:link {
 
 .dropdown-content:hover {
     overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.dropdown-content:hover ul {
+    margin-left: -6px;
 }
 
 .dropdown-content ul {
     direction: ltr;
-}
-
-#smile-dropdown-scrollbar::-webkit-scrollbar,
-#comments-dropdown-scrollbar::-webkit-scrollbar,
-#thunder-dropdown-scrollbar::-webkit-scrollbar {
-    width: 6px;
-}
-
-#smile-dropdown-scrollbar::-webkit-scrollbar-thumb,
-#comments-dropdown-scrollbar::-webkit-scrollbar-thumb,
-#thunder-dropdown-scrollbar::-webkit-scrollbar-thumb {
-    background: #aaa;
-    border-radius: 8px;
-}
-
-#smile-dropdown-scrollbar::-webkit-scrollbar-thumb:hover,
-#comments-dropdown-scrollbar::-webkit-scrollbar-thumb:hover,
-#thunder-dropdown-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #888;
 }
 
 .dropdown-smile .dropdown-container {
@@ -769,8 +771,8 @@ a:link {
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    right: 233px;
-    top: 65px;
+    right: -153px;
+    top: 44px;
     height: 300px;
     transition: opacity 0.3s linear;
 }
@@ -927,8 +929,8 @@ a:link {
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    right: 175px;
-    top: 65px;
+    right: -153px;
+    top: 44px;
     transition: opacity 0.4s linear;
 }
 
@@ -1005,8 +1007,8 @@ a:link {
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    right: 120px;
-    top: 65px;
+    right: -153px;
+    top: 44px;
     transition: opacity 0.4s linear;
 }
 
@@ -1054,7 +1056,6 @@ a:link {
 
 .dropdown-footer-orange:hover {
     background-color: #dc310a;
-    
 }
 
 .dropdown-author-content-two-img {
@@ -1090,7 +1091,7 @@ a:link {
     transition: opacity 0.3s linear;
 }
 
-.dropdown-author .dropdown-title::after {
+.dropdown-content-author::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -1112,6 +1113,11 @@ a:link {
     border-bottom: 1px solid #e6ecf5;
     border-top: 1px solid #e6ecf5;
     padding: 10px 10px 10px 25px;
+}
+
+.dropdown-content-author {
+    overflow: auto;
+    max-height: calc(100vh - 70px);
 }
 
 .title-account,
@@ -1252,28 +1258,12 @@ button[type=button] {
         display: none;
     }
 
-    .dropdown-smile .dropdown-container {
-        right: 124px;
-    }
-
-    .dropdown-comments .dropdown-container {
-        right: 64px;
-    }
-
-    .dropdown-thunder .dropdown-container {
-        right: 12px;
-    }
-
     .dropdown-author .dropdown-content-author {
         right: -2px;
     }
 }
 
 @media only screen and (max-width: 1080px) {
-    .online-status-dot {
-        left: 50px;
-    }
-
 	.title {
 		display: none;
 	}
@@ -1293,27 +1283,11 @@ button[type=button] {
 	.author-data-wrapper img {
         margin-left: 20px;
     }
-
-    .online-status-dot {
-        left: 20px;
-    }
-
-    .dropdown-smile .dropdown-container {
-        right: 94px;
-    }
-
-    .dropdown-comments .dropdown-container {
-        right: 40px;
-    }
-
-    .dropdown-thunder .dropdown-container {
-        right: -15px;
-    }
 }
 
 @media only screen and (max-width: 992px) {
 	.text-find-friends {
-        padding-left: 50px;
+        padding-left: 47px;
     }
 
     .search-form {
@@ -1352,10 +1326,6 @@ button[type=button] {
     .nav-item {
         margin-right: 20px;
         margin-left: 20px;
-    }
-
-    .search-form {
-        display: none;
     }
 
     .nav-item-search {

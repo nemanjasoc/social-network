@@ -381,7 +381,9 @@ button[type=button] {
 
 /*media query*/
 @media (max-width: 1199px) {
-    p {
+    .title-photos,
+    .title-name,
+    .right-side-second-block-content p {
         font-size: 12px;
     }
 }

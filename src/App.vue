@@ -20,4 +20,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+ /* Custom Scroll bar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #aaa; 
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
+}
 </style>

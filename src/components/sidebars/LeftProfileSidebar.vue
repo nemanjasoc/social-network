@@ -158,21 +158,23 @@
                         <span class="left-menu-title">Manage Widgets</span>
                     </a>
                 </li>
-                <div class="profile-completion-container">
-                    <div class="profile-completion-title">
-                        <span class="completion-title">Profile Completion</span>
-                        <span class="completion-percent">76%</span>
-                    </div>
-                    <div class="completion-line">
-                        <div class="max-range-line progress-moved">
-                            <span class="filled-profile"></span>
+                <li class="left-menu">
+                    <div class="profile-completion-container">
+                        <div class="profile-completion-title">
+                            <span class="completion-title">Profile Completion</span>
+                            <span class="completion-percent">76%</span>
+                        </div>
+                        <div class="completion-line">
+                            <div class="max-range-line progress-moved">
+                                <span class="filled-profile"></span>
+                            </div>
+                        </div>
+                        <div class="comletion-text">Complete
+                            <span class="your-profile-text">your profile</span>
+                            so people can know more about you!
                         </div>
                     </div>
-                    <div class="comletion-text">Complete
-                        <span class="your-profile-text">your profile</span>
-                        so people can know more about you!
-                    </div>
-                </div>
+                </li>
             </ul>
         </aside>
     </div>
@@ -199,6 +201,7 @@ export default {
     width: 70px;
     height: 100%;
     left: 0;
+    overflow: hidden;
     transition: left ease-out .3s;
     transition-delay: .6s;
 }
@@ -211,7 +214,7 @@ export default {
 .left-sidebar {
     position: fixed;
     z-index: 22;
-    width: 70px;
+    width: 76px;
     height: calc(100% - 70px);
     left: 0;
     background-color: #fff;
@@ -223,11 +226,18 @@ export default {
     text-align: center;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    margin-left: -6px;
+    direction: rtl;
 }
 
 .left-sidebar.inactive {
     left: -70px;
     transition-delay: 0s;
+}
+
+.left-sidebar li {
+    direction: ltr;
 }
 
 .logo {
@@ -245,6 +255,7 @@ export default {
     width: 250px;
     height: 100%;
     left: 0;
+    overflow: hidden;
     transition: left ease-out .6s;
     transition-delay: .3s;
 }
@@ -257,7 +268,7 @@ export default {
 .left-sidebar-wider {
     position: fixed;
     z-index: 22;
-    width: 250px;
+    width: 256px;
     height: calc(100% - 70px);
     left: 0;
     background-color: #fff;
@@ -269,6 +280,10 @@ export default {
     text-align: center;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    margin-left: -6px;
+    direction: rtl;
+    
 }
 
 .left-sidebar-wider.inactive {
@@ -314,8 +329,8 @@ export default {
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    top: 28px;
-    left: 78%;
+    top: 30px;
+    left: 33px;
     font-size: 9px;
     align-items: center;
     display: flex;
@@ -363,58 +378,11 @@ export default {
     opacity: 1;
 }
 
-.fa-newspaper .tooltiptext-newsfeed {
-    top: 88px;
-}
-
-.fa-star .tooltiptext-fav-page {
-    top: 146px;
-}
-
-.fa-user-friends .tooltiptext-friend-groups {
-    top: 202px;
-    width: 100px;
-}
-
-.fa-headphones .tooltiptext-music-and-playlists {
-    top: 262px;
-    width: 115px;
-}
-
-.fa-cloud-sun .tooltiptext-weather-app {
-    top: 322px;
-    width: 90px;
-}
-
-.fa-calendar-alt .tooltiptext-calendar-and-events {
-    top: 379px;
-    width: 130px;
-}
-
-.fa-certificate .tooltiptext-community-badges {
-    top: 437px;
-    width: 130px;
-}
-
-.fa-birthday-cake .tooltiptext-friends-birthday {
-    top: 494px;
-    width: 127px;
-}
-
-.fa-industry .tooltiptext-account-stats {
-    top: 551px;
-    width: 106px;
-}
-
-.fa-poll-h .tooltiptext-manage-widgets {
-    top: 610px;
-    width: 113px;
-}
-
 .left-menu {
     display: flex;
     justify-content: flex-start;
     padding-left: 25px;
+    direction: ltr;
 }
 
 .fa-times,
@@ -429,6 +397,7 @@ export default {
 .fa-birthday-cake,
 .fa-industry,
 .fa-poll-h {
+    position: relative;
     padding-top: 32px;
     font-size: 22px;
     color: #9a9fbf;
@@ -501,7 +470,7 @@ a:link {
     height: 180px;
     justify-content: center;
     flex-direction: column;
-    position: relative;
+    margin-left: -25px;
 }
 
 .profile-completion-title {

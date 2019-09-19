@@ -535,6 +535,14 @@ p {
 
 /*media query*/
 @media (max-width: 1199px) {
+    .author-name-title {
+        font-size: 12px;
+    }
+
+    .time {
+        font-size: 11px;
+    }
+
     p {
         font-size: 12px;
     }
@@ -542,12 +550,13 @@ p {
     .more-content-blocks {
         margin: 40px auto 25px auto;
     }
-}
 
-@media (max-width: 992px) {
+    .post-heart,
     .people-message-icon,
-    .share-icon {
-        font-size: 14px;
+    .share-icon,
+    .author-data a,
+    .apostrophe {
+        font-size: 12px;
     }
 }
 

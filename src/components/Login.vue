@@ -11,8 +11,9 @@
 						</div>
 					</div>
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fas fa-bars"></i>
+				<button class="navbar-toggler" type="button" @click="isBarClicked = !isBarClicked" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars" v-if="!isBarClicked"></i>
+					<i class="fas fa-times" v-if="isBarClicked"></i>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
@@ -34,59 +35,70 @@
 				</div>
 			</nav>
 			<div class="main-content">
-				<div class="left-content">
-					<h2 class="left-content-title">Welcome to the Biggest Social Network in the World</h2>
-					<div class="left-content-text">
-						<p>We are the best and biggest social network with 5 billion active users all around the world. Share you thoughts, write blog posts, show your favorite music via Stopify, earn badges and much more!</p>
-					</div>
-					<div class="registration-button">Register Now!</div>
-				</div>
-				<div class="right-content" v-if="isNewUser">
-					<div class="left-side">
-						<div class="shut-down-aside">
-							<i class="fas fa-power-off"></i>
+				<div class="content-wrapper">
+					<div class="left-content">
+						<h2 class="left-content-title">Welcome to the Biggest Social Network in the World</h2>
+						<div class="left-content-text">
+							<p>We are the best and biggest social network with 5 billion active users all around the world. Share you thoughts, write blog posts, show your favorite music via Stopify, earn badges and much more!</p>
 						</div>
-						<div class="spinner-aside">
-							<i class="fas fa-spinner"></i>
-						</div>
+						<div class="registration-button">Register Now!</div>
 					</div>
-					<div class="registration-form">
-						<div class="top-side">
-							<div class="top-shut-down">
+					<div class="right-content" v-if="isNewUser">
+						<div class="left-side">
+							<div class="shut-down-aside">
 								<i class="fas fa-power-off"></i>
 							</div>
-							<div class="top-spinner">
+							<div class="spinner-aside">
 								<i class="fas fa-spinner"></i>
 							</div>
 						</div>
-						<div class="register-header-title">Register to Olympus</div>
-						<form id="form" @submit.prevent="isNewUser = false">
-							<div class="fullname-form-wrapper">
-								<input id="first-name" type="text" name="firstname" placeholder="First Name" required>
-								<input id="last-name" type="text" name="lastname" placeholder="Last Name" required>
-							</div>
-							<div class="registration-form-data-wrapper">
-								<input id="email" type="email" name="email" placeholder="Your Email" required>
-								<input id="password" type="password" name="psw" placeholder="Your Password" required>
-								<input id="date" type="date" name="bday" required>
-								<select name="genderlist" class="select-gender">
-									<option value="male">Male</option>
-									<option value="female">Female</option>
-									<option value="other">Other</option>
-								</select>
-								<div class="check-terms-register">
-									<label class="container">
-										<span class="terms">I accept the <span class="terms-and-conditions">Terms and Conditions</span> of the website</span>
-										<input type="checkbox" name="terms-and-conitions" value="website">
-										<span class="checkmark"></span>
-									</label>
+						<div class="registration-form">
+							<div class="top-side">
+								<div class="top-shut-down">
+									<i class="fas fa-power-off"></i>
+								</div>
+								<div class="top-spinner">
+									<i class="fas fa-spinner"></i>
 								</div>
 							</div>
-							<button class="submit-registration" type="submit" value="Submit">Complete Registration!</button>
-						</form> 
+							<div class="register-header-title">Register to Olympus</div>
+							<form id="form" @submit.prevent="isNewUser = false">
+								<div class="full-name-form-wrapper">
+									<div class="first-name-wrapper">
+										<input id="first-name" type="text" name="firstname" required>
+										<label class="label-first-name" for="first-name">First Name</label>
+									</div>
+									<div class="last-name-wrapper">
+										<input id="last-name" type="text" name="lastname" required>
+										<label class="label-second-name" for="last-name">Last Name</label>
+									</div>
+								</div>
+								<div class="registration-form-data-wrapper">
+									<div class="email-wrapper">
+										<input id="email" type="email" name="email" required>
+										<label class="label-email" for="label-email">Your Email</label>
+									</div>
+									<input id="password" type="password" name="psw" placeholder="Your Password" required>
+									<input id="date" type="date" name="bday" required>
+									<select name="genderlist" class="select-gender">
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+										<option value="other">Other</option>
+									</select>
+									<div class="check-terms-register">
+										<label class="container">
+											<span class="terms">I accept the <span class="terms-and-conditions">Terms and Conditions</span> of the website</span>
+											<input type="checkbox" name="terms-and-conitions" value="website">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<button class="submit-registration" type="submit" value="Submit">Complete Registration!</button>
+							</form> 
+						</div>
 					</div>
+					<app-login-form v-else></app-login-form>
 				</div>
-				<app-login-form v-else></app-login-form>
 			</div>
 		</div>
 	</div>
@@ -98,7 +110,8 @@ import LoginForm from '../components/form/LoginForm.vue';
 export default {
 	data() {
 		return {
-			isNewUser: true
+			isNewUser: true,
+			isBarClicked: false
 		}
 	},
 	components: {
@@ -150,7 +163,7 @@ export default {
 }
 
 .navbar-light .navbar-nav .nav-link {
-	color: white;
+	color: #fff;
 }
 
 .navbar-light .navbar-toggler {
@@ -158,7 +171,12 @@ export default {
 }
 
 .fa-bars {
-	color: white;
+	color: #fff;
+}
+
+.fa-times {
+	color: #fff;
+	font-size: 23px;
 }
 
 button[type=button] {
@@ -194,18 +212,22 @@ img {
 }
 
 .main-content {
+	width: 100%;
+}
+
+.content-wrapper {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	width: 100%;
-	padding: 40px;
+	width: 85%;
+	margin: 40px auto;
 }
 
 .left-content {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: calc(60% - 80px);
+	width: 58%;
 }
 
 .left-content-title {
@@ -238,7 +260,7 @@ img {
     display: flex;
     background-color: white;
     border-radius: 0px 4px 4px 0px;
-	width: calc(40% - 80px);
+	width: 42%;
 }
 
 .top-side {
@@ -308,28 +330,85 @@ form {
 	flex-direction: column;
 }
 
-.fullname-form-wrapper {
+.full-name-form-wrapper {
 	display: flex;
-	padding: 15px 0px;
+	margin-bottom: 25px;
 }
 
-input[type=text] {
-	padding-left: 10px;
-	line-height: 42px;
+.first-name-wrapper,
+.last-name-wrapper,
+.email-wrapper {
+	display: flex;
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+}
+
+.label-first-name,
+.label-second-name,
+.label-email {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: gray;
+	transition: 0.2s all;
+	cursor: text;
+	padding-left: 8px;
+}
+
+input[type=text],
+input[type=email] {
+	font-weight: 500;
+	width: 100%;
+	border: 0;
+	outline: 0;
 	border: 1px solid #8080804f;
+	border-radius: 4px;
+	box-shadow: none;
+	color: #555555;
+	font-size: 15px;
+	-webkit-transition: border-bottom 0.4s ease-out;
+	-o-transition: border-bottom 0.4s ease-out;
+	-moz-transition: border-bottom 0.4s ease-out;
+	transition: border-bottom 0.4s ease-out;
+}
+
+input[type=text]:invalid,
+input[type=email]:invalid {
+	outline: 0;
+}
+
+input[type=text]:focus,
+input[type=text]:valid,
+input[type=email]:focus,
+input[type=email]:valid {
+	border-color: #ff5e3a;
+}
+
+input[type=text]:focus~label,
+input[type=text]:valid~label,
+input[type=email]:focus~label,
+input[type=email]:valid~label {
+	font-size: 11px;
+	top: -14px;
+	color: #555555;
 }
 
 #first-name {
 	margin-right: 10px;
-	width: 50%;
+	width: 100%;
+	padding-left: 8px;
+	padding-top: 10px;
 }
 
 #last-name {
-	margin-left: 10px;
-	width: 50%;
+	width: 100%;
+	padding-left: 8px;
+	padding-top: 10px;
 }
 
-input[type=email],
 input[type=password],
 input[type=date] {
 	margin: 12px 0px;
@@ -475,35 +554,49 @@ input:focus {
 }
 
 /*media query*/
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-	.left-content {
-		width: calc(55% - 40px);
-	}
-
-	.right-content {
-		width: calc(45% - 40px);
+@media only screen  and (max-width: 1200px) {
+	.content-wrapper {
+		width: 90%;
 	}
 }
 
-@media only screen and (min-width: 769px) and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
+	.navbar-light .navbar-nav {
+		background-color: #fff;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		color: #515365;
+		font-weight: 700;
+		padding: 10px 20px;
+		-webkit-transition: color .3s ease;
+		-moz-transition: color .3s ease;
+		-o-transition: color .3s ease;
+		transition: color .3s ease;
+	}
+
+	.navbar-light .navbar-nav .nav-link:hover {
+		color: #ff5e3a;
+	}
+
 	.main-content {
 		padding: 20px;
 	}
 
+	.content-wrapper {
+		width: 97%;
+	}
+
 	.left-content {
-		width: calc(50% - 15px);
+		width: 55%;
 	}
 
 	.right-content {
-		width: calc(50% - 15px);
+		width: 45%;
 	}
 }
 
 @media only screen and (max-width: 768px) {
-	.main-content {
-		padding: 60px;
-	}
-	
 	.left-content {
 		width: 100%;
 		margin-bottom: 40px;

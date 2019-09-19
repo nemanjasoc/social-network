@@ -427,6 +427,14 @@ a:link {
 }
 
 @media (max-width: 1199px) {
+    .author-name {
+        font-size: 19px;
+    }
+
+    .country {
+        font-size: 11px;
+    }
+
     .user-profile-sections ul li {
         padding: 0 20px;
     }

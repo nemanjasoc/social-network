@@ -223,12 +223,12 @@ ul, li {
 .badges {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
     margin: 0 0 -20px -18px;
 }
 
 .badges li {
-    margin: 0 0 20px 8px;
+    position: relative;
+    margin: 0 0 20px 15px;
 }
    
 .orange-badge,
@@ -246,19 +246,16 @@ ul, li {
     text-align: center;
     display: flex;
     justify-content: center;
-    top: -2px;
-    left: 32px;
+    top: 0px;
+    right: -4px;
 }
 
 .blue-badge {
     background-color: #38a9ff;
-    left: 124px;
 }
 
 .green-badge {
     background-color: #08ddc1;
-    top: 57px;
-    left: 124px;
 }
 
 .left-side-second-block {
@@ -400,48 +397,16 @@ ul, li {
 
 /*media query*/
 @media (max-width: 1399px) {
-    .green-badge {
-        left: 172px;
-    }
-
     .play-icon img {
         width: 36px;
         height: 36px;
     }
 }
 
-@media (max-width: 1216px) {
-    .green-badge {
-        left: 80px;
-        top: 116px;
-    }
-}
-
 @media (max-width: 1199px) {
-    .green-badge {
-        left: 355px;
-        top: 0;
-    }
-}
-
-@media (max-width: 1105px)  {
-    .green-badge {
-        left: 32px;
-        top: 58px;
-    }
-}
-
-@media (max-width: 977px) {
-    .green-badge {
-        left: 77px;
-        top: 58px;
-    }
-}
-
-@media (max-width: 849px) {
-    .green-badge {
-        left: 125px;
-        top: 58px;
+    .title-badges,
+    .title-playlist {
+        font-size: 12px;
     }
 }
 

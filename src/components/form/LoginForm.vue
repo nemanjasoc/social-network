@@ -61,7 +61,7 @@ export default {
     display: flex;
     background-color: white;
     border-radius: 0px 4px 4px 0px;
-	width: calc(40% - 80px);
+	width: 42%;
 }
 
 .top-side {
@@ -209,14 +209,14 @@ input:focus {
 
 .checkbox-text-remember {
 	display: flex;
-	font-size: 14px;
-	margin-left: 5px;
+    font-size: 13px;
+    margin: 0 5px;
 }
 
 .text-forgot {
     display: flex;
-    justify-content: flex-end;
-    font-size: 14px;
+    font-size: 13px;
+    text-align: right;
 }
 
 .submit-login {
@@ -290,15 +290,9 @@ input:focus {
 }
 
 /*media query*/
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (max-width: 991px) {
 	.right-content {
-		width: calc(45% - 40px);
-	}
-}
-
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-	.right-content {
-		width: calc(50% - 15px);
+		width: 45%;
 	}
 }
 
