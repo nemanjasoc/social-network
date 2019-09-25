@@ -2,86 +2,15 @@
     <div>
         <!--big devices narrow sidebar-->
         <aside class="left-fixed-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
-            <div class="logo">
+            <div class="logo" @click="checkWidth()">
                 <img src="../../assets/login-images/logo.png" alt="logo">
             </div>
             <ul class="left-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
-                <li>
+                <li v-for="tooltip in leftSidebarTooltips" :key="tooltip.id">
                     <a href="#">
-                        <i class="fas fa-bars" @click="leftSidebarToggle = !leftSidebarToggle">
-                            <span class="tooltiptext-menu">OPEN MENU</span>
-                        </i>
+                        <i :class="tooltip.icon" :id="tooltip.tooltip_id" @click="leftSidebarToggle = !leftSidebarToggle"></i>
                     </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="far fa-newspaper">
-                            <span class="tooltiptext-newsfeed">NEWSFEED</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="far fa-star">
-                            <span class="tooltiptext-fav-page">FAV PAGE</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-user-friends">
-                            <span class="tooltiptext-friend-groups">FRIEND GROUPS</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-headphones">
-                            <span class="tooltiptext-music-and-playlists">MUSIC&PLAYLIST</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-cloud-sun">
-                            <span class="tooltiptext-weather-app">WEATHER APP</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="far fa-calendar-alt">
-                            <span class="tooltiptext-calendar-and-events">CALENDAR AND EVENTS</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-certificate">
-                            <span class="tooltiptext-community-badges">COMMUNITY BADGES</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-birthday-cake">
-                            <span class="tooltiptext-friends-birthday">FRIENDS BIRTHDAYS</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-industry">
-                            <span class="tooltiptext-account-stats">ACCOUNT STATS</span>
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-poll-h">
-                            <span class="tooltiptext-manage-widgets">MANAGE WIDGETS</span>
-                        </i>
-                    </a>
+                    <b-tooltip :target="tooltip.tooltip_id" placement="left">{{ tooltip.title }}</b-tooltip>
                 </li>
             </ul>
         </aside>
@@ -91,91 +20,63 @@
                 <img src="../../assets/login-images/logo.png" alt="logo">
                 <span class="olympus-title">OLYMPUS</span>
             </div>
-            <ul class="left-sidebar-wider" v-bind:class="{ inactive: !leftSidebarToggle }">  
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="fas fa-times" @click="leftSidebarToggle = !leftSidebarToggle"></i>
-                        <span class="left-menu-title">Collapse menu</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="far fa-newspaper"></i>
-                        <span class="left-menu-title">Newsfeed</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="far fa-star"></i>
-                        <span class="left-menu-title">Fav Pages Feed</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="fas fa-user-friends"></i>
-                        <span class="left-menu-title">Friend Groups</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="fas fa-headphones"></i>
-                        <span class="left-menu-title">Music & Playlist</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="fas fa-cloud-sun"></i>
-                        <span class="left-menu-title">Weather App</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="far fa-calendar-alt"></i>
-                        <span class="left-menu-title">Calendar and Events</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="fas fa-certificate"></i>
-                        <span class="left-menu-title">Community Badges</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="fas fa-birthday-cake"></i>
-                        <span class="left-menu-title">Friends Birthdays</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="fas fa-industry"></i>
-                        <span class="left-menu-title">Account Stats</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <a href="#">
-                        <i class="fas fa-poll-h"></i>
-                        <span class="left-menu-title">Manage Widgets</span>
-                    </a>
-                </li>
-                <li class="left-menu">
-                    <div class="profile-completion-container">
-                        <div class="profile-completion-title">
-                            <span class="completion-title">Profile Completion</span>
-                            <span class="completion-percent">76%</span>
-                        </div>
-                        <div class="completion-line">
-                            <div class="max-range-line progress-moved">
-                                <span class="filled-profile"></span>
-                            </div>
-                        </div>
-                        <div class="comletion-text">Complete
-                            <span class="your-profile-text">your profile</span>
-                            so people can know more about you!
+            <div class="left-sidebar-wider" v-bind:class="{ inactive: !leftSidebarToggle }"> 
+                <div class="author-data-wrapper">
+                    <div class="author-status">
+                        <img src="../../assets/profile-images/author-page.jpg" alt="author">
+                        <span class="online-status-dot"></span>
+                    </div>
+                    <div class="author-data">
+                        <span class="author-title">James Spiegel</span>
+                        <span class="author-subtitle">SPACE COWBOY</span>
+                    </div>
+                </div>
+                <div class="menu-header">
+                    <span class="menu-title">MAIN SECTIONS</span>
+                </div>
+                <ul> 
+                    <li class="left-menu" v-for="li in leftSidebarWider" :key="li.id">
+                        <a href="#">
+                            <i :class="li.icon" @click="leftSidebarToggle = !leftSidebarToggle"></i>
+                            <span class="left-menu-title">{{ li.title }}</span>
+                        </a>
+                    </li>      
+                </ul>
+                <div class="menu-header">
+                    <span class="menu-title">YOUR ACCOUNT</span>
+                </div>
+                <ul class="account-block">
+                    <li class="left-menu-account-block" v-for="li in leftSidebarAccountBlock" :key="li.id">
+                        <a href="#">
+                            <i :class="li.icon"></i>
+                            <span class="left-menu-title-account-block">{{ li.title }}</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="menu-header">
+                    <span class="menu-title">ABOUT OLYMPUS</span>
+                </div> 
+                <ul>
+                    <li class="about-list" v-for="li in leftSidebarAboutBlock" :key="li.id">
+                        <span class="about-list-title">{{ li.title }}</span>                      
+                    </li>
+                </ul>                         
+                <div class="profile-completion-container">
+                    <div class="profile-completion-title">
+                        <span class="completion-title">Profile Completion</span>
+                        <span class="completion-percent">76%</span>
+                    </div>
+                    <div class="completion-line">
+                        <div class="max-range-line progress-moved">
+                            <span class="filled-profile"></span>
                         </div>
                     </div>
-                </li>
-            </ul>
+                    <div class="comletion-text">Complete
+                        <span class="your-profile-text">your profile</span>
+                        so people can know more about you!
+                    </div>
+                </div>
+            </div>
         </aside>
     </div>
 </template>
@@ -184,13 +85,34 @@
 export default {
     data() {
         return {
-            leftSidebarToggle: false
+            leftSidebarToggle: false,
+            leftSidebarTooltips: this.$store.state.leftProfileSidebar.leftSidebarTooltips,
+            leftSidebarWider: this.$store.state.leftProfileSidebar.leftSidebarWider,
+            leftSidebarAccountBlock: this.$store.state.leftProfileSidebar.leftSidebarAccountBlock,
+            leftSidebarAboutBlock: this.$store.state.leftProfileSidebar.leftSidebarAboutBlock
+        }
+    },
+    methods: {
+        checkWidth() {
+            if (window.innerWidth < 769) {
+                this.leftSidebarToggle = !this.leftSidebarToggle;
+            }
         }
     }
 }
 </script>
 
 <style scoped>
+.tooltip {
+    left: 130px !important;
+    top: 18px !important;
+    width: 135px !important;
+    height: 21px !important;
+    border-radius: 6px !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+}
+
 .logo-small {
     display: none;
 }
@@ -308,74 +230,67 @@ export default {
     font-size: 13px;
 }
 
-.fa-bars .tooltiptext-menu,
-.fa-newspaper .tooltiptext-newsfeed,
-.fa-star .tooltiptext-fav-page,
-.fa-user-friends .tooltiptext-friend-groups,
-.fa-headphones .tooltiptext-music-and-playlists,
-.fa-cloud-sun .tooltiptext-weather-app,
-.fa-calendar-alt .tooltiptext-calendar-and-events,
-.fa-certificate .tooltiptext-community-badges,
-.fa-birthday-cake .tooltiptext-friends-birthday,
-.fa-industry .tooltiptext-account-stats,
-.fa-poll-h .tooltiptext-manage-widgets {
-    visibility: hidden;
-    width: 80px;
-    height: 25px;
-    background-color: #3f4257;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 30px;
-    left: 33px;
-    font-size: 9px;
-    align-items: center;
+.author-data-wrapper {
     display: flex;
-    justify-content: center;
-    opacity: 0;
-    -webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
+    cursor: pointer;
+    justify-content: flex-end;
+    padding: 20px 25px 0 25px;
+    display: none;
 }
 
-.fa-bars .tooltiptext-menu::after,
-.fa-newspaper .tooltiptext-newsfeed::after,
-.fa-star .tooltiptext-fav-page::after,
-.fa-user-friends .tooltiptext-friend-groups::after,
-.fa-headphones .tooltiptext-music-and-playlists::after,
-.fa-cloud-sun .tooltiptext-weather-app::after,
-.fa-calendar-alt .tooltiptext-calendar-and-events::after,
-.fa-certificate .tooltiptext-community-badges::after,
-.fa-birthday-cake .tooltiptext-friends-birthday::after,
-.fa-industry .tooltiptext-account-stats::after,
-.fa-poll-h .tooltiptext-manage-widgets::after {
-    content: "";
+.author-data-wrapper img {
+    border-radius: 50%;
+}
+
+.author-status {
     position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent #3f4257 transparent transparent;
+    justify-content: flex-start;
 }
 
-.fa-bars:hover .tooltiptext-menu,
-.fa-newspaper:hover .tooltiptext-newsfeed,
-.fa-star:hover .tooltiptext-fav-page,
-.fa-user-friends:hover .tooltiptext-friend-groups,
-.fa-headphones:hover .tooltiptext-music-and-playlists,
-.fa-cloud-sun:hover .tooltiptext-weather-app,
-.fa-calendar-alt:hover .tooltiptext-calendar-and-events,
-.fa-certificate:hover .tooltiptext-community-badges,
-.fa-birthday-cake:hover .tooltiptext-friends-birthday,
-.fa-industry:hover .tooltiptext-account-stats,
-.fa-poll-h:hover .tooltiptext-manage-widgets {
-    visibility: visible;
-    opacity: 1;
+.author-data {
+    display: flex;
+    flex-direction: column;
+    padding-left: 45px;
+    text-align: left;
+}
+
+.author-title {
+    color: #515365;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.author-subtitle {
+    display: block;
+    font-weight: 700;
+    color: #9a9fbf;
+    font-size: 8px;
+}
+
+.online-status-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #32e4cd;
+    top: 0px;
+    right: 27px;
+    border-radius: 50%;
+}
+
+.menu-header {
+    display: none;
+    justify-content: flex-end;
+    border-bottom: 1px solid #e6ecf5;
+    border-top: 1px solid #e6ecf5;
+    padding: 5px 0;
+    margin-top: 20px;
+}
+
+.menu-title {
+    color: #9a9fbf;
+    margin-left: 25px;
+    font-size: 9px;
+    font-weight: 700;
 }
 
 .left-menu {
@@ -383,6 +298,10 @@ export default {
     justify-content: flex-start;
     padding-left: 25px;
     direction: ltr;
+}
+
+.left-menu:last-child {
+    margin-bottom: 20px;
 }
 
 .fa-times,
@@ -396,7 +315,8 @@ export default {
 .fa-certificate,
 .fa-birthday-cake,
 .fa-industry,
-.fa-poll-h {
+.fa-poll-h,
+.fa-sign-out-alt {
     position: relative;
     padding-top: 32px;
     font-size: 22px;
@@ -470,7 +390,7 @@ a:link {
     height: 180px;
     justify-content: center;
     flex-direction: column;
-    margin-left: -25px;
+    padding: 0 25px;
 }
 
 .profile-completion-title {
@@ -481,13 +401,11 @@ a:link {
 .completion-title {
     display: flex;
     font-size: 14px;
-    margin-left: 25px;
 }
 
 .completion-percent {
     display: flex;
     font-size: 14px;
-    margin-right: 25px;
 }
 
 .completion-line {
@@ -501,7 +419,7 @@ a:link {
     border-radius: 10px;
     background-color: #ebecf2;
     position: relative;
-    margin: 12px 25px;
+    margin: 12px 0;
 }
 
 .filled-profile {
@@ -525,12 +443,72 @@ a:link {
 
 .comletion-text {
     font-size: 14px;
-    margin: 0 25px;
-    text-align: justify;
+    text-align: left;
 }
 
 .your-profile-text {
     color: #ff5e3a;
+}
+
+.account-block {
+    display: none;
+}
+
+.left-menu-account-block {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 25px;
+    direction: ltr;
+}
+
+.left-menu-account-block:first-child {
+    margin-left: 5px;
+}
+
+.left-menu-account-block:last-child {
+    margin-bottom: 20px;
+}
+
+.left-menu-title-account-block {
+    padding-left: 20px;
+    padding-top: 32px;
+    color: #515365;
+    font-weight: 700;
+    font-size: 13px;
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+    font-weight: 700;
+}
+
+.left-menu-title-account-block:hover {
+    color: #ff5e3a;
+}
+
+.about-list {
+    display: none;
+    justify-content: flex-end;
+    padding: 10px 10px 10px 25px;
+    cursor: pointer;
+}
+
+.about-list-title {
+    font-size: 12px;
+    color: #515365;
+    font-weight: 700;
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+}
+
+.about-list-title:hover {
+    color: #ff5e3a;
+}
+
+.about-list:last-child {
+    margin-bottom: 20px;
 }
 
 /*media query*/
@@ -539,8 +517,32 @@ a:link {
         display: none;
     }
 
-    .left-sidebar-wider {
+    .olympus-title {
+        font-size: 10px;
+    }
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .author-data-wrapper {
+        display: flex;
+    }
+
+    .profile-completion-container {
         display: none;
+    }
+
+    .menu-header {
+        display: flex;
+    }
+
+    .account-block {
+        display: block;
+    }
+
+    .about-list {
+        display: flex;
     }
 }
 </style>

@@ -11,40 +11,26 @@
                     </div>
                     <div class="user-profile-sections">                                
                         <ul class="profile-menu-left">
-                            <li>
-                                <a href="#" class="active">Timeline</a>
-                            </li>
-                            <li>
-                                <a href="#">About</a>
-                            </li>
-                            <li>
-                                <a href="#">Friends</a>
+                            <li v-for="li in profileMenuLeft" :key="li.id">
+                                <a href="#" :class="li.active">{{ li.link }}</a>
                             </li>
                         </ul>                                   
                         <ul class="profile-menu-right">
-                            <li>
-                                <a href="#">Photos</a>
+                            <li v-for="li in profileMenuRight" :key="li.id">
+                                <a href="#">{{ li.link }}</a>
                             </li>
-                            <li>
-                                <a href="#">Videos</a>
-                            </li>
-                            <li>
-                                <div class="three-dots">
-                                    <div class="dropdown-three-dots">
-                                        <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
-                                        <div class="dropdown-content">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Report Profile</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Block Profile</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                            <div class="three-dots">
+                                <div class="dropdown-three-dots">
+                                    <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li v-for="li in dropdownThreeDots" :key="li.id">
+                                                <a href="#">{{ li.link }}</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
                         </ul>
                         <div class="three-rounded-image-buttons">
                             <div class="smile-button">
@@ -58,14 +44,8 @@
                                     <div class="dropbtn"><i class="fas fa-sliders-h"></i></div>
                                     <div class="dropdown-content">
                                         <ul>
-                                            <li>
-                                                <a href="#">Update Profile Photo</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Update Header Photo</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Account Settings</a>
+                                            <li v-for="li in dropdownSettingButton" :key="li.id">
+                                                <a href="#">{{ li.link }}</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -109,6 +89,14 @@ import CenterBlocks from '../components/profile/CenterBlocks.vue';
 import RightBlocks from '../components/profile/RightBlocks.vue';
 
 export default {
+    data() {
+        return {
+            profileMenuLeft: this.$store.state.profile.profileMenuLeft,
+            profileMenuRight: this.$store.state.profile.profileMenuRight,
+            dropdownThreeDots: this.$store.state.profile.dropdownThreeDots,
+            dropdownSettingButton: this.$store.state.profile.dropdownSettingButton
+        }
+    },
     methods: { 
         scrollToTop() {
             window.scrollTo({
@@ -192,10 +180,7 @@ a:link {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.user-profile-sections ul li {
-    padding: 0 35px;
+    width: 35%;
 }
 
 .profile-menu-left li a,
@@ -415,7 +400,7 @@ a:link {
     bottom: 10px;
     right: 85px;
     cursor: pointer;
-    z-index: 20;
+    z-index: 10;
     transition: all .3s ease;
 }
 
@@ -433,10 +418,6 @@ a:link {
 
     .country {
         font-size: 11px;
-    }
-
-    .user-profile-sections ul li {
-        padding: 0 20px;
     }
 
     .three-dots {
@@ -469,10 +450,6 @@ a:link {
 }
 
 @media (max-width: 992px) {
-    .user-profile-sections ul li {
-        padding: 0 14px;
-    }
-
     .author-name {
         font-size: 18px;
     }
@@ -505,7 +482,13 @@ a:link {
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: column;
+        align-items: center;
         padding-bottom: 225px;
+    }
+
+    .profile-menu-left,
+    .profile-menu-right {
+        width: 100%;
     }
 }
 

@@ -17,19 +17,8 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Community</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Events</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-						<li class="nav-item dropdown">
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Action</a>
-								<a class="dropdown-item" href="#">Another action</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Something else here</a>
-							</div>
+						<li class="nav-item" v-for="li in dropdownLinks" :key="li.id">
+							<a class="nav-link" href="#">{{ li.text }}</a>
 						</li>
 					</ul>
 				</div>
@@ -62,22 +51,13 @@
 								</div>
 							</div>
 							<div class="register-header-title">Register to Olympus</div>
-							<form id="form" @submit.prevent="isNewUser = false">
-								<div class="full-name-form-wrapper">
-									<div class="first-name-wrapper">
-										<input id="first-name" type="text" name="firstname" required>
-										<label class="label-first-name" for="first-name">First Name</label>
-									</div>
-									<div class="last-name-wrapper">
-										<input id="last-name" type="text" name="lastname" required>
-										<label class="label-second-name" for="last-name">Last Name</label>
-									</div>
-								</div>
+							<form id="form" @submit.prevent="isNewUser = false">								
+								<div class="fullname-form-wrapper">
+									<input id="first-name" type="text" name="firstname" placeholder="First Name" required>
+									<input id="last-name" type="text" name="lastname" placeholder="Last Name" required>
+								</div>							
 								<div class="registration-form-data-wrapper">
-									<div class="email-wrapper">
-										<input id="email" type="email" name="email" required>
-										<label class="label-email" for="label-email">Your Email</label>
-									</div>
+									<input id="email" type="email" name="email" placeholder="Your Email" required>
 									<input id="password" type="password" name="psw" placeholder="Your Password" required>
 									<input id="date" type="date" name="bday" required>
 									<select name="genderlist" class="select-gender">
@@ -111,7 +91,8 @@ export default {
 	data() {
 		return {
 			isNewUser: true,
-			isBarClicked: false
+			isBarClicked: false,
+			dropdownLinks: this.$store.state.loginPage.dropdownLinks
 		}
 	},
 	components: {
@@ -120,11 +101,16 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
+
 .main-container {
-	background-color: white;
+	background-color: #fff;
 	background-image: url("../assets/login-images/users-bg.png");
 	background-repeat: repeat;
+	position: relative;
+	@include full-width-height;
 	animation-delay: 0s;
 	animation-duration: 20s;
 	animation-iteration-count: infinite;
@@ -132,19 +118,33 @@ export default {
 	animation-fill-mode: none;
 	animation-play-state: running;
 	animation-name: move-right;
-	position: relative;
-	width: 100%;
-	height: 100vh;
 }
 
 .content {
-	background-color: rgb(255,94,58, 0.9);
-	width: 100%;
-	height: 100vh;
+	background-color: rgba(255,94,58, 0.9);
+	@include full-width-height;
 	overflow: scroll;
 }
 
 @-webkit-keyframes move-right {
+	0% {
+		background-position-x: 0%;
+	}
+	100% {
+		background-position-x: 100%;
+	}
+}
+
+@-moz-keyframes move-right {
+	0% {
+		background-position-x: 0%;
+	}
+	100% {
+		background-position-x: 100%;
+	}
+}
+
+@-o-keyframes move-right {
 	0% {
 		background-position-x: 0%;
 	}
@@ -162,7 +162,8 @@ export default {
 	}
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link,
+.fa-bars {
 	color: #fff;
 }
 
@@ -170,22 +171,9 @@ export default {
 	border: none;
 }
 
-.fa-bars {
-	color: #fff;
-}
-
 .fa-times {
 	color: #fff;
-	font-size: 23px;
-}
-
-button[type=button] {
-	outline: none;
-}
-
-.logo-wrapper {
-	display: flex;
-	justify-content: space-between;
+	font-size: $base-font-size + 7;
 }
 
 img {
@@ -194,20 +182,19 @@ img {
 }
 
 .title-wrapper {
-	display: flex;
-	flex-direction: column;
+	@include flex-column;
 }
 
 .main-title {
-	color: white;
-    font-size: 18px;
+	color: #fff;
+    font-size: $base-font-size + 2;
     margin-left: 10px;
 	margin-bottom: 0;
 }
 
 .title {
-    font-size: 12px;
-    color: white;
+    font-size: $base-font-size - 4;
+    color: #fff;
 	margin-left: 10px;
 }
 
@@ -216,51 +203,44 @@ img {
 }
 
 .content-wrapper {
-	display: flex;
-	justify-content: center;
+	@include flex-center;
 	flex-wrap: wrap;
 	width: 85%;
 	margin: 40px auto;
 }
 
 .left-content {
-	display: flex;
-	justify-content: center;
+	@include flex-center;
 	flex-direction: column;
 	width: 58%;
 }
 
 .left-content-title {
-	font-weight: 100;
-	color: white;
-	font-size: 34px;
+	color: #fff;
+	font-size: $base-font-size + 18;
 	width: 60%;
 }
 
 .left-content-text {
-	color: white;
+	color: #fff;
 	width: 75%;
-	font-size: 14px;
+	font-size: $base-font-size - 2;
 }
 
 .registration-button {
-	border: 1px solid white;
-	color: white;
+	border: 1px solid #fff;
+	color: #fff;
 	width: 160px;
 	height: 40px;
 	margin-top: 22px;
 	align-items: center;
-	display: flex;
-	justify-content: center;
+	@include flex-center;
 	cursor: pointer;
 	border-radius: 4px;
 }
 
 .right-content {
-    display: flex;
-    background-color: white;
-    border-radius: 0px 4px 4px 0px;
-	width: 42%;
+    @include right-content;
 }
 
 .top-side {
@@ -268,57 +248,33 @@ img {
 }
 
 .left-side {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: center;
-	width: 18%;
+	@include left-side;
 }
 
 .shut-down-aside {
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid #8080804f;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #8080804f;
-    height: 50%;
+	@include shut-down-aside;
 }
 
 .fa-power-off {
-	font-size: 18px;
-	color: rgb(255,94,58);
+	font-size: $base-font-size + 2;
+	color: #ff5e3a;
 }
 
 .spinner-aside {
-    display: flex;
-    justify-content: center;
-	align-items: center;
-    background-color: #acd1ef14;
-    height: 50%;
-	border-right: 1px solid #8080804f;
+    @include spinner-aside;
 }
 
 .fa-spinner {
-	font-size: 18px;
-	color: gray;
+	font-size: $base-font-size + 2;
+	color: #8080804f;
 }
 
 .registration-form {
-	display: flex;
-	flex-direction: column;
-	width: 82%;
+	@include registration-form;
 }
 
 .register-header-title {
-	display: flex;
-	text-align: center;
-	align-items: center;
-	padding-left: 10px;
-	height: 60px;
-	font-size: 15px;
-	border-bottom: 1px solid #8080804f;
-	font-weight: 600;
+	@include register-header-title;
 }
 
 form {
@@ -326,95 +282,26 @@ form {
 }
 
 .registration-form-data-wrapper {
-	display: flex;
-	flex-direction: column;
+	@include flex-column;
 }
 
-.full-name-form-wrapper {
+.logo-wrapper,
+.fullname-form-wrapper {
 	display: flex;
-	margin-bottom: 25px;
 }
 
-.first-name-wrapper,
-.last-name-wrapper,
-.email-wrapper {
-	display: flex;
-	position: relative;
-	height: 40px;
-	line-height: 40px;
-	width: 100%;
-}
-
-.label-first-name,
-.label-second-name,
-.label-email {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	color: gray;
-	transition: 0.2s all;
-	cursor: text;
-	padding-left: 8px;
+#first-name,
+#last-name {
+	margin-right: 10px;
+	width: 50%;
 }
 
 input[type=text],
-input[type=email] {
-	font-weight: 500;
-	width: 100%;
-	border: 0;
-	outline: 0;
-	border: 1px solid #8080804f;
-	border-radius: 4px;
-	box-shadow: none;
-	color: #555555;
-	font-size: 15px;
-	-webkit-transition: border-bottom 0.4s ease-out;
-	-o-transition: border-bottom 0.4s ease-out;
-	-moz-transition: border-bottom 0.4s ease-out;
-	transition: border-bottom 0.4s ease-out;
-}
-
-input[type=text]:invalid,
-input[type=email]:invalid {
-	outline: 0;
-}
-
-input[type=text]:focus,
-input[type=text]:valid,
-input[type=email]:focus,
-input[type=email]:valid {
-	border-color: #ff5e3a;
-}
-
-input[type=text]:focus~label,
-input[type=text]:valid~label,
-input[type=email]:focus~label,
-input[type=email]:valid~label {
-	font-size: 11px;
-	top: -14px;
-	color: #555555;
-}
-
-#first-name {
-	margin-right: 10px;
-	width: 100%;
-	padding-left: 8px;
-	padding-top: 10px;
-}
-
-#last-name {
-	width: 100%;
-	padding-left: 8px;
-	padding-top: 10px;
-}
-
+input[type=email],
 input[type=password],
-input[type=date] {
-	margin: 12px 0px;
-	padding-left: 10px;
-	line-height: 42px;
-	border: 1px solid #8080804f;
+input[type=date],
+.select-gender {
+	@include inputs;
 }
 
 /*calendar style*/
@@ -445,30 +332,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type="date"]::-webkit-inner-spin-button {
 	z-index: 1;
 	padding-top: 24px;
-	font-size: 13px;
+	font-size: $base-font-size - 3;
 }
 
- 
 input[type="date"]::-webkit-clear-button {
 	z-index: 1;
 }
 
-.select-gender {
-	margin: 12px 0px;
-	padding-left: 10px;
-	height: 42px;
-	border: 1px solid #8080804f;
-}
-
+button[type=button],
 input:focus {
 	outline: none;
 }
 
 .check-terms-register {
-	display: flex;
-    flex-wrap: wrap;
-    margin-top: 18px;
-    margin-bottom: 12px;
+	@include check-terms-register;
 }
 
 .terms {
@@ -476,20 +353,17 @@ input:focus {
 }
 
 .terms-and-conditions {
-	color: rgb(255,94,58);
+	color: #ff5e3a;
 	margin: 0 2px;
 }
 
 .submit-registration {
     width: 100%;
     background-color: #803ddf;
-    text-align: center;
-    color: white;
+    color: #fff;
     font-weight: 500;
     height: 42px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 	border-radius: 6px;
 	outline: none;
 	border: none;
@@ -498,63 +372,31 @@ input:focus {
 
 /*checkbox style*/
 .container {
-	display: flex;
-	position: relative;
-	margin-bottom: 12px;
-	cursor: pointer;
-	font-size: 14px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	flex-wrap: wrap;
-    text-align: justify;
+	@include checkbox-container;
 }
 
 .container input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
+	@include checkbox-container-input;
+
+	&:checked ~ .checkmark:after {
+		display: block;
+	}
 }
 
 .checkmark {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 14px;
-	width: 14px;
-	background-color: white;
-	border: 1px solid gray;
-	border-radius: 2px;
-	margin-top: 2px;
-}
+	@include checkbox-container-checkmark;
 
-.checkmark:after {
-	content: "";
-	position: absolute;
-	display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-	display: block;
+	&:after {
+		@include checkbox-container-checkmark-after;
+	}
 }
 
 .container .checkmark:after {
-	left: 3px;
-	top: 0px;
-	width: 6px;
-	height: 10px;
-	border: 1px solid rgb(255,94,58);
-	border-width: 0 3px 3px 0;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
+	@include container-checkmark-after;
 }
 
 /*media query*/
-@media only screen  and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
 	.content-wrapper {
 		width: 90%;
 	}
@@ -569,10 +411,7 @@ input:focus {
 		color: #515365;
 		font-weight: 700;
 		padding: 10px 20px;
-		-webkit-transition: color .3s ease;
-		-moz-transition: color .3s ease;
-		-o-transition: color .3s ease;
-		transition: color .3s ease;
+		@include transition-color-vendors;
 	}
 
 	.navbar-light .navbar-nav .nav-link:hover {
@@ -602,15 +441,10 @@ input:focus {
 		margin-bottom: 40px;
 	}
 
-	.left-content-title {
-		width: 100%;
-	}
-
-	.left-content-text {
-		width: 100%;
-	}
-
-	.right-content {
+	.left-content-title,
+	.left-content-text,
+	.right-content,
+	.registration-form {
 		width: 100%;
 	}
 
@@ -618,23 +452,17 @@ input:focus {
 		display: none;
 	}
 
-	.registration-form {
-		width: 100%;
-	}
-
 	.register-header-title {
 		padding-left: 20px;
 	}
 
 	.top-side {
-		display: flex;
-		flex-direction: row;
+		@include flex-row;
 		border-bottom: 1px solid #8080804f;
 	}
 
 	.top-shut-down {
-		display: flex;
-		justify-content: center;
+		@include flex-center;
 		width: 50%;
 		border-right: 1px solid #8080804f;
 		height: 60px;
@@ -642,19 +470,18 @@ input:focus {
 	}
 
 	.top-spinner {
-		display: flex;
+		@include flex-center;
 		margin: auto;
-		justify-content: center;
 		width: 50%;
 	}
 
 	.fa-spinner {
-		color: gray;
+		color: #8080804f;
 	}
 
 	.registration-button {
 		width: 120px;
-		font-size: 14px;
+		font-size: $base-font-size - 2;
 	}
 }
 </style>

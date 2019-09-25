@@ -7,38 +7,9 @@
                 </div>
                 <div class="badges-block-content">
                     <ul class="badges">
-                        <li>
-                            <img src="../../assets/profile-images/badge1.png" alt="badge-1">
-                            <div class="orange-badge">2</div>
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge4.png" alt="badge-4">
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge3.png" alt="badge-3">
-                            <div class="blue-badge">4</div>
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge6.png" alt="badge-6">
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge11.png" alt="badge-11">
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge8.png" alt="badge-8">
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge10.png" alt="badge-10">
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge13.png" alt="badge-13">
-                            <div class="green-badge">2</div>
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge7.png" alt="badge-7">
-                        </li>
-                        <li>
-                            <img src="../../assets/profile-images/badge12.png" alt="badge-12">
+                        <li v-for="badge in badges" :key="badge.id">
+                            <img :src="getImgUrl(badge.img)" :alt="badge.img">
+                            <div :class="badge.color">{{ badge.number }}</div>
                         </li>
                     </ul>
                 </div>
@@ -49,127 +20,31 @@
                     <h6 class="title-playlist">My Spotify Playlist</h6>
                 </div>                      
                 <ol class="playlist">
-                    <li class="first-video">
-                        <span class="one">1</span>                             
-                        <div class="play-icon" data-toggle="modal" data-target="#videoModalFirst">
-                            <img src="../../assets/profile-images/ws-blue-orchid.jpg" alt="ws-blue-orchid">
+                    <li class="first-video" v-for="song in playlist" :key="song.id">
+                        <span class="song-number">{{ song.number }}</span>                             
+                        <div class="play-icon" data-toggle="modal" data-target="#videoModal" @click="playSong(song)">
+                            <img :src="getImgUrl(song.img)" :alt="song.img">
                             <i class="fas fa-play"></i>
                         </div>                               
                         <div class="composition">
-                            <span class="composition-name">Blue Orchid</span>
-                            <span class="composition-author">The White Stripes</span>
+                            <span class="composition-name">{{ song.name }}</span>
+                            <span class="composition-author">{{ song.author }}</span>
                         </div>
-                        <span class="composition-time">3:22</span>
-                    </li>
-                    <li class="second-video">
-                        <span class="two">2</span>                                
-                        <div class="play-icon" data-toggle="modal" data-target="#videoModalSecond">
-                            <img src="../../assets/profile-images/ws-seven-nation-army.jpg" alt="ws-seven-nation-army">
-                            <i class="fas fa-play"></i>
-                        </div>                               
-                        <div class="composition">
-                            <span class="composition-name">Seven Nation Army</span>
-                            <span class="composition-author">The White Stripes</span>
-                        </div>
-                        <span class="composition-time">5:48</span>
-                    </li>
-                    <li class="third-video">
-                        <span class="three">3</span>                                  
-                        <div class="play-icon" data-toggle="modal" data-target="#videoModalThird">
-                            <img src="../../assets/profile-images/rhcp-snow.jpg" alt="rhcp-snow">
-                            <i class="fas fa-play"></i>
-                        </div>                                
-                        <div class="composition">
-                            <span class="composition-name">Snow</span>
-                            <span class="composition-author">Red Hot Chili Peppers</span>
-                        </div>
-                        <span class="composition-time">3:06</span>
-                    </li>
-                    <li class="fourth-video">
-                        <span class="four">4</span>                                   
-                        <div class="play-icon" data-toggle="modal" data-target="#videoModalFourth">
-                            <img src="../../assets/profile-images/sg-mrs-robinson.jpg" alt="sg-mrs-robinson">
-                            <i class="fas fa-play"></i>
-                        </div>                               
-                        <div class="composition">
-                            <span class="composition-name">Mrs. Robinson</span>
-                            <span class="composition-author">Simon & Garfunkel</span>
-                        </div>
-                        <span class="composition-time">6:17</span>
-                    </li>
-                    <li class="fifth-video">
-                        <span class="five">5</span>                                
-                        <div class="play-icon" data-toggle="modal" data-target="#videoModalFifth">
-                            <img src="../../assets/profile-images/bb-everybody.jpg" alt="bb-everybody">
-                            <i class="fas fa-play"></i>
-                        </div>
-                        <div class="composition">
-                            <span class="composition-name">Everybody Needs <br> Somebody</span>
-                            <span class="composition-author">The Blues Brothers</span>
-                        </div>
-                        <span class="composition-time">5:40</span>
+                        <span class="composition-time">{{ song.time }}</span>
                     </li>
                 </ol>                       
             </div>
         </div>
         
-        <div class="modal fade" id="videoModalFirst">
+        <div class="modal fade" id="videoModal" @click="closeVideo()">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <iframe width="100%" height="350px" src="https://www.youtube.com/embed/jW8UlrtcEac"></iframe>
+                        <iframe width="100%" height="350px" :src="currentVideo"></iframe>
                     </div>            
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="videoModalSecond">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/0J2QdDbelmY"></iframe>
-                    </div>               
-                </div>
-            </div>
-        </div> 
-        <div class="modal fade" id="videoModalThird">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/ifXalt3MJtM"></iframe>
-                    </div>               
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="videoModalFourth">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/9C1BCAgu2I8"></iframe>
-                    </div>               
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="videoModalFifth">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/EHV0zs0kVGg"></iframe>
-                    </div>               
                 </div>
             </div>
         </div>
@@ -178,7 +53,24 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            currentVideo: '',
+            playlist: this.$store.state.leftBlocks.playlist,
+            badges: this.$store.state.leftBlocks.badges
+        }
+    },
+    methods: {
+        getImgUrl(pic) {
+            return require('../../assets/profile-images/'+pic);
+        },
+        playSong(song) {
+            this.currentVideo = song.video;
+        },
+        closeVideo() {
+            this.currentVideo = '';
+        }
+    }
 }
 </script>
 
@@ -311,11 +203,7 @@ ul, li {
     cursor: pointer;
 }
 
-.one,
-.two,
-.three,
-.four,
-.five {
+.song-number {
     margin-right: 8px;
     font-size: 10px;
     color: #888da8;

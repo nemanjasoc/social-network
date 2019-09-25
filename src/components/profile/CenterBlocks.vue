@@ -14,10 +14,9 @@
                         <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
                         <div class="dropdown-content">
                             <ul>
-                                <li><a href="#">Edit Post</a></li>
-                                <li><a href="#">Delete Post</a></li>
-                                <li><a href="#">Turn Off Notifications</a></li>
-                                <li><a href="#">Select As Featured</a></li>
+                                <li>
+                                    <a href="#" v-for="li in dropdownContent" :key="li.id">{{ li.text }}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -35,11 +34,9 @@
                     <span class="post-heart-number">8</span>
                 </div>
                 <ul class="friends-images">
-                    <li><img src="../../assets/profile-images/friend-harmonic7.jpg" alt="friend-7"></li>
-                    <li><img src="../../assets/profile-images/friend-harmonic8.jpg" alt="friend-8"></li>
-                    <li><img src="../../assets/profile-images/friend-harmonic9.jpg" alt="friend-9"></li>
-                    <li><img src="../../assets/profile-images/friend-harmonic10.jpg" alt="friend-10"></li>
-                    <li><img src="../../assets/profile-images/friend-harmonic11.jpg" alt="friend-11"></li>
+                    <li v-for="image in postInfoImagesFirstBlock" :key="image.id">
+                        <img :src="getImgUrl(image.friend)" :alt="image.friend">
+                    </li>
                 </ul>
                 <div class="people-names">
                     <span class="name-one">Jenny,</span>
@@ -93,10 +90,9 @@
                         <div class="dropbtn"><i class="fas fa-ellipsis-h"></i></div>
                         <div class="dropdown-content">
                             <ul>
-                                <li><a href="#">Edit Post</a></li>
-                                <li><a href="#">Delete Post</a></li>
-                                <li><a href="#">Turn Off Notifications</a></li>
-                                <li><a href="#">Select As Featured</a></li>
+                                <li>
+                                    <a href="#" v-for="li in dropdownContent" :key="li.id">{{ li.text }}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -127,11 +123,9 @@
                     <span class="post-heart-number">15</span>
                 </div>
                 <ul class="friends-images">
-                    <li><img src="../../assets/profile-images/friend-harmonic7.jpg" alt="friend"></li>
-                    <li><img src="../../assets/profile-images/friend-harmonic8.jpg" alt="friend"></li>
-                    <li><img src="../../assets/profile-images/friend-harmonic9.jpg" alt="friend"></li>
-                    <li><img src="../../assets/profile-images/friend-harmonic10.jpg" alt="friend"></li>
-                    <li><img src="../../assets/profile-images/friend-harmonic11.jpg" alt="friend"></li>
+                    <li v-for="image in postInfoImagesSecondBlock" :key="image.id">
+                        <img :src="getImgUrl(image.friend)" :alt="image.friend">
+                    </li>
                 </ul>
                 <div class="people-names">
                     <span class="name-one">Diana,</span>
@@ -169,11 +163,25 @@
 
 <script>
 export default {
-    
+    data() {
+        return {
+            dropdownContent: this.$store.state.centerBlocks.dropdownContent,
+            postInfoImagesFirstBlock: this.$store.state.centerBlocks.postInfoImagesFirstBlock,
+            postInfoImagesSecondBlock: this.$store.state.centerBlocks.postInfoImagesSecondBlock
+        }
+    },
+    methods: {
+        getImgUrl(pic) {
+            return require('../../assets/profile-images/'+pic)
+        }
+    }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
+
 ul {
     list-style-type: none;
 }
@@ -192,19 +200,12 @@ a:link {
 }
 
 .center-first-block {
-    position: relative;
-    border-radius: 5px;
-    /*border: 1px solid #e6ecf5;*/
-    background: #fff;
-    padding: 25px;
-    border: 1px solid gray;
-    height: fit-content;
+    @include center-block; 
     margin-bottom: 15px;
 }
 
 .author-container {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-between;
 }
 
 .author-data-block {
@@ -219,23 +220,22 @@ a:link {
 }
 
 .author-data-wrapper {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 }
 
 .author-name-title {
-    font-size: 14px;
+    font-size: $base-font-size - 2;
     color: #515365;
     font-weight: 700;
     cursor: pointer;
-}
 
-.author-name-title:hover {
-    color: #ff5e3a;
+    &:hover {
+        color: #ff5e3a;
+    }
 }
 
 .time {
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     color: #9a9fbf;
 }
 
@@ -247,6 +247,10 @@ a:link {
 .dropdown-block-three-dots {
     position: relative;
     display: inline-block;
+
+    &:hover .dropdown-content {
+        @include visible-opacity;
+    }
 }
 
 .dropdown-block-three-dots .dropdown-content {
@@ -262,43 +266,29 @@ a:link {
     z-index: 5;
     right: -25px;
     margin-top: 10px;
-    -webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
-}
+    @include transition-opacity-ease-vendors;
 
-.dropdown-block-three-dots .dropdown-content::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 168px;
-    margin-left: -10px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent #fff transparent;
-}
+    &::after {
+        @include after-arrow;
+        left: 168px;
+    }
 
-.dropdown-block-three-dots .dropdown-content li a {
-    display: block;
-    font-weight: 700;
-    color: #515365;
-    font-size: 12px;
-    padding: 7px 0;
-}
+    li a {
+        display: block;
+        font-weight: 700;
+        color: #515365;
+        font-size: $base-font-size - 4;
+        padding: 7px 0;
 
-.block-three-dots:hover .dropdown-content {
-    visibility: visible;
-    opacity: 1;
-}
-
-.dropdown-block-three-dots .dropdown-content li a:hover {
-    color: #ff5e3a;
+        &:hover {
+            color: #ff5e3a;
+        }
+    }
 }
 
 p {
     margin: 25px 0;
-    font-size: 14px;
+    font-size: $base-font-size - 2;
     color: #9a9fbf;
 }
 
@@ -312,11 +302,11 @@ p {
 .post-heart {
     margin-right: 15px;
     cursor: pointer;
-}
 
-.post-heart:hover .fa-heart,
-.post-heart:hover .post-heart-number {
-    color: #ff5e3a;
+    &:hover .fa-heart,
+    &:hover .post-heart-number {
+        color: #ff5e3a;
+    }
 }
 
 .post-heart .fa-heart {
@@ -337,16 +327,11 @@ p {
     margin-right: -12px;
 }
 
-.name-one {
-    color: #515365;
-    font-weight: 700;
-    font-size: 12px;
-}
-
+.name-one,
 .name-two {
     color: #515365;
     font-weight: 700;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
 }
 
 .friends-images img {
@@ -357,7 +342,7 @@ p {
 
 .more-likes {
     color: #9a9fbf;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
 }
 
 .people-names {
@@ -372,46 +357,35 @@ p {
 .people-message-icon {
     margin-right: 15px;
     cursor: pointer;
+
+    &:hover .fa-comment-alt,
+    &:hover .comment-number {
+        color: #ff5e3a;
+    }
 }
 
-.people-message-icon .fa-comment-alt {
-    color: #c2c5d9;
-    margin-right: 5px;
-}
-
-.comment-number {
-    color: #888da8;
-}
-
-.people-message-icon:hover .fa-comment-alt,
-.people-message-icon:hover .comment-number {
-    color: #ff5e3a;
-}
-
-.share-icon {
-    cursor: pointer;
-}
-
+.people-message-icon .fa-comment-alt,
 .share-icon .fa-share {
     color: #c2c5d9;
     margin-right: 5px;
 }
 
+.comment-number,
 .share-number {
     color: #888da8;
 }
 
-.share-icon:hover .fa-share,
-.share-icon:hover .share-number {
-    color: #ff5e3a;
+.share-icon {
+    cursor: pointer;
+
+    &:hover .fa-share,
+    &:hover .share-number {
+        color: #ff5e3a;
+    }
 }
 
 .center-first-block-side-icons {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    right: -17px;
-    top: 20px;
+    @include center-block-side-icons;
 }
 
 .trophy-side-icon,
@@ -422,16 +396,11 @@ p {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     align-items: center;
     margin-bottom: 8px;
     cursor: pointer;
-    -webkit-transition: background-color 2s ease;
-    -moz-transition: background-color 2s ease;
-    -o-transition: background-color 2s ease;
-    transition: background-color 2s ease;
-    transition: background-color .2s ease;
+    @include transition-background-color-ease-vendors;
 }
 
 .trophy-side-icon .fa-trophy,
@@ -452,13 +421,7 @@ p {
 }
 
 .center-second-block {
-    position: relative;
-    border-radius: 5px;
-    /*border: 1px solid #e6ecf5;*/
-    background: #fff;
-    padding: 25px;
-    border: 1px solid gray;
-    height: fit-content;
+    @include center-block; 
 }
 
 .post-photo {
@@ -474,11 +437,7 @@ p {
 }
 
 .center-second-block-side-icons {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    right: -17px;
-    top: 20px;
+    @include center-block-side-icons;
 }
 
 .author-dot {

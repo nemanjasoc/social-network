@@ -6,50 +6,10 @@
         </div>
         <aside class="right-sidebar" v-bind:class="{ inactive: rightSidebarToggle }">
             <ul class="right-sidebar-users">
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar67-sm.jpg" alt="avatar-67">
-                    <span class="user-status-online"></span>                
+                <li class="chat-user" v-for="user in usersSidebar" :key="user.id">              
+                    <img :src="getImgUrl(user.img)" :alt="user.img">
+                    <span :class="user.status"></span>               
                 </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar62-sm.jpg" alt="avatar-62">
-                    <span class="user-status-online"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar68-sm.jpg" alt="avatar-68">
-                    <span class="user-status-online"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar69-sm.jpg" alt="avatar-69">
-                    <span class="user-status-away"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar70-sm.jpg" alt="avatar-70">
-                    <span class="user-status-disconected"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar64-sm.jpg" alt="avatar-64">
-                    <span class="user-status-online"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar71-sm.jpg" alt="avatar-71">
-                    <span class="user-status-online"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar72-sm.jpg" alt="avatar-72">
-                    <span class="user-status-away"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar63-sm.jpg" alt="avatar-63">
-                    <span class="user-status-invisible"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar72-sm.jpg" alt="avatar-72">
-                    <span class="user-status-away"></span>                
-                </li>
-                <li class="chat-user">              
-                    <img src="../../assets/profile-images/avatar71-sm.jpg" alt="avatar-71">
-                    <span class="user-status-online"></span>                
-                </li>                           
             </ul>
             <div class="right-sidebar-toggle">
                 <div class="right-sidebar-bar">
@@ -62,350 +22,86 @@
         </aside>
 
         <aside class="right-sidebar-wider" v-bind:class="{ inactive: !rightSidebarToggle }">
-            <ul class="right-sidebar-wider-users">
+            <div class="right-sidebar-wider-users">
                 <div class="settings">
                     <span class="left-title">CLOSE FRIENDS</span>
                     <span class="right-title">SETTINGS</span>
                 </div>
-                <li class="chat-user-wider">
-                    <div class="user-thumb">              
-                        <img src="../../assets/profile-images/avatar67-sm.jpg" alt="avatar-67">
-                        <span class="user-status-online-wider"></span>
-                    </div> 
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal" data-backdrop="false">Carol Summers</a>
-                        <span class="status">ONLINE</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal" data-backdrop="false"></i>                
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div>               
-                </li>
-                <li class="chat-user-wider">
-                    <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar62-sm.jpg" alt="avatar-62">
-                        <span class="user-status-online-wider"></span>
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal" data-backdrop="false">Mathilda Brinker</a>
-                        <span class="status">AT WORK!</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal" data-backdrop="false"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div>                 
-                </li>
-                <li class="chat-user-wider">
-                    <div class="user-thumb">              
-                        <img src="../../assets/profile-images/avatar68-sm.jpg" alt="avatar-68">
-                        <span class="user-status-online-wider"></span>
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Carol Summers</a>
-                        <span class="status">ONLINE</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div>                  
-                </li>
-                <li class="chat-user-wider">
-                    <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar69-sm.jpg" alt="avatar-69">
-                        <span class="user-status-away-wider"></span>
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Michael Maximoff</a>
-                        <span class="status">AWAY</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div>                  
-                </li>
-                <li class="chat-user-wider">
-                    <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar70-sm.jpg" alt="avatar-70">
-                        <span class="user-status-disconected-wider"></span>
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Rachel Howlett</a>
-                        <span class="status">OFFLINE</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div>                  
-                </li>
+                <ul>
+                    <li class="chat-user-wider" v-for="user in usersWiderSidebarCloseFriends" :key="user.id">
+                        <div class="user-thumb">              
+                            <img :src="getImgUrl(user.img)" :alt="user.img">
+                            <span :class="user.status"></span>
+                        </div> 
+                        <div class="user-status">
+                            <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal" data-backdrop="false">{{ user.user_name }}</a>
+                            <span class="status">{{ user.title_status }}</span>
+                        </div>
+                        <div class="three-dots">
+                            <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal" data-backdrop="false"></i>                
+                            <ul class="three-chat-icons">
+                                <li v-for="tooltip in tooltips" :key="tooltip.id">
+                                    <i :class="tooltip.icon" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
+                                        <span class="tooltiptext">{{ tooltip.text }}</span>
+                                    </i>
+                                </li>
+                            </ul>
+                        </div>               
+                    </li>
+                </ul>
                 <div class="settings">
                     <span class="left-title">MY FAMILY</span>
                     <span class="right-title">SETTINGS</span>
                 </div>
-                <li class="chat-user-wider">
-                    <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar64-sm.jpg" alt="avatar-64">
-                        <span class="user-status-online-wider"></span>
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Sarah Hetfield</a>
-                        <span class="status">ONLINE</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div>                 
-                </li>
+                <ul>
+                    <li class="chat-user-wider" v-for="user in usersWiderSidebarFamily" :key="user.id">
+                        <div class="user-thumb">               
+                            <img :src="getImgUrl(user.img)" :alt="user.img">
+                            <span :class="user.status"></span>
+                        </div>
+                        <div class="user-status">
+                            <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">{{ user.user_name }}</a>
+                            <span class="status">{{ user.title_status }}</span>
+                        </div>
+                        <div class="three-dots">
+                            <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
+                            <ul class="three-chat-icons">
+                                <li v-for="tooltip in tooltips" :key="tooltip.id">
+                                    <i :class="tooltip.icon" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
+                                        <span class="tooltiptext">{{ tooltip.text }}</span>
+                                    </i>
+                                </li>
+                            </ul>
+                        </div>                 
+                    </li>
+                </ul>
                 <div class="settings">
                     <span class="left-title">UNCATEGORIZED</span>
                     <span class="right-title">SETTINGS</span>
                 </div>
-                <li class="chat-user-wider">
-                    <div class="user-thumb">               
-                        <img src="../../assets/profile-images/avatar71-sm.jpg" alt="avatar-71">
-                        <span class="user-status-online-wider"></span>
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Rachel Howlett</a>
-                        <span class="status">OFFLINE</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div> 
-                </li>
-                <li class="chat-user-wider"> 
-                    <div class="user-thumb"> 
-                        <img src="../../assets/profile-images/avatar72-sm.jpg" alt="avatar-72">
-                        <span class="user-status-away-wider"></span>  
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Bruce Peterson</a>
-                        <span class="status">ONLINE</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div> 
-                </li>
-                <li class="chat-user-wider">   
-                    <div class="user-thumb"> 
-                        <img src="../../assets/profile-images/avatar63-sm.jpg" alt="avatar-63">
-                        <span class="user-status-invisible-wider"></span> 
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Chris Greyson</a>
-                        <span class="status">AWAY</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div> 
-                </li>
-                <li class="chat-user-wider">     
-                    <div class="user-thumb"> 
-                        <img src="../../assets/profile-images/avatar72-sm.jpg" alt="avatar-72">
-                        <span class="user-status-away-wider"></span> 
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Nicholas Grisom</a>
-                        <span class="status">INVISIBLE</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div> 
-                </li>
-                <li class="chat-user-wider">    
-                    <div class="user-thumb"> 
-                        <img src="../../assets/profile-images/avatar71-sm.jpg" alt="avatar-71">
-                        <span class="user-status-online-wider"></span> 
-                    </div>
-                    <div class="user-status">
-                        <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">Chris Greyson</a>
-                        <span class="status">AWAY</span>
-                    </div>
-                    <div class="three-dots">
-                        <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
-                        <ul class="three-chat-icons">
-                            <li>
-                                <i class="fas fa-comment-dots" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">START CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment-medical" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">AD TO CONVERSATION</span>
-                                </i>
-                            </li>
-                            <li>
-                                <i class="fas fa-comment" data-toggle="modal" data-target="#chatModal">
-                                    <span class="tooltiptext">BLOCK FROM CHAT</span>
-                                </i>
-                            </li>
-                        </ul>
-                    </div> 
-                </li>
-            </ul>
+                <ul>
+                    <li class="chat-user-wider" v-for="user in usersWiderSidebarUncategorized" :key="user.id">
+                        <div class="user-thumb">               
+                            <img :src="getImgUrl(user.img)" :alt="user.img">
+                            <span :class="user.status"></span>
+                        </div>
+                        <div class="user-status">
+                            <a href="#" class="user-name" data-toggle="modal" data-target="#chatModal">{{ user.user_name }}</a>
+                            <span class="status">{{ user.title_status }}</span>
+                        </div>
+                        <div class="three-dots">
+                            <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#chatModal"></i>
+                            <ul class="three-chat-icons">
+                                <li v-for="tooltip in tooltips" :key="tooltip.id">
+                                    <i :class="tooltip.icon" data-toggle="modal" data-target="#chatModal" data-backdrop="false">
+                                        <span class="tooltiptext">{{ tooltip.text }}</span>
+                                    </i>
+                                </li>
+                            </ul>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
             <div class="right-sidebar-wider-toggle">
                 <div class="search-friends">
                     <form class="form-group">
@@ -416,12 +112,12 @@
                         <i class="fas fa-times"></i>
                     </div>
                 </div>
-                <li>       
+                <div>       
                     <div class="social-network-chat-sidebar-wide">
                         <span class="chat-title">OLYMPUS CHAT</span>
                         <i class="far fa-comments"></i>
                     </div>
-                </li> 
+                </div> 
             </div>
         </aside>
         
@@ -456,18 +152,9 @@
                                 <div class="modal-smile-icon">
                                     <i class="far fa-smile"></i>
                                     <ul class="more-smile-icons">
-                                        <li><img src="../../assets/profile-images/icon-chat1.png" alt="icon-chat1"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat9.png" alt="icon-chat9"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat6.png" alt="icon-chat6"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat21.png" alt="icon-chat21"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat15.png" alt="icon-chat15"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat24.png" alt="icon-chat24"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat11.png" alt="icon-chat11"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat4.png" alt="icon-chat4"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat20.png" alt="icon-chat20"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat8.png" alt="icon-chat8"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat26.png" alt="icon-chat26"></li>
-                                        <li><img src="../../assets/profile-images/icon-chat27.png" alt="icon-chat27"></li>
+                                        <li v-for="smileIcon in smileIcons" :key="smileIcon.id">
+                                            <img :src="getImgUrl(smileIcon.img)" :alt="smileIcon.img">
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -483,7 +170,18 @@
 export default {
     data() {
         return {
-            rightSidebarToggle: false
+            rightSidebarToggle: false,
+            usersSidebar: this.$store.state.rightProfileSidebar.usersSidebar,
+            usersWiderSidebarCloseFriends: this.$store.state.rightProfileSidebar.usersWiderSidebarCloseFriends,
+            usersWiderSidebarFamily: this.$store.state.rightProfileSidebar.usersWiderSidebarFamily,
+            usersWiderSidebarUncategorized: this.$store.state.rightProfileSidebar.usersWiderSidebarUncategorized,
+            tooltips: this.$store.state.rightProfileSidebar.tooltips,
+            smileIcons: this.$store.state.rightProfileSidebar.smileIcons
+        }
+    },
+    methods: {
+        getImgUrl(pic) {
+            return require('../../assets/profile-images/'+pic);
         }
     }
 }
@@ -510,6 +208,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-right: -15px;
+    margin-top: 70px;
 }
 
 .right-sidebar.inactive {
@@ -518,7 +217,7 @@ export default {
 }
 
 .right-sidebar-users {
-    height: calc(100% - 70px);
+    height: calc(100% - 210px);
     overflow-y: scroll;
 }
 
@@ -554,8 +253,9 @@ export default {
 }
 
 .right-sidebar-wider-users {
-    height: calc(100% - 70px);
+    height: calc(100% - 210px);
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .right-sidebar-wider-toggle {
@@ -566,7 +266,7 @@ export default {
 }
 
 .chat-user {
-    padding-top: 32px;
+    padding-top: 25px;
     position: relative;
 }
 
@@ -804,7 +504,6 @@ a:link {
     display: flex;
     align-items: center;
     width: 75%;
-    padding-top: 20px;
 }
 
 .form-control {
@@ -833,14 +532,14 @@ a:link {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: -23px;
+    padding-top: 20px;
 }
 
 .right-sidebar-bar-wider {
     display: flex;
     justify-content: center;
     margin-left: 10px;
-    margin-top: 3px;
+    padding-bottom: 18px;
 }
 
 .right-sidebar-bar-wider .fa-times {
@@ -1041,3 +740,4 @@ textarea {
     }
 }
 </style>
+

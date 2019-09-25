@@ -56,12 +56,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
+
 .right-content {
-    display: flex;
-    background-color: white;
-    border-radius: 0px 4px 4px 0px;
-	width: 42%;
+    @include right-content;
 }
 
 .top-side {
@@ -69,57 +69,33 @@ export default {
 }
 
 .left-side {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: center;
-	width: 18%;
+    @include left-side;
 }
 
 .shut-down-aside {
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid #8080804f;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #8080804f;
-    height: 50%;
+    @include shut-down-aside;
 }
 
 .fa-power-off {
-	font-size: 18px;
+	font-size: $base-font-size + 2;
 	color: #8080804f;
 }
 
 .spinner-aside {
-    display: flex;
-    justify-content: center;
-	align-items: center;
-    background-color: #acd1ef14;
-    height: 50%;
-	border-right: 1px solid #8080804f;
+    @include spinner-aside;
 }
 
 .fa-spinner {
-	font-size: 18px;
-	color: rgb(255,94,58);
+	font-size: $base-font-size + 2;
+	color: #ff5e3a;
 }
 
 .registration-form {
-	display: flex;
-	flex-direction: column;
-	width: 82%;
+	@include registration-form;
 }
 
 .register-header-title {
-	display: flex;
-	text-align: center;
-	align-items: center;
-	padding-left: 10px;
-	height: 60px;
-	font-size: 15px;
-	border-bottom: 1px solid #8080804f;
-	font-weight: 600;
+	@include register-header-title;
 }
 
 form {
@@ -127,16 +103,12 @@ form {
 }
 
 .registration-form-data-wrapper {
-	display: flex;
-	flex-direction: column;
+	@include flex-column;
 }
 
 input[type=email],
 input[type=password] {
-	margin: 12px 0px;
-	padding-left: 10px;
-	line-height: 42px;
-	border: 1px solid #8080804f;
+	@include inputs;
 }
 
 input:focus {
@@ -145,112 +117,68 @@ input:focus {
 
 /*checkbox style*/
 .container {
-	display: flex;
-	position: relative;
-	margin-bottom: 12px;
-	cursor: pointer;
-	font-size: 15px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	user-select: none;
-    justify-content: space-between;
+	@include checkbox-container;
 }
 
 .container input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
+	@include checkbox-container-input;
+
+	&:checked ~ .checkmark:after {
+		display: block;
+	}
 }
 
 .checkmark {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 14px;
-	width: 14px;
-	background-color: white;
-	border: 1px solid gray;
-	border-radius: 2px;
-	margin-top: 2px;
-}
+	@include checkbox-container-checkmark;
 
-.checkmark:after {
-	content: "";
-	position: absolute;
-	display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-	display: block;
+	&:after {
+		@include checkbox-container-checkmark-after;
+	}
 }
 
 .container .checkmark:after {
-	left: 3px;
-	top: 0px;
-	width: 6px;
-	height: 10px;
-	border: 1px solid rgb(255,94,58);
-	border-width: 0 3px 3px 0;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
+	@include container-checkmark-after;
 }
 
 .check-terms-register {
-	display: flex;
-    flex-wrap: wrap;
-    margin-top: 18px;
-    margin-bottom: 12px;
+	@include check-terms-register;
 }
 
 .checkbox-text-remember {
 	display: flex;
-    font-size: 13px;
+    font-size: $base-font-size - 3;
     margin: 0 5px;
 }
 
 .text-forgot {
     display: flex;
-    font-size: 13px;
+    font-size: $base-font-size - 3;
     text-align: right;
 }
 
 .submit-login {
     width: 100%;
-    background-color: rgb(255,94,58);
+    background-color: #ff5e3a;
     text-align: center;
-    color: white;
+    color: #fff;
     font-weight: 500;
     height: 42px;
     align-items: center;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 	border-radius: 6px;
 	outline: none;
 	border: none;
 }
 
 .or {
-	font-size: 15px;
+	font-size: $base-font-size - 1;
 	text-align: center;
 	margin-bottom: 12px;
 }
 
 .facebook-login {
-	height: 42px;
-	color: white;
 	background-color: #4263eb;
-	border-radius: 6px;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	font-size: 14px;
-	font-weight: 600;
+	@include social-networks-login;
 	margin: 12px 28px;
 }
 
@@ -259,16 +187,8 @@ input:focus {
 }
 
 .twitter-login {	
-	height: 42px;
-	color: white;
 	background-color: #5cace2;
-	border-radius: 6px;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	font-size: 14px;
-	font-weight: 600;
+	@include social-networks-login;
 	margin: 0 28px 12px 28px;
 }
 
@@ -277,16 +197,15 @@ input:focus {
 }
 
 .login-footer {
-	display: flex;
-    flex-wrap: wrap;
-    font-size: 14px;
+	@include flex-wrap;
+    font-size: $base-font-size - 3;
     margin: 0 28px 40px 28px;
     text-align: justify;
 }
 
 .register-now {
-	color: rgb(255,94,58);
-	font-size: 14px;
+	color: #ff5e3a;
+	font-size: $base-font-size - 3;
 }
 
 /*media query*/
@@ -297,7 +216,8 @@ input:focus {
 }
 
 @media only screen and (max-width: 768px) {
-	.right-content {
+	.right-content,
+	.registration-form {
 		width: 100%;
 	}
 
@@ -305,23 +225,17 @@ input:focus {
 		display: none;
 	}
 
-	.registration-form {
-		width: 100%;
-	}
-
 	.register-header-title {
 		padding-left: 20px;
 	}
 
 	.top-side {
-		display: flex;
-		flex-direction: row;
+		@include flex-row;
 		border-bottom: 1px solid #8080804f;
 	}
 
 	.top-shut-down {
-		display: flex;
-		justify-content: center;
+		@include flex-center;
 		width: 50%;
 		border-right: 1px solid #8080804f;
 		height: 60px;
@@ -329,19 +243,18 @@ input:focus {
 	}
 
 	.top-spinner {
-		display: flex;
+		@include flex-center;
 		margin: auto;
-		justify-content: center;
 		width: 50%;
 	}
 
 	.fa-spinner {
-		color: rgb(255,94,58);
+		color: #ff5e3a;
 	}
 
 	.registration-button {
 		width: 120px;
-		font-size: 14px;
+		font-size: $base-font-size - 2;
 	}
 }
 </style>
