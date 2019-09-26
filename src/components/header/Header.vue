@@ -313,13 +313,8 @@ button[type=submit] {
     opacity: 0.8;
 }
 
-ul {
-    list-style-type: none;
-}
-
 ul, li {
-    margin: 0;
-    padding: 0;
+    @include ul-li;
 }
 
 .nav-item-search {
@@ -335,7 +330,7 @@ a:link {
     padding-left: 20px;
     font-size: $base-font-size - 4;
     font-weight: 600;
-    @include transition-color-vendors;
+    @include transition-vendors(color .3s ease);
 
     &:hover {
         color: #ff5e3a;
@@ -416,13 +411,7 @@ a:link {
 }
 
 .online-status-dot {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: #32e4cd;
-    top: 0px;
-    right: 27px;
-    border-radius: 50%;
+    @include online-status-dot;
 }
 
 .fa-angle-down {
@@ -451,7 +440,7 @@ a:link {
     right: -153px;
     top: 44px;
     height: 300px;
-    @include transition-opacity-linear-vendors;
+    @include transition-vendors(opacity .3s linear);
 }
 
 .dropdown-header {
@@ -536,7 +525,7 @@ a:link {
     font-size: $base-font-size - 2;
     cursor: pointer;
     font-weight: 700;
-    @include transition-color-vendors;
+    @include transition-vendors(color .3s ease);
 
     &:hover {
         color: #ff5e3a;
@@ -674,7 +663,7 @@ a:link {
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
     right: -25px;
     top: 47px;
-    @include transition-opacity-linear-vendors;
+    @include transition-vendors(opacity .3s linear);
 }
 
 .dropdown-author:hover .dropdown-content-author {
@@ -687,7 +676,7 @@ a:link {
     top: 29px;
     visibility: hidden;
     opacity: 0;
-    @include transition-opacity-linear-vendors;
+    @include transition-vendors(opacity .3s linear);
 }
 
 .dropdown-author:hover .dropdown-content-author-wrapper::after {

@@ -63,43 +63,31 @@ export default {
 }
 </script>
 
-<style scoped>
-ul {
-    list-style-type: none;
-}
-
-li {
-    list-style-type: none;
-}
+<style lang="scss" scoped>
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
 
 ul, li {
-    margin: 0;
-    padding: 0;
+    @include ul-li;
 }
 
 p {
     margin: 25px 0;
-    font-size: 14px;
+    font-size: $base-font-size - 2;
     color: #9a9fbf;
 }
 
 .right-side-first-block {
-    border-radius: 5px;
-    /*border: 1px solid #e6ecf5;*/
-    background: #fff;
-    border: 1px solid gray;
+    @include right-block;
     margin-bottom: 15px;
 }
 
 .right-side-first-block-title {
-    padding: 23px 25px 18px;
-    border-bottom: 1px solid #e6ecf5;
+    @include header-block-title;
 }
 
 .title-photos {
-    color: #515365;
-    font-weight: 700;
-    font-size: 14px;
+    @include right-header-block-title;
 }
 
 .photos-content {
@@ -107,41 +95,33 @@ p {
 }
 
 .photos {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     align-items: center;
-}
 
-.photos li {
-    padding: 2px 2px 2px 2px;
-    text-align: center;
-    width: 33.33%;
-    cursor: pointer;
-}
+    li {
+        padding: 2px 2px 2px 2px;
+        text-align: center;
+        width: 33.33%;
+        cursor: pointer;
+    }
 
-.photos img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
 }
 
 .right-side-second-block {
-    border-radius: 5px;
-    /*border: 1px solid #e6ecf5;*/
-    background: #fff;
-    border: 1px solid gray;
-    height: fit-content;
+    @include right-block;
 }
 
 .right-side-second-block-title {
-    padding: 23px 25px 18px;
-    border-bottom: 1px solid #e6ecf5;
+    @include header-block-title;
 }
 
 .title-name {
-    color: #515365;
-    font-weight: 700;
-    font-size: 14px;
+    @include right-header-block-title;
 }
 
 .right-side-second-block-content {
@@ -149,13 +129,12 @@ p {
 }
 
 .right-side-second-block-content p {
-    font-size: 13px;
+    font-size: $base-font-size - 3;
     margin-top: 0;
 }
 
 .vote-info-first {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-between;
 }
 
 /* custom radio button */
@@ -165,18 +144,24 @@ p {
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: $base-font-size - 3;
     color: #515365;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+    @include user-select-vendors;
 
-.vote-title input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked ~ .checkmark {
+            background-color: #fff;
+            border: 1px solid #ff5e3a;
+
+            &:after {
+                @include visible-opacity;
+            }
+        }
+    }
 }
 
 .checkmark {
@@ -187,24 +172,14 @@ p {
     width: 18px;
     border: 1px solid #c3c1c1;
     border-radius: 50%;
-}
 
-.vote-title input:checked ~ .checkmark {
-    background-color: #fff;
-    border: 1px solid #ff5e3a;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .5s linear;
-}
-
-.vote-title input:checked ~ .checkmark:after {
-    visibility: visible;
-    opacity: 1;
+    &:after {
+        content: "";
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        @include transition-vendors(opacity .5s linear);
+    }
 }
 
 .vote-title .checkmark:after {
@@ -218,13 +193,12 @@ p {
 }
 
 .vote-percent {
-    font-size: 13px;
+    font-size: $base-font-size - 3;
     color: #515365;
 }
 
 .completion-line {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 }
 
 .max-range-line {
@@ -279,25 +253,24 @@ p {
 }
 
 .voted-number {
-    font-size: 13px;
+    font-size: $base-font-size - 3;
     color: #9a9fbf;
     margin: 10px 0;
 }
 
 .friends-voted-images {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     margin-bottom: 20px;
-}
 
-.friends-voted-images li {
-    margin-right: -12px;
-}
+    li {
+        margin-right: -12px;
+    }
 
-.friends-voted-images img {
-    border-radius: 50%;
-    border: 2px solid #fff;
-    cursor: pointer;
+    img {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        cursor: pointer;
+    }
 }
 
 .other-users {
@@ -305,16 +278,14 @@ p {
     height: 32px;
     border-radius: 50%;
     border: 2px solid #fff;
-    display: block;
     margin-right: -12px;
     background-color: #ff5e3a;
     color: #fff;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     cursor: pointer;
     font-weight: 700;
     align-items: center;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     opacity: 0.8;
 }
 
@@ -325,13 +296,13 @@ p {
     height: 40px;
     color: #888da8;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     font-weight: 700;
     margin: 15px 0;
-}
 
-.vote-button:hover {
-    color: #9a9fbf;
+    &:hover {
+        color: #9a9fbf;
+    }
 }
 
 button[type=button] {
@@ -339,11 +310,11 @@ button[type=button] {
 }
 
 /*media query*/
-@media (max-width: 1199px) {
+@media only screen and (max-width: 1199px) {
     .title-photos,
     .title-name,
     .right-side-second-block-content p {
-        font-size: 12px;
+        font-size: $base-font-size - 4;
     }
 }
 </style>

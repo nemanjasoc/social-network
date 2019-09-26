@@ -373,13 +373,13 @@ input:focus {
 /*checkbox style*/
 .container {
 	@include checkbox-container;
-}
 
-.container input {
-	@include checkbox-container-input;
+	input {
+		@include checkbox-container-input;
 
-	&:checked ~ .checkmark:after {
-		display: block;
+		&:checked ~ .checkmark:after {
+			display: block;
+		}
 	}
 }
 
@@ -411,7 +411,7 @@ input:focus {
 		color: #515365;
 		font-weight: 700;
 		padding: 10px 20px;
-		@include transition-color-vendors;
+		@include transition-vendors(color .3s ease);
 	}
 
 	.navbar-light .navbar-nav .nav-link:hover {

@@ -116,18 +116,12 @@ export default {
 }
 </script>
 
-<style scoped>
-ul {
-    list-style-type: none;
-}
-
-li {
-    list-style-type: none;
-}
+<style lang="scss" scoped>
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
 
 ul, li {
-    margin: 0;
-    padding: 0;
+    @include ul-li;
 }
 
 a:link {
@@ -143,8 +137,7 @@ a:link {
 
 .main-container {
     width: 86%;
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     margin: 0 auto;
 }
 
@@ -156,14 +149,14 @@ a:link {
 
 .main-image {
     padding-top: 110px;
-}
 
-.main-image img {
-    display: block;
-    width: 100%;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    height: auto;
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        height: auto;
+    }
 }
 
 .user-profile-sections {
@@ -171,28 +164,24 @@ a:link {
     padding: 38px 0;
     border: 1px solid #e6ecf5;;
     background-color: #fff;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-between;
 }
 
 .profile-menu-left,
 .profile-menu-right {
-    display: flex;
-    justify-content: space-around;
+    @include flex-space-around;
     align-items: center;
     width: 35%;
-}
 
-.profile-menu-left li a,
-.profile-menu-right li a {
-    font-size: 14px;
-    font-weight: 700;
-    color: #9a9fbf;
-}
+    li a {
+        font-size: $base-font-size - 2;
+        font-weight: 700;
+        color: #9a9fbf;
 
-.profile-menu-left li a:hover,
-.profile-menu-right li a:hover {
-    color: #515365;
+        &:hover {
+            color: #515365;
+        }
+    }
 }
 
 .profile-menu-left li a.active {
@@ -203,6 +192,10 @@ a:link {
     position: relative;
     display: inline-block;
     margin-right: 35px;
+
+    &:hover .dropdown-content {
+        @include visible-opacity;
+    }
 }
 
 .dropdown-content {
@@ -218,38 +211,30 @@ a:link {
     z-index: 5;
     right: -25px;
     margin-top: 10px;
-    -webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
-}
+    @include transition-vendors(opacity .3s ease);
 
-.dropdown-content::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 168px;
-    margin-left: -10px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent #fff transparent;
-}
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 168px;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #fff transparent;
+    }
 
-.dropdown-content li a {
-    display: block;
-    font-weight: 700;
-    color: #9a9fbf;
-    font-size: 12px;
-    padding: 7px 0;
-}
+    li a {
+        display: block;
+        font-weight: 700;
+        color: #9a9fbf;
+        font-size: $base-font-size - 4;
+        padding: 7px 0;
 
-.dropdown-content li a:hover {
-    color: #515365;
-}
-
-.dropdown-three-dots:hover .dropdown-content {
-    visibility: visible;
-    opacity: 1;
+        &:hover {
+            color: #515365;
+        }
+    }
 }
 
 .dropbtn .fa-ellipsis-h {
@@ -259,8 +244,7 @@ a:link {
 
 .three-rounded-image-buttons {
     position: absolute;
-    display: flex;
-    justify-content: space-around;
+    @include flex-space-around;
     right: 20px;
     top: -31px;
 }
@@ -269,13 +253,12 @@ a:link {
 .chat-button,
 .settings-button {
     margin-right: 20px;
-    font-size: 20px;
+    font-size: $base-font-size + 4;
     color: #fff;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     align-items: center;
     cursor: pointer;
 }
@@ -290,6 +273,10 @@ a:link {
 
 .settings-button {
     background-color: #ff5e3a;
+
+    &:hover .dropdown-content {
+        @include visible-opacity;
+    }
 }
 
 .dropdown-settings-button {
@@ -300,7 +287,7 @@ a:link {
 .dropdown-settings-button .dropdown-content {
     visibility: hidden;
     opacity: 0;
-    width: 230px;
+    width: 175px;
     border-radius: 4px;
     position: absolute;
     background-color: #fff;
@@ -308,38 +295,30 @@ a:link {
     z-index: 5;
     bottom: 190%;
     padding: 0;
-    -webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
-}
+    @include transition-vendors(opacity .3s ease);
 
-.dropdown-settings-button .dropdown-content li a {
-    display: block;
-    font-weight: 700;
-    color: #515365;
-    font-size: 12px;
-    padding: 7px 0;
-}
+    li a {
+        display: block;
+        font-weight: 700;
+        color: #515365;
+        font-size: $base-font-size - 4;
+        padding: 7px 7px;
 
-.settings-button:hover .dropdown-content {
-    visibility: visible;
-    opacity: 1;
-}
+        &:hover {
+            color: #ff5e3a;
+        }
+    }
 
-.dropdown-settings-button .dropdown-content li a:hover {
-    color: #ff5e3a;
-}
-
-.dropdown-settings-button .dropdown-content::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 215px;
-    margin-left: -30px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: #fff transparent transparent transparent;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 158px;
+        margin-left: -30px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+    }
 }
 
 .author-main-content {
@@ -348,17 +327,16 @@ a:link {
     bottom: 10px;
     align-items: center;
     text-align: center;
-}
 
-.author-main-image img {
-    border-radius: 50%;
-    border: 6px solid #fff;
-    background-color: #fff;
+    img {
+        border-radius: 50%;
+        border: 6px solid #fff;
+        background-color: #fff;
+    }
 }
 
 .autor-data {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: center;
     align-items: center;
 }
@@ -366,16 +344,16 @@ a:link {
 .author-name {
     color: #515365;
     font-weight: 700;
-    font-size: 23px;
+    font-size: $base-font-size + 7;
     cursor: pointer;
-}
 
-.author-name:hover {
-    color: #ff5e3a;
+    &:hover {
+        color: #ff5e3a;
+    }
 }
 
 .country {
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     color: #9a9fbf;
 }
 
@@ -392,16 +370,15 @@ a:link {
     border-radius: 50%;
     position: fixed;
     box-shadow: 0 0 10px 0 rgba(63, 66, 87, 0.4);
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     align-items: center;
     color: #fff;
-    font-size: 22px;
+    font-size: $base-font-size + 6;
     bottom: 10px;
     right: 85px;
     cursor: pointer;
     z-index: 10;
-    transition: all .3s ease;
+    @include transition-vendors(all .3s ease);
 }
 
 /*media query*/
@@ -413,11 +390,11 @@ a:link {
 
 @media (max-width: 1199px) {
     .author-name {
-        font-size: 19px;
+        font-size: $base-font-size + 3;
     }
 
     .country {
-        font-size: 11px;
+        font-size: $base-font-size - 5;
     }
 
     .three-dots {
@@ -451,7 +428,7 @@ a:link {
 
 @media (max-width: 992px) {
     .author-name {
-        font-size: 18px;
+        font-size: $base-font-size + 2;
     }
 
     .three-rounded-image-buttons {
@@ -478,11 +455,8 @@ a:link {
     }
 
     .user-profile-sections {
-        display: flex;
+        @include flex-center;
         flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
         padding-bottom: 225px;
     }
 

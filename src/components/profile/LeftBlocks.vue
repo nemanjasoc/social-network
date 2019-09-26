@@ -20,7 +20,7 @@
                     <h6 class="title-playlist">My Spotify Playlist</h6>
                 </div>                      
                 <ol class="playlist">
-                    <li class="first-video" v-for="song in playlist" :key="song.id">
+                    <li class="video" v-for="song in playlist" :key="song.id">
                         <span class="song-number">{{ song.number }}</span>                             
                         <div class="play-icon" data-toggle="modal" data-target="#videoModal" @click="playSong(song)">
                             <img :src="getImgUrl(song.img)" :alt="song.img">
@@ -74,38 +74,26 @@ export default {
 }
 </script>
 
-<style scoped>
-ul {
-    list-style-type: none;
-}
-
-li {
-    list-style-type: none;
-}
+<style lang="scss" scoped>
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
 
 ul, li {
-    margin: 0;
-    padding: 0;
+    @include ul-li;
 }
 
 .left-side-first-block {
-    border-radius: 5px;
-    /*border: 1px solid #e6ecf5;*/
-    background: #fff;
-    margin-bottom: 15px;
-    border: 1px solid gray;
-    height: fit-content;
+    @include left-block;
 }
 
 .left-side-first-block-title {
-    padding: 23px 25px 18px;
-    border-bottom: 1px solid #e6ecf5;
+    @include header-block-title;
 }
 
 .title-badges {
     color: #515365;
     font-weight: 700;
-    font-size: 14px;
+    font-size: $base-font-size - 2;
 }
 
 .badges-block-content {
@@ -113,99 +101,70 @@ ul, li {
 }
 
 .badges {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     margin: 0 0 -20px -18px;
+
+    li {
+        position: relative;
+        margin: 0 0 20px 15px;
+    }
 }
 
-.badges li {
-    position: relative;
-    margin: 0 0 20px 15px;
-}
-   
-.orange-badge,
-.blue-badge,
-.green-badge {
-    position: absolute;
-    width: 15px;
-    height: 15px;
+.orange-badge {
+    @include left-block-badges;
     background-color: #ff5e3a;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    top: 0px;
-    right: -4px;
 }
 
 .blue-badge {
+    @include left-block-badges;
     background-color: #38a9ff;
 }
 
 .green-badge {
+    @include left-block-badges;
     background-color: #08ddc1;
 }
 
 .left-side-second-block {
-    border-radius: 5px;
-    /*border: 1px solid #e6ecf5;*/
-    background: #fff;
-    margin-bottom: 15px;
-    border: 1px solid gray;
-    height: fit-content;
+    @include left-block;
 }
 
 .left-side-second-block-title {
-    padding: 23px 25px 18px;
-    border-bottom: 1px solid #e6ecf5;
+    @include header-block-title;
 }
 
 .title-playlist {
     color: #515365;
     font-weight: 700;
-    font-size: 14px; 
+    font-size: $base-font-size - 2; 
 }
 
 .playlist {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     padding-left: 5px;
     padding-top: 20px;
+
+    li {
+        padding: 13px 5px;
+    }
 }
 
-.playlist li {
-    padding: 13px 5px;
-}
+.video {
+    @include flex-wrap;
 
-.first-video,
-.second-video,
-.third-video,
-.fourth-video,
-.fifth-video {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.first-video:hover .play-icon .fa-play,
-.second-video:hover .play-icon .fa-play,
-.third-video:hover .play-icon .fa-play,
-.fourth-video:hover .play-icon .fa-play,
-.fifth-video:hover .play-icon .fa-play {
-    position: absolute;
-    left: 12px;
-    top: 10px;
-    color: #fff;
-    opacity: 0.8;
-    cursor: pointer;
+    &:hover .play-icon .fa-play {
+        position: absolute;
+        left: $base-font-size - 4;
+        top: 10px;
+        color: #fff;
+        opacity: 0.8;
+        cursor: pointer;
+    }
 }
 
 .song-number {
     margin-right: 8px;
-    font-size: 10px;
+    font-size: $base-font-size - 6;
     color: #888da8;
     align-items: center;
     display: flex;
@@ -214,12 +173,16 @@ ul, li {
 .play-icon {
     position: relative;
     cursor: pointer;
-}
 
-.play-icon img {
-    border-radius: 4px;
-    width: 40px;
-    height: 40px;
+    img {
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover .fa-play {
+        @include visible-opacity;
+    }
 }
 
 .play-icon .fa-play {
@@ -230,51 +193,38 @@ ul, li {
     color: #fff;
     opacity: 0;
     cursor: pointer;
-    -webkit-transition: opacity .3 ease;
-    -moz-transition: opacity .3 ease;
-    -o-transition: opacity .3 ease;
-    transition: opacity .3 ease;
-}
-
-.play-icon:hover .fa-play {
-    visibility: visible;
-    opacity: 1;
+    @include transition-vendors(opacity .3s ease);
 }
 
 .composition {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     margin-left: 8px;
     margin-right: auto;
 }
 
 .composition-name {
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     font-weight: 600;
     color: #515365;
-    -webkit-transition: color .2 linear;
-    -moz-transition: color .2 linear;
-    -o-transition: color .2 linear;
-    transition: color .2 linear;
+    @include transition-vendors(color .3s linear);
+
+    &:hover {
+        @include orange-and-pointer;
+    }
 }
 
 .composition-author {
-    font-size: 11px;
+    font-size: $base-font-size - 5;
     color: #888da8;
-    -webkit-transition: color .2 linear;
-    -moz-transition: color .2 linear;
-    -o-transition: color .2 linear;
-    transition: color .2 linear;
-}
+    @include transition-vendors(color .3s linear);
 
-.composition-name:hover,
-.composition-author:hover {
-    color: #ff5e3a;
-    cursor: pointer;
+    &:hover {
+        @include orange-and-pointer;
+    }
 }
 
 .composition-time {
-    font-size: 11px;
+    font-size: $base-font-size - 5;
     margin-right: 5px;
     color: #888da8;
 }
@@ -284,27 +234,27 @@ ul, li {
 }
 
 /*media query*/
-@media (max-width: 1399px) {
+@media only screen and (max-width: 1399px) {
     .play-icon img {
         width: 36px;
         height: 36px;
     }
 }
 
-@media (max-width: 1199px) {
+@media only screen and (max-width: 1199px) {
     .title-badges,
     .title-playlist {
-        font-size: 12px;
+        font-size: $base-font-size - 4;
     }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .composition-name {
-        font-size: 11px;
+        font-size: $base-font-size - 5;
     }
     
     .composition-author {
-        font-size: 10px;
+        font-size: $base-font-size - 6;
     }
 }
 </style>

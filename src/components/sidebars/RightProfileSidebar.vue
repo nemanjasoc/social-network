@@ -187,7 +187,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
+
 .social-network-chat-header {
     display: none;
 }
@@ -195,7 +198,7 @@ export default {
 .right-sidebar {
     position: fixed;
     z-index: 5;
-    width: 80px;
+    width: 76px;
     height: 100%;
     right: 0;
     background-color: #fff;
@@ -205,14 +208,13 @@ export default {
     cursor: pointer;
     color: gray;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-right: -15px;
+    @include flex-column;
+    margin-right: -6px;
     margin-top: 70px;
 }
 
 .right-sidebar.inactive {
-    right: -80px;
+    right: -76px;
     transition-delay: 0s;
 }
 
@@ -222,10 +224,7 @@ export default {
 }
 
 .right-sidebar-toggle {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0;
+    @include right-sidebar-toggle;
 }
 
 .right-sidebar-wider {
@@ -242,9 +241,8 @@ export default {
     cursor: pointer;
     color: gray;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-right: -15px;
+    @include flex-column;
+    margin-right: -6px;
 }
 
 .right-sidebar-wider.inactive {
@@ -259,19 +257,16 @@ export default {
 }
 
 .right-sidebar-wider-toggle {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0;
+    @include right-sidebar-toggle;
 }
 
 .chat-user {
     padding-top: 25px;
     position: relative;
-}
 
-.chat-user img {
-    border-radius: 50%;
+    img {
+        border-radius: 50%;
+    }
 }
 
 .chat-user-wider {
@@ -280,36 +275,26 @@ export default {
     display: flex;
     padding-left: 18px;
     padding-bottom: 14px;
-}
 
-.chat-user-wider img {
-    border-radius: 50%;
+    img {
+        border-radius: 50%;
+    }
 }
 
 .user-status-online,
 .user-status-away,
 .user-status-disconected,
 .user-status-invisible {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: #32e4cd;
+    @include user-status;
     top: 30px;
-    left: 19px;
-    border-radius: 50%;
 }
 
 .user-status-online-wider,
 .user-status-away-wider,
 .user-status-disconected-wider,
 .user-status-invisible-wider {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: #32e4cd;
+    @include user-status;
     top: 15px;
-    left: 19px;
-    border-radius: 50%;
 }
 
 .user-status-away,
@@ -328,29 +313,25 @@ export default {
 }
 
 .user-status {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: center;
     margin-right: auto;
 }
 
 .user-name {
     color: #515365;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     font-weight: 700;
     padding-left: 10px;
-    -webkit-transition: color .2s ease;
-    -moz-transition: color .2s ease;
-    -o-transition: color .2s ease;
-    transition: color .2s ease;
-}
+    @include transition-vendors(color .2s ease);
 
-.user-name:hover {
-    color: #ff4f60;
+    &:hover {
+        color: #ff4f60;
+    }
 }
 
 .status {
-    font-size: 8px;
+    font-size: $base-font-size - 8;
     font-weight: 700;
     display: flex;
     padding-left: 10px;
@@ -363,35 +344,35 @@ export default {
     align-items: center;
     position: relative;
     color: #c0c4d8;
+
+    &:hover .three-chat-icons {
+        @include visible-opacity;
+        width: 160px;
+    }
 }
 
 .three-chat-icons {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     position: absolute;
     right: 100%;
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     background-color: #fff;
     width: 0px;
-    -webkit-transition: width .5s ease opacity .3s ease;
-    -moz-transition: width .5s ease opacity .3s ease;
-    -o-transition: width .5s ease opacity .3s ease;
-    transition: width .5s ease opacity .3s ease;
-}
-
-.three-dots:hover .three-chat-icons {
-    visibility: visible;
-    opacity: 1;
-    width: 160px;
+    @include transition-vendors(width .5s ease opacity .3s ease);
 }
 
 .fa-comment-dots,
 .fa-comment-medical,
 .fa-comment {
     position: relative;
-    font-size: 20px;
+    font-size: $base-font-size + 4;
     margin-right: 22px;
+
+    &:hover .tooltiptext {
+        @include visible-opacity;
+        z-index: 1;
+    }
 }
 
 .fa-comment-dots .tooltiptext,
@@ -409,41 +390,27 @@ export default {
     bottom: 150%;
     left: 50%;
     margin-left: -60px;
-    font-size: 9px;
+    font-size: $base-font-size - 7;
     opacity: 0;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-}
+    @include transition-vendors(all .5s ease);
 
-.fa-comment-dots .tooltiptext::after,
-.fa-comment-medical .tooltiptext::after,
-.fa-comment .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #3f4257 transparent transparent transparent;
-}
-
-.fa-comment-dots:hover .tooltiptext,
-.fa-comment-medical:hover .tooltiptext,
-.fa-comment:hover .tooltiptext  {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #3f4257 transparent transparent transparent;
+    }
 }
 
 .right-sidebar-bar {
     box-shadow: 0 -50px 45px -3px rgba(255, 255, 255, 0.7);
     height: 70px;
     text-align: center;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     align-items: center;
     width: 70px;
     background-color: #fff;
@@ -458,18 +425,16 @@ export default {
     width: 70px;
     height: 70px;
     background-color: #7c5ac2;
-    display: flex;
+    @include flex-center;
     align-items: center;
-    justify-content: center;
-    font-size: 25px;
+    font-size: $base-font-size + 9;
     z-index: 22;
     right: 0;
     cursor: pointer;
 }
 
 .settings {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-between;
     border-bottom: 1px solid #e6ecf5;
     border-top: 1px solid #e6ecf5;
     padding: 7px 0;
@@ -478,22 +443,17 @@ export default {
 .left-title {
     color: #9a9fbf;
     margin-left: 20px;
-    font-size: 9px;
+    font-size: $base-font-size - 7;
 }
 
 .right-title {
     color: #515365;
     margin-right: 20px;
-    font-size: 9px;
-}
-
-ul {
-    list-style-type: none;
+    font-size: $base-font-size - 7;
 }
 
 ul, li {
-    margin: 0;
-    padding: 0;
+    @include ul-li;
 }
 
 a:link {
@@ -501,24 +461,24 @@ a:link {
 }
 
 .form-group {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     width: 75%;
+    align-items: center;
 }
 
 .form-control {
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     padding: 5px 10px;
     color: #515365;
     margin-right: 10px;
 }
 
 .fa-sliders-h {
-    font-size: 20px;
-}
+    font-size: $base-font-size + 4;
 
-.fa-sliders-h:hover {
-    color: #ff5e3a; 
+    &:hover {
+        color: #ff5e3a; 
+    }
 }
 
 .search-friends {
@@ -527,8 +487,7 @@ a:link {
     background-color: #fff;
     height: 70px;
     border-top: 1px solid #e6ecf5;
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -536,18 +495,17 @@ a:link {
 }
 
 .right-sidebar-bar-wider {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     margin-left: 10px;
     padding-bottom: 18px;
 }
 
 .right-sidebar-bar-wider .fa-times {
-    font-size: 25px;
-}
+    font-size: $base-font-size + 9;
 
-.right-sidebar-bar-wider .fa-times:hover {
-    color: #ff5e3a;
+    &:hover {
+        color: #ff5e3a; 
+    }
 }
 
 .social-network-chat-sidebar-wide {
@@ -566,7 +524,7 @@ a:link {
 }
 
 .chat-title {
-    font-size: 14px;
+    font-size: $base-font-size - 2;
     font-weight: 700;
     color: #fff;
 }
@@ -574,7 +532,6 @@ a:link {
 .modal {
     left: calc(100% - 300px);
     width: 300px;
-    top: -29px;
 }
 
 .modal-header {
@@ -584,7 +541,7 @@ a:link {
 .close {
     color: #fff;
     font-weight: 500;
-    font-size: 19px;
+    font-size: $base-font-size + 3;
 }
 
 .close:hover {
@@ -603,13 +560,12 @@ a:link {
     color: #fff;
     font-weight: 700;
     margin-left: 5px;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     margin: auto 185px auto 5px;
 }
 
 .modal-header-three-dots {
-    display: flex;
-    justify-content: flex-end;
+    @include flex-end;
 }
 
 .modal-header .fa-ellipsis-h {
@@ -619,8 +575,7 @@ a:link {
 }
 
 .modal-body {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     padding: 5px 25px 5px 24px;
 }
 
@@ -629,7 +584,7 @@ a:link {
     margin-top: 12px;
     border-radius: 10px;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     margin-left: 8px;
     padding: 10px;
     width: 75%;
@@ -643,18 +598,17 @@ a:link {
 
 .chat-message-date {
     color: #888da8;
-    font-size: 10px;
+    font-size: $base-font-size - 6;
     margin-left: 37px;
 }
 
 .modal-form-group {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     width: 100%;
 }
 
 .modal-form-label {
-    font-size: 11px;
+    font-size: $base-font-size - 5;
     margin-top: 10px;
     color: #888da8;
 }
@@ -668,7 +622,7 @@ a:link {
 textarea {
     outline: none;
     border: none;
-    font-size: 11px;
+    font-size: $base-font-size - 5;
     width: 95%
 }
 
@@ -685,11 +639,15 @@ textarea {
 .modal-smile-icon {
     position: relative;
     cursor: pointer;
+
+    &:hover .more-smile-icons {
+        @include visible-opacity;
+        cursor: pointer;
+    }
 }
 
 .more-smile-icons {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     visibility: hidden;
     position: absolute;
     width: 150px;
@@ -701,42 +659,29 @@ textarea {
     text-align: left;
     padding: 10px 10px 10px 15px;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-}
-
-.modal-smile-icon:hover .more-smile-icons {
-    visibility: visible;
-    opacity: 1;
-    cursor: pointer;
+    @include transition-vendors(all .3s ease);
 }
 
 /*media query*/
 @media only screen and (max-width: 768px) {
-    .right-sidebar {
+    .right-sidebar,
+    .right-sidebar-bar-wider .fa-times {
         display: none;
     }
 
     .social-network-chat-header {
         position: absolute;
         color: #fff;
-        width: 80px;
+        width: 76px;
         height: 70px;
         background-color: #7c5ac2;
-        display: flex;
+        @include flex-center;
         align-items: center;
-        justify-content: center;
-        font-size: 25px;
+        font-size: $base-font-size + 9;
         position: fixed;
         z-index: 1031;
         right: 0;
         cursor: pointer;
-    }
-
-    .right-sidebar-bar-wider .fa-times {
-        display: none;
     }
 }
 </style>

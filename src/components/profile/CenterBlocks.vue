@@ -182,17 +182,8 @@ export default {
 @import 'src/scss/mixins';
 @import 'src/scss/variables';
 
-ul {
-    list-style-type: none;
-}
-
-li {
-    list-style-type: none;
-}
-
 ul, li {
-    margin: 0;
-    padding: 0;
+    @include ul-li;
 }
 
 a:link {
@@ -210,13 +201,13 @@ a:link {
 
 .author-data-block {
     display: flex;
-}
 
-.author-data-block img {
-    border-radius: 100%;
-    margin-right: 12px;
-    width: 40px;
-    height: 40px;
+    img {
+        border-radius: 100%;
+        margin-right: 12px;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .author-data-wrapper {
@@ -266,7 +257,7 @@ a:link {
     z-index: 5;
     right: -25px;
     margin-top: 10px;
-    @include transition-opacity-ease-vendors;
+    @include transition-vendors(opacity .3s ease);
 
     &::after {
         @include after-arrow;
@@ -321,10 +312,10 @@ p {
 .friends-images {
     display: flex;
     margin-right: 27px;
-}
 
-.friends-images li {
-    margin-right: -12px;
+    li {
+        margin-right: -12px;
+    }
 }
 
 .name-one,
@@ -388,19 +379,24 @@ p {
     @include center-block-side-icons;
 }
 
-.trophy-side-icon,
+.trophy-side-icon {
+    @include side-icons;
+    @include transition-vendors(background-color .2s ease);
+
+    &:hover {
+        background-color: #fdc014;
+    }
+}
+
 .heart-side-icon,
 .comments-side-icon,
 .share-side-icon {
-    background-color: #9a9fbf;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    @include flex-center;
-    align-items: center;
-    margin-bottom: 8px;
-    cursor: pointer;
-    @include transition-background-color-ease-vendors;
+    @include side-icons;
+    @include transition-vendors(background-color .2s ease);
+
+    &:hover {
+        background-color: #ff5e3a;
+    }
 }
 
 .trophy-side-icon .fa-trophy,
@@ -408,16 +404,6 @@ p {
 .comments-side-icon .fa-comment-alt,
 .share-side-icon .fa-share {
     color: #fff;
-}
-
-.trophy-side-icon:hover {
-    background-color: #fdc014;
-}
-
-.heart-side-icon:hover,
-.comments-side-icon:hover,
-.share-side-icon:hover {
-    background-color: #ff5e3a;
 }
 
 .center-second-block {
@@ -452,19 +438,19 @@ p {
 
 .author-data a {
     color: #ff5e3a;
-    font-size: 14px;
+    font-size: $base-font-size - 2;
     font-weight: 700;
 }
 
 .shared-photo {
     color: #9a9fbf;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     cursor: default;
 }
 
 .apostrophe {
     color: #9a9fbf;
-    font-size: 14px;
+    font-size: $base-font-size - 2;
     font-weight: 600;
 }
 
@@ -474,80 +460,39 @@ p {
     border-radius: 50%;
     background-color: #ccd1e0;
     padding: 20px;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     align-items: center;
     margin: 40px auto;
     cursor: pointer;
-    color: white;
-    font-size: 20px;
-    -webkit-transition: color .4s linear;
-    -moz-transition: color .4s linear;
-    -o-transition: color .4s linear;
-    transition: color .4s linear;
-    transition: color .4s linear;
-}
+    color: #fff;
+    font-size: $base-font-size + 4;
+    @include transition-vendors(color .3s linear);
 
-.more-content-blocks:hover {
-    color: #ff5e3a;
+    &:hover {
+        color: #ff5e3a;
+    }
 }
 
 /*media query*/
-@media (max-width: 1199px) {
-    .author-name-title {
-        font-size: 12px;
-    }
-
-    .time {
-        font-size: 11px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-
-    .more-content-blocks {
-        margin: 40px auto 25px auto;
-    }
-
+@media only screen and (max-width: 1199px) {
+    .author-name-title,
+    p,
     .post-heart,
     .people-message-icon,
     .share-icon,
     .author-data a,
     .apostrophe {
-        font-size: 12px;
+        font-size: $base-font-size - 4;
+    }
+
+    .time {
+        font-size: $base-font-size - 5;
     }
 }
 
-@media (max-width: 768px) {
-    .center-first-block-side-icons {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        right: 33px;
-        top: -19px;
-    }
-
-    .trophy-side-icon,
-    .heart-side-icon,
-    .comments-side-icon,
-    .share-side-icon {
-        margin-right: 8px;
-    }
-
-    .center-second-block-side-icons {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        right: 35px;
-        top: -16px;
-    }
-}
-
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .post-info {
-        display: flex;
-        flex-wrap: wrap;
+        @include flex-wrap;
     }
 
     .people-comments {

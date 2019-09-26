@@ -102,7 +102,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import 'src/scss/mixins';
+@import 'src/scss/variables';
+
 .tooltip {
     left: 130px !important;
     top: 18px !important;
@@ -129,8 +132,7 @@ export default {
 }
 
 .left-fixed-sidebar.inactive {
-    left: -70px;
-    transition-delay: 0s;
+    @include left-sidebar-inactive;
 }
 
 .left-sidebar {
@@ -146,20 +148,18 @@ export default {
     cursor: pointer;
     color: gray;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     overflow-y: scroll;
     margin-left: -6px;
     direction: rtl;
+
+    li {
+        direction: ltr;
+    }
 }
 
 .left-sidebar.inactive {
-    left: -70px;
-    transition-delay: 0s;
-}
-
-.left-sidebar li {
-    direction: ltr;
+    @include left-sidebar-inactive;
 }
 
 .logo {
@@ -167,8 +167,7 @@ export default {
     width: 70px;
     background-color: #ff5e3a;
     align-items: center;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 }
 
 .left-fixed-sidebar-wider {
@@ -183,8 +182,7 @@ export default {
 }
 
 .left-fixed-sidebar-wider.inactive {
-    left: -250px;
-    transition-delay: 0s;
+    @include left-sidebar-wider-inactive;
 }
 
 .left-sidebar-wider {
@@ -200,17 +198,14 @@ export default {
     cursor: pointer;
     color: gray;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     overflow-y: scroll;
     margin-left: -6px;
     direction: rtl;
-    
 }
 
 .left-sidebar-wider.inactive {
-    left: -250px;
-    transition-delay: 0s;
+    @include left-sidebar-wider-inactive;
 }
 
 .logo-wider {
@@ -218,8 +213,7 @@ export default {
     width: 250px;
     background-color: #ff5e3a;
     align-items: center;
-    display: flex;
-    justify-content: flex-start;
+    @include flex-start;
     padding-left: 18px;
 }
 
@@ -227,19 +221,18 @@ export default {
     padding-left: 15px;
     color: #fff;
     font-weight: 800;
-    font-size: 13px;
+    font-size: $base-font-size - 3;
 }
 
 .author-data-wrapper {
-    display: flex;
+    @include flex-end;
     cursor: pointer;
-    justify-content: flex-end;
     padding: 20px 25px 0 25px;
     display: none;
-}
 
-.author-data-wrapper img {
-    border-radius: 50%;
+    img {
+        border-radius: 50%;
+    }
 }
 
 .author-status {
@@ -248,8 +241,7 @@ export default {
 }
 
 .author-data {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     padding-left: 45px;
     text-align: left;
 }
@@ -257,51 +249,72 @@ export default {
 .author-title {
     color: #515365;
     font-weight: 700;
-    font-size: 12px;
+    font-size: $base-font-size - 4;
 }
 
 .author-subtitle {
     display: block;
     font-weight: 700;
     color: #9a9fbf;
-    font-size: 8px;
+    font-size: $base-font-size - 8;
 }
 
 .online-status-dot {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: #32e4cd;
-    top: 0px;
-    right: 27px;
-    border-radius: 50%;
+    @include online-status-dot;
 }
 
 .menu-header {
-    display: none;
-    justify-content: flex-end;
+    @include flex-end;
     border-bottom: 1px solid #e6ecf5;
     border-top: 1px solid #e6ecf5;
     padding: 5px 0;
     margin-top: 20px;
+    display: none;
 }
 
 .menu-title {
     color: #9a9fbf;
     margin-left: 25px;
-    font-size: 9px;
+    font-size: $base-font-size - 7;
     font-weight: 700;
 }
 
 .left-menu {
-    display: flex;
-    justify-content: flex-start;
+    @include flex-start;
     padding-left: 25px;
     direction: ltr;
+
+    &:hover .left-menu-title {
+        color: #555;
+    }
+
+    &:hover .fa-times,
+    &:hover .fa-newspaper,
+    &:hover .fa-star,
+    &:hover .fa-user-friends,
+    &:hover .fa-headphones,
+    &:hover .fa-cloud-sun,
+    &:hover .fa-calendar-alt,
+    &:hover .fa-certificate,
+    &:hover .fa-birthday-cake,
+    &:hover .fa-industry,
+    &:hover .fa-poll-h {
+        color: #ff5e3a;
+    }
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
 }
 
-.left-menu:last-child {
-    margin-bottom: 20px;
+.left-menu-account-block .fa-bars,
+.left-menu-account-block .fa-star,
+.left-menu-account-block .fa-sign-out-alt {
+    @include left-sidebar-menu-icons;
+    
+    &:hover {
+        color: #9a9fbf;
+    }
 }
 
 .fa-times,
@@ -315,70 +328,21 @@ export default {
 .fa-certificate,
 .fa-birthday-cake,
 .fa-industry,
-.fa-poll-h,
-.fa-sign-out-alt {
-    position: relative;
-    padding-top: 32px;
-    font-size: 22px;
-    color: #9a9fbf;
-    -webkit-transition: color .3s linear;
-    -moz-transition: color .3s linear;
-    -o-transition: color .3s linear;
-    transition: color .3s linear; 
-}
-
-.fa-bars:hover,
-.fa-newspaper:hover,
-.fa-star:hover,
-.fa-user-friends:hover,
-.fa-headphones:hover,
-.fa-cloud-sun:hover,
-.fa-calendar-alt:hover,
-.fa-certificate:hover,
-.fa-birthday-cake:hover,
-.fa-industry:hover,
-.fa-poll-h:hover {
-    color: #ff5e3a;
+.fa-poll-h {
+    @include left-sidebar-menu-icons;
+    
+    &:hover {
+        color: #ff5e3a;
+    }
 }
 
 .left-menu-title {
-    padding-left: 20px;
-    padding-top: 32px;
     color: #9a9fbf;
-    font-weight: 700;
-    font-size: 13px;
-    -webkit-transition: color .2s ease;
-    -moz-transition: color .2s ease;
-    -o-transition: color .2s ease;
-    transition: color .2s ease;
-    font-weight: 700;
-}
-
-.left-menu:hover .fa-times,
-.left-menu:hover .fa-newspaper,
-.left-menu:hover .fa-star,
-.left-menu:hover .fa-user-friends,
-.left-menu:hover .fa-headphones,
-.left-menu:hover .fa-cloud-sun,
-.left-menu:hover .fa-calendar-alt,
-.left-menu:hover .fa-certificate,
-.left-menu:hover .fa-birthday-cake,
-.left-menu:hover .fa-industry,
-.left-menu:hover .fa-poll-h {
-    color: #ff5e3a;
-}
-
-.left-menu:hover .left-menu-title {
-    color: #555;
-}
-
-ul {
-    list-style-type: none;
+    @include left-sidebar-menu-title; 
 }
 
 ul, li {
-    margin: 0;
-    padding: 0;
+    @include ul-li;
 }
 
 a:link {
@@ -386,31 +350,24 @@ a:link {
 }
 
 .profile-completion-container {
-    display: flex;
-    height: 180px;
-    justify-content: center;
+    @include flex-center;
     flex-direction: column;
     padding: 0 25px;
+    height: 180px;
 }
 
 .profile-completion-title {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-between;
 }
 
-.completion-title {
-    display: flex;
-    font-size: 14px;
-}
-
+.completion-title,
 .completion-percent {
     display: flex;
-    font-size: 14px;
+    font-size: $base-font-size - 2;
 }
 
 .completion-line {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 }
 
 .max-range-line {
@@ -442,7 +399,7 @@ a:link {
 }
 
 .comletion-text {
-    font-size: 14px;
+    font-size: $base-font-size - 2;
     text-align: left;
 }
 
@@ -455,35 +412,26 @@ a:link {
 }
 
 .left-menu-account-block {
-    display: flex;
-    justify-content: flex-start;
+    @include flex-start;
     padding-left: 25px;
     direction: ltr;
-}
 
-.left-menu-account-block:first-child {
-    margin-left: 5px;
-}
+    &:first-child {
+        margin-left: 5px;
+    }
 
-.left-menu-account-block:last-child {
-    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 20px;
+    }
 }
 
 .left-menu-title-account-block {
-    padding-left: 20px;
-    padding-top: 32px;
     color: #515365;
-    font-weight: 700;
-    font-size: 13px;
-    -webkit-transition: color .2s ease;
-    -moz-transition: color .2s ease;
-    -o-transition: color .2s ease;
-    transition: color .2s ease;
-    font-weight: 700;
-}
+    @include left-sidebar-menu-title;
 
-.left-menu-title-account-block:hover {
-    color: #ff5e3a;
+    &:hover {
+        color: #ff5e3a;
+    }
 }
 
 .about-list {
@@ -491,29 +439,27 @@ a:link {
     justify-content: flex-end;
     padding: 10px 10px 10px 25px;
     cursor: pointer;
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
 }
 
 .about-list-title {
-    font-size: 12px;
+    font-size: $base-font-size - 4;
     color: #515365;
     font-weight: 700;
-    -webkit-transition: color .2s ease;
-    -moz-transition: color .2s ease;
-    -o-transition: color .2s ease;
-    transition: color .2s ease;
-}
+    @include transition-vendors(color .2s ease);
 
-.about-list-title:hover {
-    color: #ff5e3a;
-}
-
-.about-list:last-child {
-    margin-bottom: 20px;
+    &:hover {
+        color: #ff5e3a;
+    }
 }
 
 /*media query*/
 @media only screen and (max-width: 768px) {
-    .left-sidebar {
+    .left-sidebar,
+    .profile-completion-container {
         display: none;
     }
 
@@ -525,25 +471,14 @@ a:link {
         cursor: pointer;
     }
 
-    .author-data-wrapper {
-        display: flex;
-    }
-
-    .profile-completion-container {
-        display: none;
-    }
-
-    .menu-header {
+    .author-data-wrapper,
+    .menu-header,
+    .about-list {
         display: flex;
     }
 
     .account-block {
         display: block;
     }
-
-    .about-list {
-        display: flex;
-    }
 }
 </style>
-

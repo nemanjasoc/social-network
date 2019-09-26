@@ -28,37 +28,26 @@
     justify-content: flex-end;
 }
 
+@mixin flex-start {
+	display: flex;
+    justify-content: flex-start;
+}
+
 @mixin flex-space-between {
 	display: flex;
     justify-content: space-between;
 }
 
-@mixin transition-color-vendors {
-	-webkit-transition: color .3s ease;
-	-moz-transition: color .3s ease;
-	-o-transition: color .3s ease;
-	transition: color .3s ease;
+@mixin flex-space-around {
+	display: flex;
+    justify-content: space-around;
 }
 
-@mixin transition-background-color-ease-vendors {
-	-webkit-transition: background-color .2s ease;
-	-moz-transition: background-color .2s ease;
-	-o-transition: background-color .2s ease;
-	transition: background-color .2s ease;
-}
-
-@mixin transition-opacity-linear-vendors {
-	-webkit-transition: opacity .3s linear;
-	-moz-transition: opacity .3s linear;
-	-o-transition: opacity .3s linear;
-	transition: opacity .3s linear;
-}
-
-@mixin transition-opacity-ease-vendors {
-	-webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
-    transition: opacity .3s ease;
+@mixin transition-vendors($property) {
+	-webkit-transition: $property;
+    -moz-transition: $property;
+    -o-transition: $property;
+    transition: $property;
 }
 
 @mixin right-content {
@@ -253,10 +242,147 @@
     height: fit-content;
 }
 
+@mixin left-block {
+	border-radius: 5px;
+	/*border: 1px solid #e6ecf5;*/
+	background: #fff;
+	margin-bottom: 15px;
+	border: 1px solid gray;
+	height: fit-content;
+}
+
 @mixin center-block-side-icons {
 	position: absolute;
     display: flex;
     flex-direction: column;
     right: -17px;
     top: 20px;
+}
+
+@mixin side-icons {
+	background-color: #9a9fbf;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+@mixin ul-li {
+	margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@mixin left-block-badges {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 700;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	top: 0px;
+	right: -4px;
+}
+
+@mixin header-block-title {
+	padding: 23px 25px 18px;
+    border-bottom: 1px solid #e6ecf5;
+}
+
+@mixin orange-and-pointer {
+	color: #ff5e3a;
+	cursor: pointer;
+}
+
+@mixin right-block {
+	border-radius: 5px;
+    /*border: 1px solid #e6ecf5;*/
+    background: #fff;
+    border: 1px solid gray;
+    height: fit-content;
+}	
+
+@mixin header-block-title {
+	padding: 23px 25px 18px;
+    border-bottom: 1px solid #e6ecf5;
+}
+
+@mixin right-header-block-title {
+	color: #515365;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+@mixin user-select-vendors {
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin left-sidebar-inactive {
+	left: -70px;
+    transition-delay: 0s;
+}
+
+@mixin left-sidebar-wider-inactive {
+	left: -250px;
+    transition-delay: 0s;
+}
+
+@mixin online-status-dot {
+	position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #32e4cd;
+    top: 0px;
+    right: 27px;
+    border-radius: 50%;
+}
+
+@mixin left-sidebar-menu-icons {
+	position: relative;
+    padding-top: 32px;
+    font-size: 22px;
+    color: #9a9fbf;
+	-webkit-transition: color .3s linear;
+    -moz-transition: color .3s linear;
+    -ms-transition: color .3s linear;
+    transition: color .3s linear; 
+}
+
+@mixin left-sidebar-menu-title {
+	padding-left: 20px;
+    padding-top: 32px;
+    font-weight: 700;
+    font-size: 13px;
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+}
+
+@mixin right-sidebar-toggle {
+	display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+}
+
+@mixin user-status {
+	position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #32e4cd;
+    left: 19px;
+    border-radius: 50%;
 }
