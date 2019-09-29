@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!--big devices narrow sidebar-->
         <aside class="left-fixed-sidebar" v-bind:class="{ inactive: leftSidebarToggle }">
             <div class="logo" @click="checkWidth()">
                 <img src="../../assets/login-images/logo.png" alt="logo">
@@ -14,7 +13,7 @@
                 </li>
             </ul>
         </aside>
-        <!--big devices wider sidebar-->
+       
         <aside class="left-fixed-sidebar-wider" v-bind:class="{ inactive: !leftSidebarToggle }">
             <div class="logo-wider">
                 <img src="../../assets/login-images/logo.png" alt="logo">
@@ -137,7 +136,7 @@ export default {
 
 .left-sidebar {
     position: fixed;
-    z-index: 22;
+    z-index: 1030;
     width: 76px;
     height: calc(100% - 70px);
     left: 0;
@@ -165,14 +164,15 @@ export default {
 .logo {
     height: 70px;
     width: 70px;
-    background-color: #ff5e3a;
+    background-color: $orange-main-color;
     align-items: center;
+    z-index: 1031;
     @include flex-center;
 }
 
 .left-fixed-sidebar-wider {
     position: fixed;
-    z-index: 1031;
+    z-index: 1032;
     width: 250px;
     height: 100%;
     left: 0;
@@ -211,7 +211,7 @@ export default {
 .logo-wider {
     height: 70px;
     width: 250px;
-    background-color: #ff5e3a;
+    background-color: $orange-main-color;
     align-items: center;
     @include flex-start;
     padding-left: 18px;
@@ -299,7 +299,7 @@ export default {
     &:hover .fa-birthday-cake,
     &:hover .fa-industry,
     &:hover .fa-poll-h {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 
     &:last-child {
@@ -332,7 +332,7 @@ export default {
     @include left-sidebar-menu-icons;
     
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -389,7 +389,7 @@ a:link {
 
 .progress-moved .filled-profile {
     width: 75%; 
-    background-color: #ff5e3a;   
+    background-color: $orange-main-color;   
     animation: progressAnimation 2s;
 }
 
@@ -404,7 +404,7 @@ a:link {
 }
 
 .your-profile-text {
-    color: #ff5e3a;
+    color: $orange-main-color;
 }
 
 .account-block {
@@ -430,7 +430,7 @@ a:link {
     @include left-sidebar-menu-title;
 
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -452,7 +452,7 @@ a:link {
     @include transition-vendors(color .2s ease);
 
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 

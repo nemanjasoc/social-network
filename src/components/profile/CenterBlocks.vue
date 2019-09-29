@@ -221,7 +221,7 @@ a:link {
     cursor: pointer;
 
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -242,37 +242,37 @@ a:link {
     &:hover .dropdown-content {
         @include visible-opacity;
     }
-}
 
-.dropdown-block-three-dots .dropdown-content {
-    visibility: hidden;
-    opacity: 0;
-    width: 200px;
-    text-align: left;
-    padding: 15px 20px;
-    border-radius: 4px;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    z-index: 5;
-    right: -25px;
-    margin-top: 10px;
-    @include transition-vendors(opacity .3s ease);
+    .dropdown-content {
+        visibility: hidden;
+        opacity: 0;
+        width: 200px;
+        text-align: left;
+        padding: 15px 20px;
+        border-radius: 4px;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+        z-index: 5;
+        right: -25px;
+        margin-top: 10px;
+        @include transition-vendors(opacity .3s ease);
 
-    &::after {
-        @include after-arrow;
-        left: 168px;
-    }
+        &::after {
+            @include after-arrow;
+            left: 168px;
+        }
 
-    li a {
-        display: block;
-        font-weight: 700;
-        color: #515365;
-        font-size: $base-font-size - 4;
-        padding: 7px 0;
+        li a {
+            display: block;
+            font-weight: 700;
+            color: #515365;
+            font-size: $base-font-size - 4;
+            padding: 7px 0;
 
-        &:hover {
-            color: #ff5e3a;
+            &:hover {
+                color: $orange-main-color;
+            }
         }
     }
 }
@@ -296,7 +296,7 @@ p {
 
     &:hover .fa-heart,
     &:hover .post-heart-number {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -316,6 +316,12 @@ p {
     li {
         margin-right: -12px;
     }
+
+    img {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        cursor: pointer;
+    }
 }
 
 .name-one,
@@ -323,12 +329,6 @@ p {
     color: #515365;
     font-weight: 700;
     font-size: $base-font-size - 4;
-}
-
-.friends-images img {
-    border-radius: 50%;
-    border: 2px solid #fff;
-    cursor: pointer;
 }
 
 .more-likes {
@@ -351,7 +351,7 @@ p {
 
     &:hover .fa-comment-alt,
     &:hover .comment-number {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -371,7 +371,7 @@ p {
 
     &:hover .fa-share,
     &:hover .share-number {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -395,7 +395,7 @@ p {
     @include transition-vendors(background-color .2s ease);
 
     &:hover {
-        background-color: #ff5e3a;
+        background-color: $orange-main-color;
     }
 }
 
@@ -437,7 +437,7 @@ p {
 }
 
 .author-data a {
-    color: #ff5e3a;
+    color: $orange-main-color;
     font-size: $base-font-size - 2;
     font-weight: 700;
 }
@@ -469,7 +469,7 @@ p {
     @include transition-vendors(color .3s linear);
 
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 

@@ -112,7 +112,7 @@ ul, li {
 
 .orange-badge {
     @include left-block-badges;
-    background-color: #ff5e3a;
+    background-color: $orange-main-color;
 }
 
 .blue-badge {

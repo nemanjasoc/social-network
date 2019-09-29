@@ -294,7 +294,7 @@ h6 {
 }
 
 .search-button.orange {
-    border-bottom: 3px solid #ff5e3a;
+    border-bottom: 3px solid $orange-main-color;
 }
 
 .form-input,
@@ -306,7 +306,7 @@ input {
     outline: none;
 }
 
-button[type=submit] {
+button[type="submit"] {
     color: #696d87;
     border: none;
     background-color: #494c62;
@@ -333,7 +333,7 @@ a:link {
     @include transition-vendors(color .3s ease);
 
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
         cursor: pointer;
     }
 }
@@ -369,7 +369,7 @@ a:link {
 }
 
 .thunder-badge {
-    background: #ff5e3a;
+    background: $orange-main-color;
     @include header-badges;
 }
 
@@ -385,10 +385,10 @@ a:link {
     position: relative;
     cursor: pointer;
     margin-left: 50px;
-}
 
-.author-data-wrapper img {
-    border-radius: 50%;
+    img {
+        border-radius: 50%;
+    }
 }
 
 .author-data {
@@ -493,7 +493,7 @@ a:link {
     margin-left: 10px;
 
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -528,7 +528,7 @@ a:link {
     @include transition-vendors(color .3s ease);
 
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -584,13 +584,13 @@ a:link {
     @include flex-wrap;
     width: 36px;
     height: 36px;
-}
 
-.dropdown-users-img img {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-} 
+    img {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+    }
+}
 
 .chat-time {
     color: #9a9fbf;
@@ -611,13 +611,13 @@ a:link {
 }
 
 .dropdown-footer-purple {
-    background-color: #7c5ac2;;
+    background-color: #7c5ac2;
     @include dropdown-footer;
 }
 
 /*dropdown thunder*/
 .orange-text {
-    color: #ff5e3a;
+    color: $orange-main-color;
     font-weight: 700;
     font-size: $base-font-size - 4;
 }
@@ -625,15 +625,15 @@ a:link {
 .comment-photo {
     display: flex;
     margin-top: 10px;
-}
 
-.comment-photo img {
-    margin-right: 15px;
-    border-radius: 10px 0px 0px 10px;
+    img {
+        margin-right: 15px;
+        border-radius: 10px 0px 0px 10px;
+    }
 }
 
 .dropdown-footer-orange {
-    background-color: #ff5e3a;
+    background-color: $orange-main-color;
     @include dropdown-footer;
 
     &:hover {
@@ -650,6 +650,11 @@ a:link {
 .dropdown-author {
     position: relative;
     display: inline-block;
+
+    &:hover .dropdown-content-author {
+        @include visible-opacity;
+        z-index: 20;
+    }
 }
 
 .dropdown-author .dropdown-content-author {
@@ -664,11 +669,6 @@ a:link {
     right: -25px;
     top: 47px;
     @include transition-vendors(opacity .3s linear);
-}
-
-.dropdown-author:hover .dropdown-content-author {
-    @include visible-opacity;
-    z-index: 20;
 }
 
 .dropdown-author .dropdown-content-author-wrapper::after {
@@ -693,6 +693,14 @@ a:link {
 .dropdown-content-author {
     overflow: auto;
     max-height: calc(100vh - 70px);
+
+    .fa-bars,
+    .fa-star,
+    .fa-sign-out-alt {
+        color: #9a9fbf;
+        font-size: 20px;
+        margin-right: 15px;
+    }
 }
 
 .title-account,
@@ -713,19 +721,15 @@ a:link {
     cursor: pointer;
 }
 
-.dropdown-content-author .fa-bars,
-.dropdown-content-author .fa-star,
-.dropdown-content-author .fa-sign-out-alt {
-    color: #9a9fbf;
-    font-size: 20px;
-    margin-right: 15px;
-}
-
 .account-text,
 .about-list-title {
     font-size: $base-font-size - 4;
     color: #515365;
     font-weight: 700;
+
+    &:hover {
+        color: $orange-main-color;
+    }
 }
 
 .status-title {
@@ -733,15 +737,10 @@ a:link {
     color: #9a9fbf;
     font-weight: 700;
     margin-left: 15px;
-}
 
-.status-title:hover {
-    color: #515365;
-}
-
-.account-text:hover,
-.about-list-title:hover {
-    color: #ff5e3a;
+    &:hover {
+        color: #515365;
+    }
 }
 
 .green-dot,
@@ -779,7 +778,7 @@ a:link {
     width: 100%;
 }
 
-button[type=button] {
+button[type="button"] {
     background-color: #7c5ac2;
     color: #fff;
     width: 35px;

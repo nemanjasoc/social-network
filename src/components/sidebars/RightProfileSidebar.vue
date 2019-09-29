@@ -417,7 +417,7 @@ export default {
 }
 
 .right-sidebar-bar .fa-bars:hover {
-    color: #ff5e3a; 
+    color: $orange-main-color; 
 }
 
 .social-network-chat-sidebar {
@@ -477,7 +477,7 @@ a:link {
     font-size: $base-font-size + 4;
 
     &:hover {
-        color: #ff5e3a; 
+        color: $orange-main-color;
     }
 }
 
@@ -498,13 +498,13 @@ a:link {
     @include flex-center;
     margin-left: 10px;
     padding-bottom: 18px;
-}
 
-.right-sidebar-bar-wider .fa-times {
-    font-size: $base-font-size + 9;
+    .fa-times {
+        font-size: $base-font-size + 9;
 
-    &:hover {
-        color: #ff5e3a; 
+        &:hover {
+            color: $orange-main-color; 
+        }
     }
 }
 
@@ -514,10 +514,9 @@ a:link {
     width: 260px;
     height: 70px;
     background-color: #7c5ac2;
-    display: flex;
     align-items: center;
-    justify-content: space-around;
-    font-size: 25px;
+    @include flex-space-around;
+    font-size: $base-font-size + 9;
     z-index: 22;
     right: 0;
     cursor: pointer;
@@ -532,6 +531,7 @@ a:link {
 .modal {
     left: calc(100% - 300px);
     width: 300px;
+    margin-top: -28px;
 }
 
 .modal-header {
@@ -561,7 +561,7 @@ a:link {
     font-weight: 700;
     margin-left: 5px;
     font-size: $base-font-size - 4;
-    margin: auto 185px auto 5px;
+    margin: auto 175px auto 5px;
 }
 
 .modal-header-three-dots {
@@ -684,5 +684,10 @@ textarea {
         cursor: pointer;
     }
 }
-</style>
 
+@media only screen and (max-width: 575px) {
+    .modal {
+        margin-top: -8px;
+    }
+}
+</style>

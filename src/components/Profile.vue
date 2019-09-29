@@ -272,7 +272,7 @@ a:link {
 }
 
 .settings-button {
-    background-color: #ff5e3a;
+    background-color: $orange-main-color;
 
     &:hover .dropdown-content {
         @include visible-opacity;
@@ -282,42 +282,42 @@ a:link {
 .dropdown-settings-button {
     position: relative;
     display: inline-block;
-}
 
-.dropdown-settings-button .dropdown-content {
-    visibility: hidden;
-    opacity: 0;
-    width: 175px;
-    border-radius: 4px;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
-    z-index: 5;
-    bottom: 190%;
-    padding: 0;
-    @include transition-vendors(opacity .3s ease);
-
-    li a {
-        display: block;
-        font-weight: 700;
-        color: #515365;
-        font-size: $base-font-size - 4;
-        padding: 7px 7px;
-
-        &:hover {
-            color: #ff5e3a;
-        }
-    }
-
-    &::after {
-        content: "";
+    .dropdown-content {
+        visibility: hidden;
+        opacity: 0;
+        width: 175px;
+        border-radius: 4px;
         position: absolute;
-        top: 100%;
-        left: 158px;
-        margin-left: -30px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: #fff transparent transparent transparent;
+        background-color: #fff;
+        box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+        z-index: 5;
+        bottom: 190%;
+        padding: 0;
+        @include transition-vendors(opacity .3s ease);
+
+        li a {
+            display: block;
+            font-weight: 700;
+            color: #515365;
+            font-size: $base-font-size - 4;
+            padding: 7px 7px;
+
+            &:hover {
+                color: $orange-main-color;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 158px;
+            margin-left: -30px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+        }
     }
 }
 
@@ -348,7 +348,7 @@ a:link {
     cursor: pointer;
 
     &:hover {
-        color: #ff5e3a;
+        color: $orange-main-color;
     }
 }
 
@@ -366,7 +366,7 @@ a:link {
 .back-to-top {
     width: 50px;
     height: 50px;
-    background-color: #ff5e3a;
+    background-color: $orange-main-color;
     border-radius: 50%;
     position: fixed;
     box-shadow: 0 0 10px 0 rgba(63, 66, 87, 0.4);
@@ -448,8 +448,7 @@ a:link {
     }
 
     .three-rounded-image-buttons {
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         position: relative;
         top: -115px;
     }

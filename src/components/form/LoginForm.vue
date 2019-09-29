@@ -87,7 +87,7 @@ export default {
 
 .fa-spinner {
 	font-size: $base-font-size + 2;
-	color: #ff5e3a;
+	color: $orange-main-color;
 }
 
 .registration-form {
@@ -106,8 +106,8 @@ form {
 	@include flex-column;
 }
 
-input[type=email],
-input[type=password] {
+input[type="email"],
+input[type="password"] {
 	@include inputs;
 }
 
@@ -118,13 +118,17 @@ input:focus {
 /*checkbox style*/
 .container {
 	@include checkbox-container;
-}
 
-.container input {
-	@include checkbox-container-input;
+	input {
+		@include checkbox-container-input;
 
-	&:checked ~ .checkmark:after {
-		display: block;
+		&:checked ~ .checkmark:after {
+			display: block;
+		}
+	}
+
+	.checkmark:after {
+		@include container-checkmark-after;
 	}
 }
 
@@ -134,10 +138,6 @@ input:focus {
 	&:after {
 		@include checkbox-container-checkmark-after;
 	}
-}
-
-.container .checkmark:after {
-	@include container-checkmark-after;
 }
 
 .check-terms-register {
@@ -158,7 +158,7 @@ input:focus {
 
 .submit-login {
     width: 100%;
-    background-color: #ff5e3a;
+    background-color: $orange-main-color;
     text-align: center;
     color: #fff;
     font-weight: 500;
@@ -204,7 +204,7 @@ input:focus {
 }
 
 .register-now {
-	color: #ff5e3a;
+	color: $orange-main-color;
 	font-size: $base-font-size - 3;
 }
 
@@ -249,7 +249,7 @@ input:focus {
 	}
 
 	.fa-spinner {
-		color: #ff5e3a;
+		color: $orange-main-color;
 	}
 
 	.registration-button {

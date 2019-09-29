@@ -155,12 +155,22 @@ p {
 
         &:checked ~ .checkmark {
             background-color: #fff;
-            border: 1px solid #ff5e3a;
+            border: 1px solid $orange-main-color;
 
             &:after {
                 @include visible-opacity;
             }
         }
+    }
+
+    .checkmark:after {
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #fff;
+        background-color: $orange-main-color;
     }
 }
 
@@ -172,6 +182,7 @@ p {
     width: 18px;
     border: 1px solid #c3c1c1;
     border-radius: 50%;
+    z-index: 1031;
 
     &:after {
         content: "";
@@ -180,16 +191,6 @@ p {
         opacity: 0;
         @include transition-vendors(opacity .5s linear);
     }
-}
-
-.vote-title .checkmark:after {
-    top: 4px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #fff;
-    background-color: #ff5e3a;
 }
 
 .vote-percent {
@@ -221,19 +222,19 @@ p {
 
 .progress-moved .filled-first {
     width: 62%; 
-    background-color: #ff5e3a;   
+    background-color: $orange-main-color;  
     animation: progressAnimationFirst 3s;
 }
 
 .progress-moved .filled-second {
     width: 27%; 
-    background-color: #ff5e3a;   
+    background-color: $orange-main-color;   
     animation: progressAnimationSecond 3s;
 }
 
 .progress-moved .filled-third {
     width: 11%; 
-    background-color: #ff5e3a;   
+    background-color: $orange-main-color;   
     animation: progressAnimationThird 3s;
 }
 
@@ -279,7 +280,7 @@ p {
     border-radius: 50%;
     border: 2px solid #fff;
     margin-right: -12px;
-    background-color: #ff5e3a;
+    background-color: $orange-main-color;
     color: #fff;
     font-size: $base-font-size - 4;
     cursor: pointer;
@@ -305,7 +306,7 @@ p {
     }
 }
 
-button[type=button] {
+button[type="button"] {
     outline: none;
 }
 

@@ -17,7 +17,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item" v-for="li in dropdownLinks" :key="li.id">
+						<li v-for="li in dropdownLinks" :key="li.id">
 							<a class="nav-link" href="#">{{ li.text }}</a>
 						</li>
 					</ul>
@@ -257,7 +257,7 @@ img {
 
 .fa-power-off {
 	font-size: $base-font-size + 2;
-	color: #ff5e3a;
+	color: $orange-main-color;
 }
 
 .spinner-aside {
@@ -296,10 +296,10 @@ form {
 	width: 50%;
 }
 
-input[type=text],
-input[type=email],
-input[type=password],
-input[type=date],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
 .select-gender {
 	@include inputs;
 }
@@ -307,39 +307,39 @@ input[type=date],
 /*calendar style*/
 input[type="date"] {
 	position: relative;
+
+	&:after {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900; 
+		content: "\f073";
+		color: #555;
+		padding: 0 5px;
+	}
+
+	&::-webkit-calendar-picker-indicator {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: auto;
+		height: auto;
+		color: transparent;
+		background: transparent;
+	}
+
+	&::-webkit-inner-spin-button {
+		z-index: 1;
+		padding-top: 24px;
+		font-size: $base-font-size - 3;
+	}
+
+	&::-webkit-clear-button {
+		z-index: 1;
+	}
 }
 
-input[type="date"]:after {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900; 
-	content: "\f073";
-	color: #555;
-	padding: 0 5px;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: auto;
-	height: auto;
-	color: transparent;
-	background: transparent;
-}
-
-input[type="date"]::-webkit-inner-spin-button {
-	z-index: 1;
-	padding-top: 24px;
-	font-size: $base-font-size - 3;
-}
-
-input[type="date"]::-webkit-clear-button {
-	z-index: 1;
-}
-
-button[type=button],
+button[type="button"],
 input:focus {
 	outline: none;
 }
@@ -353,7 +353,7 @@ input:focus {
 }
 
 .terms-and-conditions {
-	color: #ff5e3a;
+	color: $orange-main-color;
 	margin: 0 2px;
 }
 
@@ -381,6 +381,10 @@ input:focus {
 			display: block;
 		}
 	}
+
+	.checkmark:after {
+		@include container-checkmark-after;
+	}
 }
 
 .checkmark {
@@ -389,10 +393,6 @@ input:focus {
 	&:after {
 		@include checkbox-container-checkmark-after;
 	}
-}
-
-.container .checkmark:after {
-	@include container-checkmark-after;
 }
 
 /*media query*/
@@ -412,10 +412,10 @@ input:focus {
 		font-weight: 700;
 		padding: 10px 20px;
 		@include transition-vendors(color .3s ease);
-	}
 
-	.navbar-light .navbar-nav .nav-link:hover {
-		color: #ff5e3a;
+		&:hover {
+			color: $orange-main-color;
+		}
 	}
 
 	.main-content {

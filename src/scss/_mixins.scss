@@ -235,19 +235,17 @@
 @mixin center-block {
 	position: relative;
     border-radius: 5px;
-    /*border: 1px solid #e6ecf5;*/
+    border: 1px solid #e6ecf5;
     background: #fff;
     padding: 25px;
-    border: 1px solid gray;
     height: fit-content;
 }
 
 @mixin left-block {
 	border-radius: 5px;
-	/*border: 1px solid #e6ecf5;*/
+	border: 1px solid #e6ecf5;
 	background: #fff;
 	margin-bottom: 15px;
-	border: 1px solid gray;
 	height: fit-content;
 }
 
@@ -305,9 +303,8 @@
 
 @mixin right-block {
 	border-radius: 5px;
-    /*border: 1px solid #e6ecf5;*/
+    border: 1px solid #e6ecf5;
     background: #fff;
-    border: 1px solid gray;
     height: fit-content;
 }	
 
